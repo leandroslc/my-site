@@ -1,3 +1,4 @@
+import { MainLayout } from '~/modules/app'
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
@@ -15,11 +16,12 @@ type Props = {
 const Index = ({ allPosts }: Props) => {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
+  const title = `Next.js Blog Example with ${CMS_NAME}`
   return (
-    <>
+    <MainLayout>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{title}</title>
         </Head>
         <Container>
           <Intro />
@@ -36,7 +38,7 @@ const Index = ({ allPosts }: Props) => {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
-    </>
+    </MainLayout>
   )
 }
 
