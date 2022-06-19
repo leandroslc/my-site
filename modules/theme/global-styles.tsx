@@ -1,10 +1,22 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.body.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
-    transition: all 0.50s linear;
+    background: ${({ theme }) => theme.body.back};
+    transition: all 0.2s linear;
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    user-select: none;
+    -webkit-appearance: button;
   }
 `
