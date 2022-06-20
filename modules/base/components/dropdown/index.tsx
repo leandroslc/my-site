@@ -21,7 +21,7 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
         name: 'offset',
         enabled: true,
         options: {
-          offset: [0, 10],
+          offset: [0, 5],
         },
       },
     ],
@@ -75,7 +75,6 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
       <S.Menu
         ref={menuRef}
         style={styles.popper}
-        role="menu"
         aria-orientation="vertical"
         aria-labelledby={id}
         $isOpen={isOpen}

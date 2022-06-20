@@ -1,4 +1,9 @@
 export const light = {
+  name: 'light',
+  all: {
+    outline: '#6366f1',
+    outlineInset: '#eef1f5',
+  },
   body: {
     back: '#eef1f5',
     text: '#1a1e2b',
@@ -17,12 +22,21 @@ export const light = {
       shadowRing: '#ffffff',
       shadow: 'rgb(0 0 0 / 0.1)',
     },
+    item: {
+      backActive: '#e7efff',
+      backHover: '#efefef',
+    },
   },
 }
 
 export type ColorScheme = typeof light
 
 export const dark: ColorScheme = {
+  name: 'dark',
+  all: {
+    outline: '#6366f1',
+    outlineInset: '#eef1f5',
+  },
   body: {
     back: '#0e0c21',
     text: '#ffffff',
@@ -40,6 +54,10 @@ export const dark: ColorScheme = {
       border: 'rgb(229, 231, 235)',
       shadowRing: '#ffffff',
       shadow: 'rgb(0 0 0 / 0.1)',
+    },
+    item: {
+      backActive: '#e7efff',
+      backHover: '#efefef',
     },
   },
 }

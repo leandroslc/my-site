@@ -5,6 +5,15 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  * {
+    &:focus {
+      box-shadow: 0 0 0 0.1rem ${({ theme }) => theme.all.outlineInset},
+        0 0 0 0.2rem ${({ theme }) => theme.all.outline};
+      outline: 0.1rem solid transparent;
+      outline-offset: 0.1rem;
+    }
+  }
+
   body {
     color: ${({ theme }) => theme.body.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;

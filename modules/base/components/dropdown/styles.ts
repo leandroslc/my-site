@@ -6,7 +6,7 @@ export const Menu = styled.div<{ $isOpen: boolean }>`
   background-color: ${({ theme }) => theme.dropdown.menu.back};
   border: 0.06rem solid ${({ theme }) => theme.dropdown.menu.border};
   border-radius: 0.4rem;
-  padding: 0.8rem;
+  padding: 0.2rem 0;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.dropdown.menu.shadowRing},
     0 10px 15px -3px ${({ theme }) => theme.dropdown.menu.shadow},
     0 4px 6px -4px ${({ theme }) => theme.dropdown.menu.shadow};
@@ -26,4 +26,11 @@ export const Button = styled.button`
   box-shadow: 0 0 ${({ theme }) => theme.dropdown.button.shadow},
     0 0 ${({ theme }) => theme.dropdown.button.shadowRing},
     0 0.06rem 0.1rem 0 ${({ theme }) => theme.dropdown.button.shadow};
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem ${({ theme }) => theme.all.outlineInset},
+      0 0 0 0.2rem ${({ theme }) => theme.all.outline};
+    outline: 0.1rem solid transparent;
+    outline-offset: 0.1rem;
+  }
 `
