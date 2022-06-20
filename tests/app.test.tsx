@@ -3,25 +3,22 @@ import user from '@testing-library/user-event'
 import * as styled from 'styled-components'
 import { App } from '~/modules/app'
 import { useStore } from '~/modules/app/data/state'
-import Home from './index'
+import { dark, light } from '~/modules/theme/color-scheme'
+import Home from '~/pages/index'
 
-const mockStyledThemeProvider = jest.fn()
+const themeSchemes: Record<string, object> = {
+  dark: dark,
+  light: light,
+}
 
-jest.mock('~/modules/theme', () => ({
-  GlobalStyles: () => <></>,
-  light: 'light',
-  dark: 'dark',
-}))
-
-jest
-  .spyOn(styled, 'ThemeProvider')
-  .mockImplementation((props: any) => mockStyledThemeProvider(props))
+const themeProvider = jest.spyOn(styled, 'ThemeProvider')
 
 const arrange = () => {
   render(
     <>
-      <App />
-      <Home allPosts={[]} />
+      <App>
+        <Home allPosts={[]} />
+      </App>
     </>
   )
 }
@@ -36,6 +33,16 @@ const expectStoredThemeToBe = (theme: string) => {
   expect(state).toMatchObject({
     state: {
       theme: theme,
+    },
+  })
+}
+
+const expectCurrentThemeToBe = (theme: string) => {
+  const passedArguments = themeProvider.mock.lastCall[0]
+
+  expect(passedArguments).toMatchObject({
+    theme: {
+      name: theme,
     },
   })
 }
@@ -65,11 +72,7 @@ describe('<App>', () => {
 
         // Assert
         expectStoredThemeToBe(value)
-        expect(mockStyledThemeProvider).toBeCalledWith(
-          expect.objectContaining({
-            theme,
-          })
-        )
+        expectCurrentThemeToBe(theme)
       }
     )
   })
@@ -92,11 +95,7 @@ describe('<App>', () => {
         arrange()
 
         // Assert
-        expect(mockStyledThemeProvider).toBeCalledWith(
-          expect.objectContaining({
-            theme,
-          })
-        )
+        expectCurrentThemeToBe(theme)
       }
     )
   })
