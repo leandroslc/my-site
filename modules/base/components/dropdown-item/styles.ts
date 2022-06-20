@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components'
 
 export const Item = styled.li<{ $isActive: boolean }>`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   padding: 0.4rem 1rem;
   font-size: 0.925rem;
 

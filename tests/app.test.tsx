@@ -3,13 +3,7 @@ import user from '@testing-library/user-event'
 import * as styled from 'styled-components'
 import { App } from '~/modules/app'
 import { useStore } from '~/modules/app/data/state'
-import { dark, light } from '~/modules/theme/color-scheme'
 import Home from '~/pages/index'
-
-const themeSchemes: Record<string, object> = {
-  dark: dark,
-  light: light,
-}
 
 const themeProvider = jest.spyOn(styled, 'ThemeProvider')
 
@@ -52,23 +46,31 @@ afterEach(() => {
 })
 
 describe('<App>', () => {
-  describe('Should change theme when selecting option', () => {
+  describe('Should change theme', () => {
     test.each`
       option      | prefersDark | theme      | value
       ${'Dark'}   | ${false}    | ${'dark'}  | ${'dark'}
-      ${'Light'}  | ${false}    | ${'light'} | ${'light'}
+      ${'Light'}  | ${true}     | ${'light'} | ${'light'}
       ${'System'} | ${true}     | ${'dark'}  | ${''}
       ${'System'} | ${false}    | ${'light'} | ${''}
     `(
-      'given "$option" and "prefers-color-scheme: dark" is "$prefersDark"',
+      'to "$theme" given option "$option" and "prefers-color-scheme: dark" is "$prefersDark"',
       async ({ option, prefersDark, theme, value }) => {
         arrangeWindowMatchMedia(prefersDark)
         arrange()
 
         // Act
-        const darkThemeButton = await screen.findByText(new RegExp(option, 'i'))
+        const themeSelect = await screen.findByText(/theme/i)
 
-        await user.click(darkThemeButton)
+        await user.click(themeSelect)
+
+        const themeOptionButton = await screen.findByText(
+          new RegExp(option, 'i')
+        )
+
+        expect(themeOptionButton).toBeVisible()
+
+        await user.click(themeOptionButton)
 
         // Assert
         expectStoredThemeToBe(value)
@@ -81,11 +83,11 @@ describe('<App>', () => {
     test.each`
       value      | prefersDark | theme
       ${'dark'}  | ${false}    | ${'dark'}
-      ${'light'} | ${false}    | ${'light'}
+      ${'light'} | ${true}     | ${'light'}
       ${''}      | ${true}     | ${'dark'}
       ${''}      | ${false}    | ${'light'}
     `(
-      '"$theme" given value "$value" and "prefers-color-scheme: dark" is "$prefersDark"',
+      'from "$theme" given value "$value" and "prefers-color-scheme: dark" is "$prefersDark"',
       async ({ value, prefersDark, theme }) => {
         arrangeWindowMatchMedia(prefersDark)
 

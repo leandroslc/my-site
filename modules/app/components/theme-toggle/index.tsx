@@ -1,7 +1,9 @@
+import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 import { Dropdown } from '~/modules/base/components/dropdown'
 import { DropdownItem } from '~/modules/base/components/dropdown-item'
-import { useStore } from '../data/state'
-import { Themes } from '../data/types'
+import { useStore } from '../../data/state'
+import { Themes } from '../../data/types'
+import * as S from './styles'
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useStore()
@@ -12,14 +14,14 @@ export const ThemeToggle = () => {
 
   return (
     <>
-      <Dropdown id="theme-toggle" label="Tema">
+      <Dropdown id="theme-toggle" label="Theme">
         <DropdownItem
           as="button"
           type="button"
           active={theme === Themes.Dark}
           onClick={() => handleThemeChange(Themes.Dark)}
         >
-          Dark
+          <S.OptionIcon as={FiMoon} /> Dark
         </DropdownItem>
         <DropdownItem
           as="button"
@@ -27,7 +29,7 @@ export const ThemeToggle = () => {
           active={theme === Themes.Light}
           onClick={() => handleThemeChange(Themes.Light)}
         >
-          Light
+          <S.OptionIcon as={FiSun} /> Light
         </DropdownItem>
         <DropdownItem
           as="button"
@@ -35,7 +37,7 @@ export const ThemeToggle = () => {
           active={theme === Themes.System}
           onClick={() => handleThemeChange(Themes.System)}
         >
-          System
+          <S.OptionIcon as={FiMonitor} /> System
         </DropdownItem>
       </Dropdown>
     </>

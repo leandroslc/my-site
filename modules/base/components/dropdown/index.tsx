@@ -1,10 +1,11 @@
-import { PropsWithChildren, useEffect, useRef, useState } from 'react'
+import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { usePopper } from 'react-popper'
 import * as S from './styles'
 
 type Props = PropsWithChildren<{
   id: string
-  label: string
+  label: string | React.ReactNode
   title?: string
 }>
 
@@ -71,6 +72,7 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
         ref={toggleRef}
       >
         {label}
+        <S.ButtonChevron as={isOpen ? FiChevronUp : FiChevronDown} />
       </S.Button>
       <S.Menu
         ref={menuRef}

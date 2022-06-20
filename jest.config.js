@@ -11,6 +11,7 @@ const jestConfig = {
   moduleNameMapper: {
     '^~/(.*)$': '<rootDir>/$1',
   },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 }
 
 module.exports = createJestConfig(jestConfig)

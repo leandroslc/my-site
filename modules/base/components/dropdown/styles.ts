@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const Menu = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
+  min-width: 14rem;
+  padding: 0.2rem 0;
   background-color: ${({ theme }) => theme.dropdown.menu.back};
   border: 0.06rem solid ${({ theme }) => theme.dropdown.menu.border};
   border-radius: 0.4rem;
-  padding: 0.2rem 0;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.dropdown.menu.shadowRing},
     0 10px 15px -3px ${({ theme }) => theme.dropdown.menu.shadow},
     0 4px 6px -4px ${({ theme }) => theme.dropdown.menu.shadow};
@@ -33,4 +34,8 @@ export const Button = styled.button`
     outline: 0.1rem solid transparent;
     outline-offset: 0.1rem;
   }
+`
+
+export const ButtonChevron = styled.svg`
+  margin-left: 0.5rem;
 `
