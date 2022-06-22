@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import { ClientSideOnly } from '~/modules/base/components/client-side-only'
+import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
 import { ThemeToggle } from '../theme-toggle'
 import * as S from './styles'
 

@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import * as styled from 'styled-components'
-import { App } from '~/modules/app'
-import { useStore } from '~/modules/app/data/state'
-import Home from '~/pages/index'
+import { App } from '@/src/modules/app'
+import { useStore } from '@/src/modules/app/data/state'
+import Home from '@/src/pages/index'
 
 const themeProvider = jest.spyOn(styled, 'ThemeProvider')
 

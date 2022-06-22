@@ -1,4 +1,4 @@
-import { MainLayout } from '~/modules/app'
+import { MainLayout } from '@/src/modules/app'
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'

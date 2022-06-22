@@ -1,6 +1,6 @@
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
-import { Dropdown } from '~/modules/base/components/dropdown'
-import { DropdownItem } from '~/modules/base/components/dropdown-item'
+import { Dropdown } from '@/src/modules/base/components/dropdown'
+import { DropdownItem } from '@/src/modules/base/components/dropdown-item'
 import { useStore } from '../../data/state'
 import { Themes } from '../../data/types'
 import * as S from './styles'
