@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import { ThemeProvider as Provider } from 'styled-components'
-import { dark, GlobalStyles, light } from '@/src/modules/theme'
+import { dark, GlobalStyles, light } from '@/src/theme'
 import { useStore } from '../data/state'
 import { Themes } from '../data/types'
 

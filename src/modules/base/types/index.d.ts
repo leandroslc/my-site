@@ -1,3 +1,5 @@
+import React from 'react'
+
 export type AnyComponentType =
   | keyof JSX.IntrinsicElements
   | React.ComponentType
