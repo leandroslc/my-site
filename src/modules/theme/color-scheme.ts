@@ -1,30 +1,37 @@
 export const light = {
   name: 'light',
   all: {
-    outline: '#6366f1',
+    outline: '#24180b',
     outlineInset: '#eef1f5',
   },
+  header: {
+    back: 'linear-gradient(72deg, #000851, #1cb5e0)',
+  },
+  main: {
+    back: '#e5ede8',
+  },
   body: {
-    back: '#eef1f5',
+    back: '#000851',
     text: '#1a1e2b',
   },
   dropdown: {
     button: {
-      back: '#ffffff',
-      text: '#1a1e2b',
-      border: 'rgb(209, 213, 219)',
+      back: '#0c1127',
+      text: '#ffffff',
       shadowRing: 'rgb(0 0 0 / 0.1)',
       shadow: 'rgb(0 0 0 / 0.1)',
     },
     menu: {
-      back: '#ffffff',
-      border: 'rgb(229, 231, 235)',
+      back: '#0c1127',
+      text: '#ffffff',
       shadowRing: '#ffffff',
       shadow: 'rgb(0 0 0 / 0.1)',
     },
     item: {
-      backActive: '#e7efff',
-      backHover: '#efefef',
+      backActive: '#d9f2f2',
+      textActive: '#1a1e2b',
+      backHover: '#252e5a',
+      textHover: '#ffffff',
     },
   },
 }
@@ -32,32 +39,6 @@ export const light = {
 export type ColorScheme = typeof light
 
 export const dark: ColorScheme = {
+  ...light,
   name: 'dark',
-  all: {
-    outline: '#6366f1',
-    outlineInset: '#eef1f5',
-  },
-  body: {
-    back: '#0e0c21',
-    text: '#ffffff',
-  },
-  dropdown: {
-    button: {
-      back: '#000000',
-      text: '#ffffff',
-      border: '#888888',
-      shadowRing: 'rgb(0 0 0 / 0.1)',
-      shadow: 'rgb(0 0 0 / 0.1)',
-    },
-    menu: {
-      back: '#44424e',
-      border: 'rgb(229, 231, 235)',
-      shadowRing: '#ffffff',
-      shadow: 'rgb(0 0 0 / 0.1)',
-    },
-    item: {
-      backActive: '#e7efff',
-      backHover: '#efefef',
-    },
-  },
 }

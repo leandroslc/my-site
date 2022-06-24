@@ -7,16 +7,21 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     &:focus {
-      box-shadow: 0 0 0 0.1rem ${({ theme }) => theme.all.outlineInset},
-        0 0 0 0.2rem ${({ theme }) => theme.all.outline};
-      outline: 0.1rem solid transparent;
-      outline-offset: 0.1rem;
+      box-shadow: 0 0 0 1px ${({ theme }) => theme.all.outlineInset},
+        0 0 0 3px ${({ theme }) => theme.all.outline};
+      outline: 2px solid transparent;
+      outline-offset: 2px;
     }
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
   }
 
   body {
     color: ${({ theme }) => theme.body.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    font-family: 'Work Sans', Tahoma, Helvetica, Arial, Roboto, sans-serif;
     background: ${({ theme }) => theme.body.back};
     transition: all 0.2s linear;
   }
