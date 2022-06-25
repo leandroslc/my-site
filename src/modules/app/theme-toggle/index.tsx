@@ -1,8 +1,8 @@
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 import { Dropdown } from '@/src/modules/base/components/dropdown'
 import { DropdownItem } from '@/src/modules/base/components/dropdown-item'
-import { useStore } from '../../data/state'
-import { Themes } from '../../data/types'
+import { useStore } from '../data/state'
+import { Themes } from '../data/types'
 import * as S from './styles'
 
 export const ThemeToggle = () => {

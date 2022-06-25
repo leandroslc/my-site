@@ -1,2 +1,2 @@
-export * from './components/page-layout'
-export * from './page'
+export * from './page-layout'
+export * from './theme-provider'
