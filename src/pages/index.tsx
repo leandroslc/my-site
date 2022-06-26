@@ -1,11 +1,11 @@
 import { PageLayout } from '@/src/modules/app'
+import { getAllPosts } from '@/src/lib/services'
+import { Post } from '@/src/lib/types/post'
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
-import { getAllPosts } from '../lib/api'
 import { CMS_NAME } from '../lib/constants'
-import Post from '../types/post'
 
 type Props = {
   allPosts: Post[]
@@ -23,7 +23,7 @@ const Index = ({ allPosts }: Props) => {
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
-            author={heroPost.author}
+            author={{}}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
           />
@@ -41,7 +41,6 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
-    'author',
     'coverImage',
     'excerpt',
   ])
