@@ -8,9 +8,11 @@ export const Navbar = styled.nav`
 `
 
 export const Header = styled.header`
+  flex: 0 1 auto;
   background: ${({ theme }) => theme.header.back};
 `
 
 export const Main = styled.main`
+  flex: 1 1 auto;
   background: ${({ theme }) => theme.main.back};
 `
