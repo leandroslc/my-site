@@ -8,24 +8,15 @@ export const Content = styled.section`
   @media (min-width: ${sizes.small}) {
     max-width: 768px;
   }
+
+  @media (min-width: ${sizes.medium}) {
+    max-width: 992px;
+  }
 `
 
 export const Posts = styled.main`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  row-gap: 30px;
+  row-gap: 90px;
   column-gap: 90px;
 `
-
-export const PostCard = styled.article`
-  display: flex;
-  flex-direction: column;
-`
-
-export const Image = styled.img``
-
-export const Title = styled.h1``
-
-export const Date = styled.time``
-
-export const Description = styled.span``

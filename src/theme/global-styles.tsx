@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     height: 100%;
+    margin: 0;
     color: ${({ theme }) => theme.body.text};
     font-family: 'Work Sans', Tahoma, Helvetica, Arial, Roboto, sans-serif;
     background: ${({ theme }) => theme.body.back};
@@ -38,5 +39,14 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     user-select: none;
     -webkit-appearance: button;
+  }
+
+  blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
   }
 `
