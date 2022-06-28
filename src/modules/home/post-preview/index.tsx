@@ -7,22 +7,22 @@ type Props = {
   post: Post
 }
 
-export const PostCard = ({ post }: Props) => {
+export const PostPreview = ({ post }: Props) => {
   const { slug, coverImage, title, date, excerpt } = post
 
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <S.PostLink aria-label={title}>
-        <S.PostCard key={slug}>
+        <S.Card key={slug}>
           <S.Header>
-            <S.Image src={coverImage} alt={`Cover image to ${title}`} />
+            <S.Image src={coverImage} alt={`Image de capa para ${title}`} />
           </S.Header>
           <S.Content>
             <S.Date dateTime={date}>{formatDate(date)}</S.Date>
             <S.Title>{title}</S.Title>
             <S.Description>{truncate(excerpt, 100)}</S.Description>
           </S.Content>
-        </S.PostCard>
+        </S.Card>
       </S.PostLink>
     </Link>
   )

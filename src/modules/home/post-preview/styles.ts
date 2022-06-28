@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { sizes } from '@/src/theme'
 
-export const PostCard = styled.article`
+export const Card = styled.article`
   display: flex;
   flex-direction: column;
 `
