@@ -6,12 +6,10 @@ export const PostCard = styled.article`
   flex-direction: column;
 `
 
-export const Header = styled.header``
-
 export const Image = styled.img`
   width: auto;
-  margin-bottom: 10px;
   border-radius: 8px;
+  transition: box-shadow 0.1s;
 
   @media (min-width: ${sizes.small}) {
     min-height: 10rem;
@@ -22,16 +20,44 @@ export const Image = styled.img`
   }
 `
 
-export const Content = styled.main`
-  display: flex;
-  flex-direction: column;
-  padding: 0 6px;
-`
-
 export const Title = styled.h1`
   margin-bottom: 16px;
   font-size: 1.5rem;
   font-weight: bold;
+`
+
+export const PostLink = styled.a`
+  cursor: pointer;
+  border-radius: 8px;
+  transform: translateY(0);
+  transition: transform 0.1s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    transform: translateY(-2px);
+    transition: transform 0.1s;
+
+    ${Title} {
+      text-decoration: underline;
+    }
+
+    ${Image} {
+      box-shadow: 0 0 0 3px ${({ theme }) => theme.main.back},
+        0 0 3px 5px ${({ theme }) => theme.postCard.borderHover};
+      transition: box-shadow 0.1s;
+    }
+  }
+`
+
+export const Header = styled.header`
+  margin-bottom: 10px;
+`
+
+export const Content = styled.main`
+  display: flex;
+  flex-direction: column;
+  padding: 0 6px;
 `
 
 export const Date = styled.time`

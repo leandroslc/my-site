@@ -34,6 +34,9 @@ export const light = {
       textHover: '#ffffff',
     },
   },
+  postCard: {
+    borderHover: '#284da9',
+  },
 }
 
 export type ColorScheme = typeof light

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Menu = styled.div<{ $isOpen: boolean }>`
+  z-index: 1;
   display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   min-width: 14rem;
