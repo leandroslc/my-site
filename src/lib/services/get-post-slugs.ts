@@ -1,6 +1,6 @@
 import fs from 'fs'
-import { POSTS_DIRECTORY } from '../constants'
+import { postsDirectory } from '../config'
 
 export const getPostSlugs = () => {
-  return fs.readdirSync(POSTS_DIRECTORY)
+  return fs.readdirSync(postsDirectory)
 }

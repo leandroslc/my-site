@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { POSTS_DIRECTORY } from '../constants'
+import { postsDirectory } from '../config'
 import { Post, PostProperty } from '../types'
 
 type SelectedItems = {
@@ -10,7 +10,7 @@ type SelectedItems = {
 
 export const getPostBySlug = (slug: string, fields: PostProperty[] = []) => {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(POSTS_DIRECTORY, `${realSlug}.md`)
+  const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
