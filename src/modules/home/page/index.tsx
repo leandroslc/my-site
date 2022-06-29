@@ -12,8 +12,8 @@ export const HomePage = ({ posts }: Props) => {
     <PageLayout title="Test">
       <S.Content>
         <S.Posts>
-          {posts.map((post) => (
-            <PostPreview key={post.slug} post={post} />
+          {posts.map((post, index) => (
+            <PostPreview key={index} post={post} />
           ))}
         </S.Posts>
       </S.Content>

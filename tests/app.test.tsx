@@ -1,24 +1,14 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import * as styled from 'styled-components'
-import { ThemeProvider } from '@/src/modules/app'
 import { useStore } from '@/src/modules/app/data/state'
 import Home from '@/src/pages/index'
+import { arrangeWindowMatchMedia, renderWithProviers } from '@/tests/utils'
 
 const themeProvider = jest.spyOn(styled, 'ThemeProvider')
 
 const arrange = () => {
-  render(
-    <>
-      <ThemeProvider>
-        <Home allPosts={[]} />
-      </ThemeProvider>
-    </>
-  )
-}
-
-const arrangeWindowMatchMedia = (matches: boolean) => {
-  global.matchMedia = jest.fn().mockImplementation(() => ({ matches }))
+  renderWithProviers(<Home allPosts={[]} />)
 }
 
 const expectStoredThemeToBe = (theme: string) => {
