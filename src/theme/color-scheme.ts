@@ -6,6 +6,7 @@ export const light = {
   },
   header: {
     back: 'linear-gradient(72deg, #000851, #1cb5e0)',
+    text: '#ffffff',
   },
   main: {
     back: '#e5ede8',
