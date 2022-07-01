@@ -15,6 +15,7 @@ export const Menu = styled.div<{ $isOpen: boolean }>`
 `
 
 export const Button = styled.button`
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;

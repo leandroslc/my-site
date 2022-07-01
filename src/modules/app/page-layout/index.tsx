@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
 import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
+import { ParticlesContainer } from '@/src/modules/base/components/particles-container'
 import { Meta } from '@/src/modules/base/components/meta'
 import { ThemeToggle } from '../theme-toggle'
 import * as S from './styles'
@@ -18,6 +19,7 @@ export const PageLayout = ({ children, header, title }: Props) => {
         <title>{title}</title>
       </Head>
       <S.Header>
+        <ParticlesContainer />
         <S.Navbar>
           <ClientSideOnly>
             <ThemeToggle />

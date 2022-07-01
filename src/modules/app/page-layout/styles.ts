@@ -8,6 +8,7 @@ export const Navbar = styled.nav`
 `
 
 export const Header = styled.header`
+  position: relative;
   flex: 0 1 auto;
   background: ${({ theme }) => theme.header.back};
 `
