@@ -10,15 +10,14 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 16px;
   left: 20px;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  margin-top: calc(-1 * (24px + 1rem));
   font-size: 1.4rem;
   color: ${vars.theme((theme) => theme.header.text)};
   pointer-events: none;
