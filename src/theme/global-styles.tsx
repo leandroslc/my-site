@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+import { cssDarkThemeClass } from '@/src/lib/config'
+import { dark, light } from './color-scheme'
+import { parseSchemeToCSSProperties } from './helpers'
 
 export const GlobalStyles = createGlobalStyle`
   *, ::after, ::before {
@@ -18,6 +21,14 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     height: 100%;
+  }
+
+  :root {
+    ${parseSchemeToCSSProperties(light)}
+
+    &.${cssDarkThemeClass} {
+      ${parseSchemeToCSSProperties(dark)}
+    }
   }
 
   html {

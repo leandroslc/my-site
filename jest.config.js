@@ -12,6 +12,7 @@ const jestConfig = {
     '^@/src/(.*)$': '<rootDir>/src/$1',
     '^@/tests/(.*)$': '<rootDir>/tests/$1',
   },
+  testPathIgnorePatterns: ['<rootDir>/e2e'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 }
 

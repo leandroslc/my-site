@@ -11,7 +11,7 @@ export const PostPreview = ({ post }: Props) => {
   const { slug, coverImage, title, date, excerpt } = post
 
   return (
-    <Link as={`/posts/${slug}`} href="/posts/[slug]">
+    <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
       <S.PostLink aria-label={title}>
         <S.Card key={slug}>
           <S.Header>

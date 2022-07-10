@@ -1,6 +1,6 @@
 import { truncate } from '@/src/lib/helpers'
 
-describe('helper: trucate', () => {
+describe('lib-helper-trucate', () => {
   test.each`
     value        | maxLength | expected
     ${'Testing'} | ${6}      | ${'Tes...'}
