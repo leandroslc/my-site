@@ -3,9 +3,29 @@ import { devices } from '@playwright/test'
 import dotenv from 'dotenv'
 import path from 'path'
 
+const isCI = !!process.env.CI
+
 const env = dotenv.config({
   path: path.resolve(process.cwd(), '.env.test'),
 })
+
+const projects: PlaywrightTestConfig['projects'] = [
+  {
+    name: 'chromium',
+    use: {
+      ...devices['Desktop Chrome'],
+    },
+  },
+]
+
+if (isCI) {
+  projects.push({
+    name: 'firefox',
+    use: {
+      ...devices['Desktop Firefox'],
+    },
+  })
+}
 
 const config: PlaywrightTestConfig = {
   testDir: './e2e',
@@ -14,29 +34,16 @@ const config: PlaywrightTestConfig = {
     timeout: 5000,
   },
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  forbidOnly: isCI,
+  retries: isCI ? 2 : 0,
+  workers: isCI ? 1 : undefined,
   reporter: 'html',
   use: {
     actionTimeout: 0,
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
   },
-  projects: [
-    {
-      name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
-    },
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
-  ],
+  projects,
   webServer: {
     command: 'npm run dev',
     port: 3000,
