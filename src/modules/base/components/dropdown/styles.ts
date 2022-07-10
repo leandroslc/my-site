@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const Menu = styled.div<{ $isOpen: boolean }>`
-  z-index: 1;
+  z-index: 2;
   display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   min-width: 14rem;
   padding: 4px 0;
   color: ${({ theme }) => theme.dropdown.menu.text};
   background-color: ${({ theme }) => theme.dropdown.menu.back};
+  border: 1px solid ${({ theme }) => theme.dropdown.menu.border};
   border-radius: 6px;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.dropdown.menu.shadowRing},
     0 10px 15px -3px ${({ theme }) => theme.dropdown.menu.shadow},
