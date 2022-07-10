@@ -22,9 +22,7 @@ export const PageLayout = ({ children, header, title }: Props) => {
       <S.Header>
         <ParticlesContainer />
         <S.Navbar>
-          <ClientSideOnly>
-            <ThemeToggle />
-          </ClientSideOnly>
+          <ThemeToggle />
         </S.Navbar>
         {header && header}
       </S.Header>

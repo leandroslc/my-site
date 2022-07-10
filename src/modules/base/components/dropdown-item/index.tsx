@@ -18,7 +18,12 @@ export const DropdownItem = <T extends AnyComponentType>({
   ...otherProps
 }: Props<T>) => {
   return (
-    <S.Item as={as} $isActive={active} {...otherProps}>
+    <S.Item
+      as={as}
+      className={active ? 'is-active' : ''}
+      is-active={active}
+      {...otherProps}
+    >
       {children}
     </S.Item>
   )

@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
-export const Item = styled.li<{ $isActive: boolean }>`
+export const Item = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,20 +18,16 @@ export const Item = styled.li<{ $isActive: boolean }>`
     background-color: ${vars.theme((theme) => theme.dropdown.item.backHover)};
   }
 
-  ${({ $isActive }) =>
-    $isActive &&
-    css`
+  &.is-active {
+    color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
+    background-color: ${vars.theme((theme) => theme.dropdown.item.backActive)};
+
+    &:hover,
+    &:focus {
       color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
       background-color: ${vars.theme(
         (theme) => theme.dropdown.item.backActive
       )};
-
-      &:hover,
-      &:focus {
-        color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
-        background-color: ${vars.theme(
-          (theme) => theme.dropdown.item.backActive
-        )};
-      }
-    `}
+    }
+  }
 `

@@ -1,16 +1,25 @@
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 import { Dropdown } from '@/src/modules/base/components/dropdown'
 import { DropdownItem } from '@/src/modules/base/components/dropdown-item'
-import { useStore } from '../data/state'
-import { Themes } from '../data/types'
+import { getCurrentTheme, injectTheme, setCurrentTheme } from '../services'
+import { Themes } from '../types/themes'
 import * as S from './styles'
+import { useEffect, useState } from 'react'
 
 export const ThemeToggle = () => {
-  const { theme, setTheme } = useStore()
+  const [theme, setTheme] = useState(Themes.System)
 
   const handleThemeChange = (theme: Themes) => {
     setTheme(theme)
+    setCurrentTheme(theme)
   }
+
+  useEffect(() => {
+    const currentTheme = getCurrentTheme()
+
+    setTheme(currentTheme)
+    injectTheme(currentTheme)
+  }, [])
 
   return (
     <>

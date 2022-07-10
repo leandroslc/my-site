@@ -1,5 +1,4 @@
 export const light = {
-  name: 'light',
   all: {
     outline: '#24180b',
     outlineInset: '#eef1f5',
@@ -53,7 +52,6 @@ export type ColorScheme = typeof light
 
 export const dark: ColorScheme = {
   ...light,
-  name: 'dark',
   header: {
     ...light.header,
     painting: {

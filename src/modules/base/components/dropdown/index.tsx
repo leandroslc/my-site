@@ -79,7 +79,7 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
         style={styles.popper}
         aria-orientation="vertical"
         aria-labelledby={id}
-        $isOpen={isOpen}
+        className={isOpen ? 'is-open' : ''}
         {...attributes.popper}
       >
         {children}

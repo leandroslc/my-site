@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
-export const Menu = styled.div<{ $isOpen: boolean }>`
+export const Menu = styled.div`
   z-index: 2;
-  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
+  display: none;
   flex-direction: column;
   min-width: 14rem;
   padding: 4px 0;
@@ -14,6 +14,10 @@ export const Menu = styled.div<{ $isOpen: boolean }>`
   box-shadow: 0 0 0 0 ${vars.theme((theme) => theme.dropdown.menu.shadowRing)},
     0 10px 15px -3px ${vars.theme((theme) => theme.dropdown.menu.shadow)},
     0 4px 6px -4px ${vars.theme((theme) => theme.dropdown.menu.shadow)};
+
+  &.is-open {
+    display: flex;
+  }
 `
 
 export const Button = styled.button`

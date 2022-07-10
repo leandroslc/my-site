@@ -1,9 +1,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { ThemeProvider } from '@/src/modules/app'
 
 export const renderWithProviers = (component: React.ReactElement) => {
-  return render(<ThemeProvider>{component}</ThemeProvider>)
+  return render(component)
 }
 
 export const arrangeWindowMatchMedia = (matches: boolean) => {
