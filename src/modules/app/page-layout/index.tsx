@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
 import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
+import { Footer } from '@/src/modules/base/components/footer'
 import { ParticlesContainer } from '@/src/modules/base/components/particles-container'
 import { Meta } from '@/src/modules/base/components/meta'
 import { ThemeToggle } from '../theme-toggle'
@@ -28,6 +29,7 @@ export const PageLayout = ({ children, header, title }: Props) => {
         {header && header}
       </S.Header>
       <S.Main>{children}</S.Main>
+      <Footer />
     </>
   )
 }

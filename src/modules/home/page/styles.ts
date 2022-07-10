@@ -19,5 +19,5 @@ export const Posts = styled.main`
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   row-gap: 90px;
   column-gap: 90px;
-  padding: 60px 0 40px 0;
+  padding: 60px 0 80px 0;
 `

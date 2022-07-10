@@ -11,6 +11,11 @@ export const light = {
   main: {
     back: '#e5ede8',
   },
+  footer: {
+    back: '#0a4f8b',
+    text: '#ffffff',
+    divider: '#1cb5e0',
+  },
   body: {
     back: '#000851',
     text: '#1a1e2b',
@@ -24,6 +29,7 @@ export const light = {
     },
     menu: {
       back: '#0c1127',
+      border: '#1cb5e0',
       text: '#ffffff',
       shadowRing: '#ffffff',
       shadow: 'rgb(0 0 0 / 0.1)',
