@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { vars } from '@/src/theme'
 
 export const Footer = styled.footer`
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.footer.back};
+  background-color: ${vars.theme((theme) => theme.footer.back)};
 
   ::after {
     content: '';
@@ -14,7 +15,7 @@ export const Footer = styled.footer`
     left: 26px;
     width: 25px;
     height: 25px;
-    background-color: ${({ theme }) => theme.footer.back};
+    background-color: ${vars.theme((theme) => theme.footer.back)};
     border-radius: 50%;
   }
 
@@ -26,7 +27,7 @@ export const Footer = styled.footer`
     left: 40px;
     width: 34px;
     height: 34px;
-    background-color: ${({ theme }) => theme.footer.back};
+    background-color: ${vars.theme((theme) => theme.footer.back)};
     border-radius: 50%;
   }
 `
@@ -48,7 +49,7 @@ export const NavLink = styled.a`
   position: relative;
   display: inline-block;
   margin-right: 24px;
-  color: ${({ theme }) => theme.footer.text};
+  color: ${vars.theme((theme) => theme.footer.text)};
   text-decoration: none;
 
   &:hover,
@@ -66,7 +67,7 @@ export const NavLink = styled.a`
     display: block;
     width: 74%;
     height: 1px;
-    background-color: ${({ theme }) => theme.footer.text};
+    background-color: ${vars.theme((theme) => theme.footer.text)};
     transition: width 0.1s;
   }
 `
@@ -77,16 +78,16 @@ export const NavSocialLink = styled.a`
   align-items: center;
   margin-right: 16px;
   padding: 8px;
-  color: ${({ theme }) => theme.footer.text};
+  color: ${vars.theme((theme) => theme.footer.text)};
   text-decoration: none;
-  border: 1px solid ${({ theme }) => theme.footer.text};
+  border: 1px solid ${vars.theme((theme) => theme.footer.text)};
   border-radius: 50%;
   transition: background-color 0.1s;
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.body.text};
-    background-color: ${({ theme }) => theme.footer.text};
+    color: ${vars.theme((theme) => theme.body.text)};
+    background-color: ${vars.theme((theme) => theme.footer.text)};
     transition: background-color 0.1s;
   }
 `
@@ -103,6 +104,6 @@ export const Copyright = styled.div`
   justify-content: center;
   padding: 4px 16px;
   font-size: 0.9rem;
-  color: ${({ theme }) => theme.footer.text};
-  border-top: 1px solid ${({ theme }) => theme.footer.divider};
+  color: ${vars.theme((theme) => theme.footer.text)};
+  border-top: 1px solid ${vars.theme((theme) => theme.footer.divider)};
 `

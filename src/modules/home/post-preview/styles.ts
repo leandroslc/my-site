@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { sizes } from '@/src/theme'
+import { sizes, vars } from '@/src/theme'
 
 export const Card = styled.article`
   display: flex;
@@ -43,8 +43,8 @@ export const PostLink = styled.a`
     }
 
     ${Image} {
-      box-shadow: 0 0 0 3px ${({ theme }) => theme.main.back},
-        0 0 3px 5px ${({ theme }) => theme.postCard.borderHover};
+      box-shadow: 0 0 0 3px ${vars.theme((theme) => theme.main.back)},
+        0 0 3px 5px ${vars.theme((theme) => theme.postCard.borderHover)};
       transition: box-shadow 0.1s;
     }
   }

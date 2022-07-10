@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { vars } from '@/src/theme'
 
 export const Item = styled.li<{ $isActive: boolean }>`
   display: flex;
@@ -13,20 +14,24 @@ export const Item = styled.li<{ $isActive: boolean }>`
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.dropdown.item.textHover};
-    background-color: ${({ theme }) => theme.dropdown.item.backHover};
+    color: ${vars.theme((theme) => theme.dropdown.item.textHover)};
+    background-color: ${vars.theme((theme) => theme.dropdown.item.backHover)};
   }
 
-  ${({ theme, $isActive }) =>
+  ${({ $isActive }) =>
     $isActive &&
     css`
-      color: ${theme.dropdown.item.textActive};
-      background-color: ${theme.dropdown.item.backActive};
+      color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
+      background-color: ${vars.theme(
+        (theme) => theme.dropdown.item.backActive
+      )};
 
       &:hover,
       &:focus {
-        color: ${theme.dropdown.item.textActive};
-        background-color: ${({ theme }) => theme.dropdown.item.backActive};
+        color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
+        background-color: ${vars.theme(
+          (theme) => theme.dropdown.item.backActive
+        )};
       }
     `}
 `

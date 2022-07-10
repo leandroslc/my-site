@@ -7,6 +7,9 @@ export const light = {
   header: {
     back: 'linear-gradient(72deg, #000851, #1cb5e0)',
     text: '#ffffff',
+    painting: {
+      filter: 'brightness(95%) sepia(12%)',
+    },
   },
   main: {
     back: '#e5ede8',
@@ -51,4 +54,10 @@ export type ColorScheme = typeof light
 export const dark: ColorScheme = {
   ...light,
   name: 'dark',
+  header: {
+    ...light.header,
+    painting: {
+      filter: 'brightness(80%) sepia(16%)',
+    },
+  },
 }

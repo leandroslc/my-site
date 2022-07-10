@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { vars } from '@/src/theme'
 
 export const Navbar = styled.nav`
   display: flex;
@@ -10,10 +11,10 @@ export const Navbar = styled.nav`
 export const Header = styled.header`
   position: relative;
   flex: 0 1 auto;
-  background: ${({ theme }) => theme.header.back};
+  background: ${vars.theme((theme) => theme.header.back)};
 `
 
 export const Main = styled.main`
   flex: 1 1 auto;
-  background: ${({ theme }) => theme.main.back};
+  background: ${vars.theme((theme) => theme.main.back)};
 `

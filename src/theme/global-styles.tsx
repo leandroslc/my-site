@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import { cssDarkThemeClass } from '@/src/lib/config'
 import { dark, light } from './color-scheme'
-import { parseSchemeToCSSProperties } from './helpers'
+import { parseSchemeToCSSProperties, vars } from './helpers'
 
 export const GlobalStyles = createGlobalStyle`
   *, ::after, ::before {
@@ -10,8 +10,8 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     &:focus {
-      box-shadow: 0 0 0 1px ${({ theme }) => theme.all.outlineInset},
-        0 0 0 3px ${({ theme }) => theme.all.outline};
+      box-shadow: 0 0 0 1px ${vars.theme((theme) => theme.all.outlineInset)},
+        0 0 0 3px ${vars.theme((theme) => theme.all.outline)};
       outline: 2px solid transparent;
       outline-offset: 2px;
     }
@@ -38,9 +38,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     height: 100%;
     margin: 0;
-    color: ${({ theme }) => theme.body.text};
+    color: ${vars.theme((theme) => theme.body.text)};
     font-family: 'Work Sans', Tahoma, Helvetica, Arial, Roboto, sans-serif;
-    background: ${({ theme }) => theme.body.back};
+    background: ${vars.theme((theme) => theme.body.back)};
     transition: all 0.2s linear;
   }
 

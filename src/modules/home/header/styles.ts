@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
-import { isDarkTheme, sizes } from '@/src/theme'
+import styled from 'styled-components'
+import { sizes, vars } from '@/src/theme'
 
 export const Container = styled.div`
   position: relative;
@@ -20,7 +20,7 @@ export const Title = styled.h1`
   justify-content: center;
   margin-top: calc(-1 * (24px + 1rem));
   font-size: 1.4rem;
-  color: ${({ theme }) => theme.header.text};
+  color: ${vars.theme((theme) => theme.header.text)};
   pointer-events: none;
   user-select: none;
 
@@ -46,13 +46,7 @@ export const PaintingImage = styled.img`
   margin-top: 30px;
   pointer-events: none;
   user-select: none;
-  filter: brightness(95%) sepia(12%);
-
-  ${({ theme }) =>
-    isDarkTheme(theme) &&
-    css`
-      filter: brightness(80%) sepia(16%);
-    `}
+  filter: ${vars.theme((theme) => theme.header.painting.filter)};
 `
 
 export const ContentBorder = styled.svg`
