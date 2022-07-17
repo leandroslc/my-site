@@ -22,6 +22,7 @@ export const Title = styled.h1`
   color: ${vars.theme((theme) => theme.header.text)};
   pointer-events: none;
   user-select: none;
+  opacity: 0;
 
   @media (min-width: ${sizes.medium}) {
     font-size: 2rem;

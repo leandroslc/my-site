@@ -1,35 +1,9 @@
-import { useEffect, useRef } from 'react'
 import { ContentBorder } from '@/src/modules/base/components/content-border'
+import { useTitleScroll } from './useTitleScroll'
 import * as S from './styles'
 
 export const Header = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const handleWindowScroll = () => {
-    if (!titleRef.current || !containerRef.current) {
-      return
-    }
-
-    const scrollPos = window.scrollY
-
-    if (scrollPos <= 600) {
-      titleRef.current.style.transform =
-        'translateY(' + -scrollPos / 3 + 'px' + ')'
-
-      titleRef.current.style.opacity = String(
-        1 - scrollPos / containerRef.current.getBoundingClientRect().height
-      )
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleWindowScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleWindowScroll)
-    }
-  }, [])
+  const { titleRef, containerRef } = useTitleScroll()
 
   return (
     <S.Container ref={containerRef}>
