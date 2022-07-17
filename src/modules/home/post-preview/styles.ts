@@ -32,6 +32,11 @@ export const PostLink = styled.a`
   transform: translateY(0);
   transition: transform 0.1s;
 
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
   &:hover,
   &:focus {
     text-decoration: none;

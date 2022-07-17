@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   * {
     &:focus {
       box-shadow: 0 0 0 1px ${vars.theme((theme) => theme.all.outlineInset)},
-        0 0 0 3px ${vars.theme((theme) => theme.all.outline)};
+        0 0 0 3px ${vars.theme((theme) => theme.all.outline)} !important;
       outline: 2px solid transparent;
       outline-offset: 2px;
     }
