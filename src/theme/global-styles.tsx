@@ -15,6 +15,11 @@ export const GlobalStyles = createGlobalStyle`
       outline: 2px solid transparent;
       outline-offset: 2px;
     }
+
+    &::selection {
+      color: ${vars.theme((theme) => theme.all.selection.text)};
+      background-color: ${vars.theme((theme) => theme.all.selection.back)};
+    }
   }
 
   #__next {

@@ -34,7 +34,7 @@ export const PostLink = styled.a`
 
   &:focus {
     outline: none;
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   &:hover,

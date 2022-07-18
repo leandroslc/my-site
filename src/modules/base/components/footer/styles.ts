@@ -96,6 +96,8 @@ export const Signature = styled.img`
   width: auto;
   height: 2.6rem;
   margin-left: auto;
+  user-select: none;
+  pointer-events: none;
 `
 
 export const Copyright = styled.div`

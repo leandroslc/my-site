@@ -1,3 +1,4 @@
+import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/types'
 import { PageLayout } from '@/src/modules/app'
 import { Header } from '../header'
@@ -10,7 +11,7 @@ type Props = {
 
 export const HomePage = ({ posts }: Props) => {
   return (
-    <PageLayout title="Test" header={<Header />}>
+    <PageLayout title={SITE_NAME} header={<Header />}>
       <S.Content>
         <S.Posts>
           {posts.map((post, index) => (

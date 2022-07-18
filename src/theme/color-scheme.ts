@@ -2,6 +2,10 @@ export const light = {
   all: {
     outline: '#24180b',
     outlineInset: '#eef1f5',
+    selection: {
+      back: 'rgba(26, 30, 43, 0.9)',
+      text: '#ffffff',
+    },
   },
   header: {
     back: 'linear-gradient(72deg, #000851, #1cb5e0)',
@@ -45,6 +49,11 @@ export const light = {
   },
   postCard: {
     borderHover: '#284da9',
+  },
+  post: {
+    backToHome: {
+      border: '#1a1e2b',
+    },
   },
 }
 
