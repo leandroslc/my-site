@@ -1,15 +1,15 @@
 import { SITE_NAME } from '@/src/lib/constants'
-import { Post } from '@/src/lib/types'
-import { PageLayout } from '@/src/modules/app'
+import { Post } from '@/src/lib/services/posts/types'
+import { PageLayout } from '@/src/modules/base/components/page-layout'
 import { Header } from '../header'
 import { PostPreview } from '../post-preview'
 import * as S from './styles'
 
-type Props = {
+export type HomeProps = {
   posts: Post[]
 }
 
-export const HomePage = ({ posts }: Props) => {
+export const HomePage = ({ posts }: HomeProps) => {
   return (
     <PageLayout title={SITE_NAME} header={<Header />}>
       <S.Content>

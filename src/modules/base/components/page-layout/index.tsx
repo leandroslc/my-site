@@ -1,9 +1,8 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
-import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
-import { Footer } from '@/src/modules/base/components/footer'
-import { ParticlesContainer } from '@/src/modules/base/components/particles-container'
-import { Meta } from '@/src/modules/base/components/meta'
+import { Footer } from '../footer'
+import { ParticlesContainer } from '../particles-container'
+import { Meta } from '../meta'
 import { ThemeToggle } from '../theme-toggle'
 import * as S from './styles'
 

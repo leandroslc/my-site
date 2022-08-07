@@ -1,13 +1,8 @@
 import { getAllPosts } from '@/src/lib/services/posts'
-import { Post } from '@/src/lib/types/post'
-import { HomePage } from '@/src/modules/home'
+import { HomePage, HomeProps } from '@/src/modules/home'
 
-type Props = {
-  allPosts: Post[]
-}
-
-const Index = ({ allPosts }: Props) => {
-  return <HomePage posts={allPosts} />
+const Index = ({ posts }: HomeProps) => {
+  return <HomePage posts={posts} />
 }
 
 export default Index
@@ -22,6 +17,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: { posts: allPosts },
   }
 }

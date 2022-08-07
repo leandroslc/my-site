@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react'
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
-import { Dropdown } from '@/src/modules/base/components/dropdown'
-import { DropdownItem } from '@/src/modules/base/components/dropdown-item'
+import { Dropdown } from '../dropdown'
+import { DropdownItem } from '../dropdown-item'
 import {
   getCurrentTheme,
   injectTheme,
@@ -8,7 +9,6 @@ import {
 } from '@/src/lib/services/theme'
 import { Themes } from '@/src/lib/services/theme/types'
 import * as S from './styles'
-import { useEffect, useState } from 'react'
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState(Themes.System)
