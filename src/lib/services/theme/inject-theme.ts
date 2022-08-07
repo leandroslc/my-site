@@ -1,4 +1,4 @@
-import { Themes } from '../types/themes'
+import { Themes } from './types'
 
 export const injectTheme = (theme: Themes) => {
   if (typeof window === 'undefined') {

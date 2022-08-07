@@ -1,8 +1,12 @@
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 import { Dropdown } from '@/src/modules/base/components/dropdown'
 import { DropdownItem } from '@/src/modules/base/components/dropdown-item'
-import { getCurrentTheme, injectTheme, setCurrentTheme } from '../services'
-import { Themes } from '../types/themes'
+import {
+  getCurrentTheme,
+  injectTheme,
+  setCurrentTheme,
+} from '@/src/lib/services/theme'
+import { Themes } from '@/src/lib/services/theme/types'
 import * as S from './styles'
 import { useEffect, useState } from 'react'
 

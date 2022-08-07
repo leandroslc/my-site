@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/src/lib/services'
+import { getAllPosts } from '@/src/lib/services/posts'
 import { Post } from '@/src/lib/types/post'
 import { HomePage } from '@/src/modules/home'
 

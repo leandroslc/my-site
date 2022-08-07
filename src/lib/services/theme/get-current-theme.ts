@@ -1,4 +1,4 @@
-import { Themes } from '../types/themes'
+import { Themes } from './types'
 import { themeStorage } from './theme-storage'
 
 const prefersDarkMode = () => {

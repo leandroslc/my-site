@@ -1,8 +1,8 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { postsDirectory } from '../config'
-import { Post, PostProperty } from '../types'
+import { postsDirectory } from '@/src/lib/config'
+import { Post, PostProperty } from './types'
 
 type SelectedItems = {
   [key: string]: string

@@ -1,4 +1,4 @@
-import { Themes } from '../types/themes'
+import { Themes } from './types'
 import { injectTheme } from './inject-theme'
 import { themeStorage } from './theme-storage'
 
