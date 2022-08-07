@@ -1,8 +1,8 @@
 import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
 import { PageLayout } from '@/src/modules/base/components/page-layout'
-import { Header } from '../header'
-import { PostPreview } from '../post-preview'
+import { Header } from '../components/header'
+import { PostPreview } from '../components/post-preview'
 import * as S from './styles'
 
 export type HomeProps = {
