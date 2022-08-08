@@ -1,6 +1,9 @@
 {
   "name": "my-site",
   "private": true,
+  "engines": {
+    "node": ">=16.13.2"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
