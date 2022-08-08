@@ -1,4 +1,4 @@
-import { cssThemePropsPrefix } from '@/src/lib/config'
+import { CSS_THEME_PROPS_PREFIX } from '../constants'
 
 export const parseSchemeToCSSProperties = (
   scheme: Record<string, string | object>,
@@ -10,7 +10,7 @@ export const parseSchemeToCSSProperties = (
   Object.keys(scheme).forEach((prop) => {
     if (typeof scheme[prop] === 'string') {
       const property = `${
-        prefix ?? cssThemePropsPrefix
+        prefix ?? CSS_THEME_PROPS_PREFIX
       }-${prop.toLowerCase()}: ${scheme[prop]};`
 
       properties.push(property)
@@ -22,7 +22,7 @@ export const parseSchemeToCSSProperties = (
         properties,
         prefix
           ? `${prefix}-${prop.toLowerCase()}`
-          : `${cssThemePropsPrefix}-${prop.toLowerCase()}`
+          : `${CSS_THEME_PROPS_PREFIX}-${prop.toLowerCase()}`
       )
 
       innerProperties.forEach((prop) => {

@@ -1,5 +1,5 @@
-import { type ColorScheme } from '../color-scheme'
-import { cssThemePropsPrefix } from '@/src/lib/config'
+import { CSS_THEME_PROPS_PREFIX } from '@/src/lib/constants'
+import { type ColorScheme } from './color-scheme'
 
 const FUNCTION_PARSE_EXPRESSION = new RegExp(/[^0-9A-Za-z\.]*/gm)
 
@@ -16,7 +16,7 @@ const parseFunction = (fn: Function) => {
 const theme = (selector: (scheme: ColorScheme) => string) => {
   const expression = parseFunction(selector)
 
-  return `var(${cssThemePropsPrefix}${expression})`
+  return `var(${CSS_THEME_PROPS_PREFIX}${expression})`
 }
 
 export const vars = {

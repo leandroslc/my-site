@@ -1,4 +1,4 @@
-import { vars } from '@/src/theme/helpers'
+import { vars } from '@/src/theme'
 
 describe('theme-helper-variables', () => {
   test('Should return theme variable given scheme item', () => {

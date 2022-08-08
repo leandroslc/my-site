@@ -1,4 +1,4 @@
-import { parseSchemeToCSSProperties } from '@/src/theme/helpers'
+import { parseSchemeToCSSProperties } from '@/src/lib/helpers'
 
 const scheme = {
   outline: '#f00',
