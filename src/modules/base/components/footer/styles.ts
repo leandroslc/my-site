@@ -86,7 +86,7 @@ export const NavSocialLink = styled.a`
 
   &:hover,
   &:focus {
-    color: ${vars.theme((theme) => theme.body.text)};
+    color: ${vars.theme((theme) => theme.footer.textHover)};
     background-color: ${vars.theme((theme) => theme.footer.text)};
     transition: background-color 0.1s;
   }
