@@ -1,13 +1,17 @@
+import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
+import type { Engine } from 'tsparticles-engine'
+import { loadSlim } from 'tsparticles-slim'
 import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
 import * as S from './styles'
 
-const initParticles = async (engine: any) => {
-  await loadFull(engine)
-}
+const colors = ['#afa0b9']
 
 export const ParticlesContainer = () => {
+  const initParticles = useCallback(async (engine: Engine) => {
+    await loadSlim(engine)
+  }, [])
+
   return (
     <S.Container>
       <ClientSideOnly>
@@ -19,6 +23,7 @@ export const ParticlesContainer = () => {
               enable: false,
               zIndex: 0,
             },
+            pauseOnOutsideViewport: true,
             particles: {
               zIndex: {
                 value: 0,
@@ -26,16 +31,18 @@ export const ParticlesContainer = () => {
               move: {
                 enable: true,
                 bounce: false,
-                direction: 'none',
+                direction: 'top',
                 outModes: 'out',
+                outMode: 'out',
+                warp: true,
                 random: false,
-                speed: 1,
+                speed: 0.75,
                 straight: false,
               },
               number: {
-                value: 80,
+                value: 20,
                 density: {
-                  area: 800,
+                  area: 400,
                 },
               },
               shape: {
@@ -45,7 +52,7 @@ export const ParticlesContainer = () => {
                 value: { min: 1, max: 5 },
               },
               color: {
-                value: ['#9B51E0', '#3CDBA2', '#C28C4C'],
+                value: colors,
               },
             },
           }}
