@@ -5,7 +5,7 @@ export const PostContainer = styled.article`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 60px 16px 80px 16px;
+  padding: 30px 16px 80px 16px;
   margin: 0 auto;
 
   @media (min-width: ${sizes.small}) {

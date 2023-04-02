@@ -16,7 +16,8 @@ export const Title = styled.h1`
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 16rem;
+  height: auto;
+  max-height: 16rem;
   margin-bottom: 40px;
   overflow: hidden;
   border-radius: 8px;
