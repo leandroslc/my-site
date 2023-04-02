@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FiArrowLeft } from 'react-icons/fi'
-import * as S from './styles'
+import * as S from './BackButton.styles'
 
 export const BackButton = () => {
   return (

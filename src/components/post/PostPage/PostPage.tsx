@@ -4,11 +4,11 @@ import { useRouter } from 'next/router'
 import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
-import { BackButton } from '../components/back-button'
-import { Header } from '../components/header'
-import { PostBody } from '../components/post-body'
-import { PostHeader } from '../components/post-header'
-import * as S from './styles'
+import { BackButton } from '../BackButton/BackButton'
+import { Header } from '../components/PostPageHeader/PostPageHeader'
+import { PostBody } from '../components/PostBody/PostBody'
+import { PostHeader } from '../components/PostHeader/PostHeader'
+import * as S from './PostPage.styles'
 
 export type PostProps = {
   post: Post

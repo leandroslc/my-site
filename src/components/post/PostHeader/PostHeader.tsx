@@ -1,5 +1,5 @@
 import { formatDate } from '@/src/lib/helpers'
-import * as S from './styles'
+import * as S from './PostHeader.styles'
 
 type Props = {
   title: string

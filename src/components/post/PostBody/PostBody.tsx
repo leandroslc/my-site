@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './PostBody.styles'
 
 type Props = {
   content: string

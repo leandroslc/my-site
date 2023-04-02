@@ -1,6 +1,6 @@
 import markdownToHtml from '@/src/lib/services/markdown/markdown-to-html'
 import { getAllPosts, getPostBySlug } from '@/src/lib/services/posts'
-import { PostPage, PostProps } from '@/src/modules/post'
+import { PostPage, PostProps } from '@/src/components/post/PostPage'
 
 const Post = ({ post }: PostProps) => {
   return <PostPage post={post} />
