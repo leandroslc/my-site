@@ -1,5 +1,5 @@
 import { Border } from '@/src/components/base/Border'
-import { useTitleScroll } from './useTitleScroll'
+import { useTitleScroll } from '@/src/lib/hooks/useTitleScroll'
 import * as S from './styles'
 
 export const Header = () => {

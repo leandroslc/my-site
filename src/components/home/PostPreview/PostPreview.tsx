@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { formatDate, truncate } from '@/src/lib/helpers'
 import { Post } from '@/src/lib/services/posts/types'
-import * as S from './styles'
+import * as S from './PostPreview.styles'
 
 type Props = {
   post: Post

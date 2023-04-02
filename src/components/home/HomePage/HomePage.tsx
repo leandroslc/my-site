@@ -2,9 +2,9 @@ import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
 import { Emoji } from '@/src/components/base/Emoji/Emoji'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
-import { Header } from '../components/header'
-import { PostPreview } from '../components/post-preview'
-import * as S from './styles'
+import { HomeHeader } from '../HomeHeader/HomeHeader'
+import { PostPreview } from '../PostPreview/PostPreview'
+import * as S from './HomePage.styles'
 
 export type HomeProps = {
   posts: Post[]
@@ -12,7 +12,7 @@ export type HomeProps = {
 
 export const HomePage = ({ posts }: HomeProps) => {
   return (
-    <PageLayout title={SITE_NAME} header={<Header />}>
+    <PageLayout title={SITE_NAME} header={<HomeHeader />}>
       <S.Content>
         <S.Hi>
           Hi <Emoji symbol="&#x1F60A;" alt="Smiling Face with Smiling Eyes" />

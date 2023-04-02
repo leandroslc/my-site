@@ -1,8 +1,8 @@
 import { Border } from '@/src/components/base/Border'
-import { useTitleScroll } from './useTitleScroll'
-import * as S from './styles'
+import { useTitleScroll } from '../../../lib/hooks/useTitleScroll'
+import * as S from './HomeHeader.styles'
 
-export const Header = () => {
+export const HomeHeader = () => {
   const { titleRef, containerRef } = useTitleScroll()
 
   return (
