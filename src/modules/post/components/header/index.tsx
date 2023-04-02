@@ -1,4 +1,4 @@
-import { ContentBorder } from '@/src/modules/base/components/content-border'
+import { Border } from '@/src/modules/base/components/Border'
 import { useTitleScroll } from './useTitleScroll'
 import * as S from './styles'
 
@@ -15,7 +15,7 @@ export const Header = () => {
         src="/assets/site/header-painting.png"
         alt="Uma pintura simples de teclas de piano, um relógio de bolso, uma xícara e um pincel"
       />
-      <S.ContentBorder as={ContentBorder} />
+      <S.ContentBorder as={Border} />
     </S.Container>
   )
 }

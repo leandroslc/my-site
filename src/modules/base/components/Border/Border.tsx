@@ -1,9 +1,9 @@
 import React from 'react'
-import * as S from './styles'
+import * as S from './Border.styles'
 
 type Props = React.SVGProps<{}>
 
-export const ContentBorder = ({ className }: Props) => {
+export const Border = ({ className }: Props) => {
   return (
     <S.Svg
       width="1116"
