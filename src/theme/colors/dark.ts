@@ -21,7 +21,7 @@ export const dark = {
     back: '#284f72',
     text: '#ffffff',
     textHover: '#1a1e2b',
-    divider: '#3394af',
+    divider: 'rgb(237 234 229 / 10%)',
   },
   body: {
     back: '#303344',

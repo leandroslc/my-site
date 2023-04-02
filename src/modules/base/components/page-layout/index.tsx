@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
 import { Footer } from '../footer'
+import { FooterBorder } from '../FooterBorder'
 import { ParticlesContainer } from '../particles-container'
 import { Meta } from '../meta'
 import { ThemeToggle } from '../theme-toggle'
@@ -25,7 +26,10 @@ export const PageLayout = ({ children, header, title }: Props) => {
         </S.Navbar>
         {header && header}
       </S.Header>
-      <S.Main>{children}</S.Main>
+      <S.Main>
+        {children}
+        <FooterBorder />
+      </S.Main>
       <Footer />
     </>
   )

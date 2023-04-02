@@ -23,7 +23,7 @@ export const light: ColorScheme = {
     back: '#0a4f8b',
     text: '#ffffff',
     textHover: '#1a1e2b',
-    divider: '#1cb5e0',
+    divider: 'rgb(237 234 229 / 10%)',
   },
   body: {
     back: '#edeae5',
