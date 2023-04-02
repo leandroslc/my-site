@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { usePopper } from 'react-popper'
-import * as S from './styles'
+import * as S from './Dropdown.styles'
 
 type Props = PropsWithChildren<{
   id: string

@@ -1,4 +1,4 @@
-import { Border } from '@/src/modules/base/components/Border'
+import { Border } from '@/src/components/base/Border'
 import { useTitleScroll } from './useTitleScroll'
 import * as S from './styles'
 

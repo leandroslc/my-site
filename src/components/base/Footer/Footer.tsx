@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import * as S from './styles'
+import * as S from './Footer.styles'
 
 export const Footer = () => {
   return (

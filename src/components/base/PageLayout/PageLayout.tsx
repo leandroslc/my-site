@@ -1,11 +1,11 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
-import { Footer } from '../footer'
+import { Footer } from '../Footer/Footer'
 import { FooterBorder } from '../FooterBorder'
-import { ParticlesContainer } from '../particles-container'
-import { Meta } from '../meta'
-import { ThemeToggle } from '../theme-toggle'
-import * as S from './styles'
+import { ParticlesContainer } from '../ParticlesContainer/ParticlesContainer'
+import { Meta } from '../Meta/Meta'
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
+import * as S from './PageLayout.styles'
 
 type Props = PropsWithChildren<{
   title: string

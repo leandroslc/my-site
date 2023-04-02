@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { AnyComponentType, PropsWithAnyComponent } from '../../types'
-import * as S from './styles'
+import { AnyComponentType, PropsWithAnyComponent } from '../../../modules/base/types'
+import * as S from './DropdownItem.styles'
 
 interface InnerProps {
   active?: boolean

@@ -2,8 +2,8 @@ import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import type { Engine } from 'tsparticles-engine'
 import { loadSlim } from 'tsparticles-slim'
-import { ClientSideOnly } from '@/src/modules/base/components/client-side-only'
-import * as S from './styles'
+import { ClientSideOnly } from '@/src/components/base/ClientSideOnly'
+import * as S from './ParticlesContainer.styles'
 
 const colors = ['#afa0b9']
 
