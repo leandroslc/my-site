@@ -5,9 +5,9 @@ import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
 import { BackButton } from '../BackButton/BackButton'
-import { Header } from '../components/PostPageHeader/PostPageHeader'
-import { PostBody } from '../components/PostBody/PostBody'
-import { PostHeader } from '../components/PostHeader/PostHeader'
+import { PostPageHeader } from '../PostPageHeader'
+import { PostBody } from '../PostBody'
+import { PostHeader } from '../PostHeader'
 import * as S from './PostPage.styles'
 
 export type PostProps = {
@@ -22,7 +22,10 @@ export const PostPage = ({ post }: PostProps) => {
   }
 
   return (
-    <PageLayout title={`${post.title} | ${SITE_NAME}`} header={<Header />}>
+    <PageLayout
+      title={`${post.title} | ${SITE_NAME}`}
+      header={<PostPageHeader />}
+    >
       {router.isFallback ? (
         <>Loading...</>
       ) : (

@@ -1,5 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { AnyComponentType, PropsWithAnyComponent } from '../../../modules/base/types'
+import {
+  AnyComponentType,
+  PropsWithAnyComponent,
+} from '@/src/lib/types/GenericComponent'
 import * as S from './DropdownItem.styles'
 
 interface InnerProps {

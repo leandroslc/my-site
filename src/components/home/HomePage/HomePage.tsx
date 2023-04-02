@@ -1,9 +1,9 @@
 import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
-import { Emoji } from '@/src/components/base/Emoji/Emoji'
-import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
-import { HomeHeader } from '../HomeHeader/HomeHeader'
-import { PostPreview } from '../PostPreview/PostPreview'
+import { Emoji } from '@/src/components/base/Emoji'
+import { PageLayout } from '@/src/components/base/PageLayout'
+import { HomeHeader } from '../HomeHeader'
+import { PostPreview } from '../PostPreview'
 import * as S from './HomePage.styles'
 
 export type HomeProps = {
