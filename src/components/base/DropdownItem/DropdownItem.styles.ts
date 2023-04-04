@@ -7,6 +7,7 @@ export const Item = styled.li`
   justify-content: flex-start;
   padding: 6px 16px;
   font-size: 0.925rem;
+  border-radius: 4px;
 
   & + & {
     margin-top: 4px;

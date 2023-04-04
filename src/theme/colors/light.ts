@@ -37,8 +37,8 @@ export const light: ColorScheme = {
       shadow: 'rgb(0 0 0 / 0.1)',
     },
     menu: {
-      back: '#0c1127',
-      border: '#1cb5e0',
+      back: 'rgb(12 17 39 / 75%)',
+      border: '#050317',
       text: '#ffffff',
       shadowRing: '#ffffff',
       shadow: 'rgb(0 0 0 / 0.1)',
