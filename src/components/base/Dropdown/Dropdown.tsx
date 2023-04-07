@@ -1,6 +1,7 @@
-import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
+import React, { PropsWithChildren, useRef } from 'react'
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { usePopper } from 'react-popper'
+import { useMenuControl } from '@/src/components/hooks/useMenuControl'
 import * as S from './Dropdown.styles'
 
 type Props = PropsWithChildren<{
@@ -10,10 +11,10 @@ type Props = PropsWithChildren<{
 }>
 
 export const Dropdown = ({ children, id, label, title }: Props) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+
+  const { isOpen, setIsOpen } = useMenuControl({ menuRef, toggleRef })
 
   const { styles, attributes } = usePopper(toggleRef.current, menuRef.current, {
     placement: 'bottom-end',
@@ -28,38 +29,9 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
     ],
   })
 
-  const handleOutsideClick = (event: MouseEvent) => {
-    const element = event.target as Node
-
-    if (
-      toggleRef.current?.contains(element) ||
-      menuRef.current?.contains(element)
-    ) {
-      return
-    }
-
-    setTimeout(() => setIsOpen(false), 1)
-  }
-
-  const handleOutsideKeyPress = (event: KeyboardEvent) => {
-    if (event.key === 'Escape' && isOpen) {
-      setIsOpen(false)
-    }
-  }
-
   const handleToggleClick = () => {
     setIsOpen(!isOpen)
   }
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleOutsideClick)
-    document.addEventListener('keyup', handleOutsideKeyPress)
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick)
-      document.removeEventListener('keyup', handleOutsideKeyPress)
-    }
-  })
 
   return (
     <>

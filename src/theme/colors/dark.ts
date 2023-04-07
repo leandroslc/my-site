@@ -36,6 +36,7 @@ export const dark = {
     },
     menu: {
       back: 'rgb(12 17 39 / 75%)',
+      backFull: 'rgb(12 17 39 / 100%)',
       border: '#050317',
       text: '#ffffff',
       shadowRing: '#ffffff',
@@ -44,7 +45,7 @@ export const dark = {
     item: {
       backActive: '#d9f2f2',
       textActive: '#1a1e2b',
-      backHover: '#252e5a',
+      backHover: 'rgb(42 99 132 / 50%)',
       textHover: '#ffffff',
     },
   },

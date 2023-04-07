@@ -7,6 +7,7 @@ export const Menu = styled.div`
   flex-direction: column;
   min-width: 16rem;
   padding: 12px 6px;
+  overflow: hidden;
   visibility: hidden;
   color: ${vars.theme((theme) => theme.dropdown.menu.text)};
   background-color: ${vars.theme((theme) => theme.dropdown.menu.back)};
