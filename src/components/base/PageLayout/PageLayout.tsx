@@ -1,10 +1,10 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
+import { OptionsMenu } from '@/src/components/options/OptionsMenu'
 import { Footer } from '../Footer'
 import { FooterBorder } from '../FooterBorder'
 import { ParticlesContainer } from '../ParticlesContainer'
 import { Meta } from '../Meta'
-import { ThemeToggle } from '../ThemeToggle'
 import * as S from './PageLayout.styles'
 
 type Props = PropsWithChildren<{
@@ -22,7 +22,7 @@ export const PageLayout = ({ children, header, title }: Props) => {
       <S.Header>
         <ParticlesContainer />
         <S.Navbar>
-          <ThemeToggle />
+          <OptionsMenu />
         </S.Navbar>
         {header && header}
       </S.Header>

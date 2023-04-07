@@ -6,6 +6,7 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 16rem;
+  min-height: 16rem;
   padding: 12px 6px;
   overflow: hidden;
   visibility: hidden;

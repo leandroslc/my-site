@@ -18,10 +18,10 @@ export const BackButtonIcon = styled.svg`
 
 export const Divider = styled.div`
   display: block;
-  margin: 4px 40% 4px 40%;
+  margin: 6px 40% 6px 40%;
   width: auto;
   height: 1px;
-  opacity: 0.2;
+  opacity: 0.4;
   background-color: ${vars.theme((theme) => theme.dropdown.menu.text)};
 `
 

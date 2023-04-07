@@ -42,7 +42,7 @@ export const DrilldownItem = ({
       >
         <S.ItemLabel>
           {label}
-          <S.ItemLabelChevron as={FiChevronRight} />
+          <S.ItemLabelChevron as={FiChevronRight} aria-hidden="true" />
         </S.ItemLabel>
       </DropdownItem>
       <S.Menu
@@ -58,7 +58,7 @@ export const DrilldownItem = ({
           title={backButtonTitle}
           onClick={handleBackClick}
         >
-          <S.BackButtonIcon as={FiChevronLeft} />
+          <S.BackButtonIcon as={FiChevronLeft} aria-hidden="true" />
           Back
         </DropdownItem>
         <S.Divider />

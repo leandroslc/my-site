@@ -44,7 +44,10 @@ export const Dropdown = ({ children, id, label, title }: Props) => {
         ref={toggleRef}
       >
         {label}
-        <S.ButtonChevron as={isOpen ? FiChevronUp : FiChevronDown} />
+        <S.ButtonChevron
+          as={isOpen ? FiChevronUp : FiChevronDown}
+          aria-hidden="true"
+        />
       </S.Button>
       <S.Menu
         ref={menuRef}
