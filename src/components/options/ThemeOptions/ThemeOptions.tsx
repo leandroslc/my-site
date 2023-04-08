@@ -9,7 +9,7 @@ import { Themes } from '@/src/lib/services/theme/types'
 import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
 import { Option } from '../Option'
-import { OptionItem } from '../OptionItem'
+import * as S from './ThemeOptions.styles'
 
 const ThemeNames = {
   [Themes.Dark]: 'Dark',
@@ -23,12 +23,32 @@ const ThemeIcons = {
   [Themes.System]: FiMonitor,
 }
 
+const ThemeColors = {
+  [Themes.Dark]: '#2ed0f1',
+  [Themes.Light]: '#ffe9ac',
+  [Themes.System]: '#bfffb5',
+}
+
 export const ThemeOptions = () => {
   const [theme, setTheme] = useState(Themes.System)
 
   const handleThemeChange = (theme: Themes) => {
     setTheme(theme)
     setCurrentTheme(theme)
+  }
+
+  const isActive = (currentTheme: Themes) => {
+    return theme === currentTheme
+  }
+
+  const getIconColor = (theme: Themes) => {
+    return isActive(theme) ? undefined : ThemeColors[theme]
+  }
+
+  const getIcon = (theme: Themes) => {
+    const Icon = ThemeIcons[theme]
+
+    return <Icon color={ThemeColors[theme]} />
   }
 
   useEffect(() => {
@@ -44,34 +64,55 @@ export const ThemeOptions = () => {
       label={
         <Option
           name="Theme"
-          selectedOptionDescription={ThemeNames[theme]}
-          Icon={ThemeIcons[theme]}
+          description={ThemeNames[theme]}
+          icon={getIcon(theme)}
         />
       }
     >
       <DropdownItem
         as="button"
         type="button"
-        active={theme === Themes.Dark}
+        active={isActive(Themes.Dark)}
         onClick={() => handleThemeChange(Themes.Dark)}
       >
-        <OptionItem Icon={FiMoon}>{ThemeNames[Themes.Dark]}</OptionItem>
+        <S.OptionItem>
+          <S.OptionIcon
+            as={FiMoon}
+            aria-hidden="true"
+            color={getIconColor(Themes.Dark)}
+          />
+          {ThemeNames[Themes.Dark]}
+        </S.OptionItem>
       </DropdownItem>
       <DropdownItem
         as="button"
         type="button"
-        active={theme === Themes.Light}
+        active={isActive(Themes.Light)}
         onClick={() => handleThemeChange(Themes.Light)}
       >
-        <OptionItem Icon={FiSun}>{ThemeNames[Themes.Light]}</OptionItem>
+        <S.OptionItem>
+          <S.OptionIcon
+            as={FiSun}
+            aria-hidden="true"
+            color={getIconColor(Themes.Light)}
+          />
+          {ThemeNames[Themes.Light]}
+        </S.OptionItem>
       </DropdownItem>
       <DropdownItem
         as="button"
         type="button"
-        active={theme === Themes.System}
+        active={isActive(Themes.System)}
         onClick={() => handleThemeChange(Themes.System)}
       >
-        <OptionItem Icon={FiMonitor}>{ThemeNames[Themes.System]}</OptionItem>
+        <S.OptionItem>
+          <S.OptionIcon
+            as={FiMonitor}
+            aria-hidden="true"
+            color={getIconColor(Themes.System)}
+          />
+          {ThemeNames[Themes.System]}
+        </S.OptionItem>
       </DropdownItem>
     </DrilldownItem>
   )

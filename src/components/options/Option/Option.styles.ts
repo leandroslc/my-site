@@ -16,6 +16,6 @@ export const OptionSelection = styled.span`
   margin-left: 12px;
 `
 
-export const OptionIcon = styled.svg`
+export const OptionIcon = styled.span`
   margin-right: 0.5rem;
 `

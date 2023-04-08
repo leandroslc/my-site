@@ -66,4 +66,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: inherit;
     font-weight: inherit;
   }
+
+  pre[class*=language-] {
+    border-radius: 0.3rem !important;
+  }
 `

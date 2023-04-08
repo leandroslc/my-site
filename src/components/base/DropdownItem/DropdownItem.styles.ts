@@ -9,7 +9,7 @@ export const Item = styled.li`
   font-size: 0.925rem;
   border-radius: 4px;
 
-  & + & {
+  & ~ & {
     margin-top: 4px;
   }
 

@@ -21,7 +21,7 @@ export const Divider = styled.div`
   margin: 6px 40% 6px 40%;
   width: auto;
   height: 1px;
-  opacity: 0.4;
+  opacity: 0.6;
   background-color: ${vars.theme((theme) => theme.dropdown.menu.text)};
 `
 
