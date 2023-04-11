@@ -5,7 +5,7 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 16px;
+  padding: 12px 16px;
 `
 
 export const Header = styled.header`

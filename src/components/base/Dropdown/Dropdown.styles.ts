@@ -56,7 +56,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  font-size: 0.925rem;
+  font-size: 1rem;
   font-weight: 500;
   color: ${vars.theme((theme) => theme.dropdown.button.text)};
   background-color: ${vars.theme((theme) => theme.dropdown.button.back)};

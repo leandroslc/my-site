@@ -43,7 +43,6 @@ export const PaintingImage = styled.img`
   z-index: 1;
   width: 80vw;
   height: auto;
-  margin-top: 30px;
   pointer-events: none;
   user-select: none;
   filter: ${vars.theme((theme) => theme.header.painting.filter)};

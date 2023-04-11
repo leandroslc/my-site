@@ -9,6 +9,10 @@ export const light: ColorScheme = {
       text: '#ffffff',
     },
   },
+  elements: {
+    emphasys: 'rgb(0 191 255)',
+    emphasys30: 'rgb(0 191 255 / 36%)',
+  },
   header: {
     back: 'linear-gradient(72deg, #000851, #1cb5e0)',
     text: '#ffffff',

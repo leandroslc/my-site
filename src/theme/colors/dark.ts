@@ -7,6 +7,10 @@ export const dark = {
       text: 'rgba(26, 30, 43, 0.9)',
     },
   },
+  elements: {
+    emphasys: 'rgb(0 191 255)',
+    emphasys30: 'rgb(0 191 255 / 36%)',
+  },
   header: {
     back: 'linear-gradient(72deg, #121638, #3394af)',
     text: '#ffffff',

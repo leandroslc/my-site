@@ -1,9 +1,10 @@
 import { SITE_NAME } from '@/src/lib/constants'
 import { Post } from '@/src/lib/services/posts/types'
-import { Emoji } from '@/src/components/base/Emoji'
 import { PageLayout } from '@/src/components/base/PageLayout'
+import { Emoji } from '../../base/Emoji'
 import { HomeHeader } from '../HomeHeader'
 import { PostPreview } from '../PostPreview'
+import { Hero } from '../Hero'
 import * as S from './HomePage.styles'
 
 export type HomeProps = {
@@ -14,10 +15,13 @@ export const HomePage = ({ posts }: HomeProps) => {
   return (
     <PageLayout title={SITE_NAME} header={<HomeHeader />}>
       <S.Content>
-        <S.Hi>
-          Hi <Emoji symbol="&#x1F60A;" alt="Smiling Face with Smiling Eyes" />
-        </S.Hi>
-        <S.IntroText>You can read some of my posts here:</S.IntroText>
+        <Hero />
+        <S.Title>Blog</S.Title>
+        <S.Description>
+          Sometimes I try to write about things I wanted to know and that maybe
+          should be important to other people. If passing by, take a time to
+          have a look <Emoji symbol="&#x1F642;" alt="Slightly Smiling Face" />.
+        </S.Description>
         <S.Posts>
           {posts.map((post, index) => (
             <PostPreview key={index} post={post} />

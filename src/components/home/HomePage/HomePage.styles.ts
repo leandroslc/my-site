@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import { sizes } from '@/src/theme'
+import { sizes, vars } from '@/src/theme'
 
 export const Content = styled.section`
-  padding: 30px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px 80px 24px;
   margin: 0 auto;
 
   @media (min-width: ${sizes.small}) {
@@ -14,15 +16,30 @@ export const Content = styled.section`
   }
 `
 
-export const IntroText = styled.p`
+export const Title = styled.h1`
   display: block;
-  width: 100%;
-  margin: 0;
-  font-size: 1.2rem;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: ${vars.theme((theme) => theme.elements.emphasys)};
+    border-radius: 4px;
+    transform: rotate(-1.2deg);
+  }
 `
 
-export const Hi = styled(IntroText)`
-  font-size: 1.6rem;
+export const Description = styled.p`
+  display: block;
+  margin-bottom: 12px;
+
+  @media (min-width: ${sizes.small}) {
+    max-width: 50%;
+  }
 `
 
 export const Posts = styled.main`
@@ -30,5 +47,5 @@ export const Posts = styled.main`
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   row-gap: 60px;
   column-gap: 90px;
-  padding: 40px 0 80px 0;
+  padding: 40px 20px 80px 20px;
 `

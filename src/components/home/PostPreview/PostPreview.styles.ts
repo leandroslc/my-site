@@ -21,7 +21,7 @@ export const Image = styled.img`
 `
 
 export const Title = styled.h1`
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 1.5rem;
   font-weight: bold;
 `
@@ -66,7 +66,7 @@ export const Content = styled.main`
 `
 
 export const Date = styled.time`
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 0.9rem;
 `
 
