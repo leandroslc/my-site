@@ -16,6 +16,7 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   position: relative;
+  z-index: 1;
   flex: 1 1 auto;
   background: ${vars.theme((theme) => theme.main.back)};
 `

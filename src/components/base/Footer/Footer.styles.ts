@@ -3,6 +3,7 @@ import { vars } from '@/src/theme'
 
 export const Footer = styled.footer`
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   background-color: ${vars.theme((theme) => theme.footer.back)};

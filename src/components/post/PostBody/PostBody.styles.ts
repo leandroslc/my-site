@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
-  padding: 0 16px 0 16px;
+  padding: 0 32px 0 32px;
   line-height: 1.625;
 
   p,
