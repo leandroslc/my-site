@@ -1,5 +1,5 @@
-import markdownToHtml from '@/src/lib/services/markdown/markdown-to-html'
-import { getAllPosts, getPostBySlug } from '@/src/lib/services/posts'
+import markdownToHtml from '@/src/services/MarkdownToHtmlService'
+import { getAllPosts, getPostBySlug } from '@/src/services/BlogPostsService'
 import { PostPage, PostProps } from '@/src/components/post/PostPage'
 
 const Post = ({ post }: PostProps) => {

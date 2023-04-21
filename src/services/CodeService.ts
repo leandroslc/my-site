@@ -1,5 +1,5 @@
-import { CODE_HIGHLIGHT_BASE_URL } from '../constants'
-import { createStorage } from './browser-storage-service'
+import { CODE_HIGHLIGHT_BASE_URL } from '../lib/constants'
+import { createStorage } from './BrowserStorageService'
 
 const CODE_HIGHLIGHT_LINK = 'highlight-theme-link'
 const STORAGE_PREFIX = 'code'

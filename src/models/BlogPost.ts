@@ -1,4 +1,4 @@
-export type Post = {
+export type BlogPost = {
   slug: string
   title: string
   date: string
@@ -10,4 +10,8 @@ export type Post = {
   content: string
 }
 
-export type PostProperty = keyof Post
+export type BlogPostProperty = keyof BlogPost
+
+export type SelectedBlogPostInfo = {
+  [key: string]: string
+}

@@ -4,8 +4,8 @@ import {
   getCurrentTheme,
   injectTheme,
   setCurrentTheme,
-} from '@/src/lib/services/theme'
-import { Themes } from '@/src/lib/services/theme/types'
+  Themes,
+} from '@/src/services/ThemeService'
 import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
 import { Option } from '../Option'

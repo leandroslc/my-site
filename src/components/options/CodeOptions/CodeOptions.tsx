@@ -5,7 +5,7 @@ import {
   getCurrentCodeHighlight,
   setCurrentCodeHighlight,
   injectTheme,
-} from '@/src/lib/services/code-service'
+} from '@/src/services/CodeService'
 import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
 import { Option } from '../Option'
