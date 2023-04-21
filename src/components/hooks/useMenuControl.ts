@@ -11,6 +11,10 @@ export const useMenuControl = ({ menuRef, toggleRef }: Props) => {
   const handleOutsideClick = (event: MouseEvent) => {
     const element = event.target as Node
 
+    if (!isOpen) {
+      return
+    }
+
     if (
       toggleRef?.current?.contains(element) ||
       menuRef.current?.contains(element)

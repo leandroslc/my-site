@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import React, { forwardRef, PropsWithChildren } from 'react'
 import {
   AnyComponentType,
   PropsWithAnyComponent,
@@ -14,14 +14,15 @@ export type Props<
   U = InnerProps
 > = PropsWithAnyComponent<T, PropsWithChildren<U>>
 
-export const DropdownItem = <T extends AnyComponentType>({
-  as,
-  active = false,
-  children,
-  ...otherProps
-}: Props<T>) => {
+export const InnerDropdownItem = <T extends AnyComponentType>(
+  props: Props<T>,
+  ref: React.ForwardedRef<T>
+) => {
+  const { as, active = false, children, ...otherProps } = props
+
   return (
     <S.Item
+      ref={ref}
       as={as}
       className={active ? 'is-active' : ''}
       is-active={active}
@@ -31,3 +32,5 @@ export const DropdownItem = <T extends AnyComponentType>({
     </S.Item>
   )
 }
+
+export const DropdownItem = forwardRef(InnerDropdownItem)

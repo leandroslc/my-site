@@ -18,8 +18,10 @@ export const DrilldownItem = ({
   label,
   backButtonTitle,
 }: Props) => {
+  const toggleRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
-  const { isOpen, setIsOpen } = useMenuControl({ menuRef })
+
+  const { isOpen, setIsOpen } = useMenuControl({ menuRef, toggleRef })
 
   const handleItemClick = () => {
     setIsOpen(true)
@@ -32,6 +34,7 @@ export const DrilldownItem = ({
   return (
     <>
       <DropdownItem
+        ref={toggleRef}
         as="button"
         type="button"
         id={id}
