@@ -14,7 +14,7 @@ export const ParticlesContainer = () => {
 
   return (
     <S.Container>
-      <ClientSideOnly>
+      <ClientSideOnly waitForPageLoad>
         <Particles
           init={initParticles}
           options={{

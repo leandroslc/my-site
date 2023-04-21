@@ -28,7 +28,7 @@ export const Divider = styled.div`
 export const Menu = styled.div`
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -38,36 +38,32 @@ export const Menu = styled.div`
   visibility: hidden;
   color: ${vars.theme((theme) => theme.dropdown.menu.text)};
   background-color: ${vars.theme((theme) => theme.dropdown.menu.backFull)};
-  transition: transform 0.1s ease-out, z-index 0.1s ease-out;
+  transform: translateX(100%);
   animation: hide 0.1s ease-out;
 
   &.is-open {
     visibility: visible;
     z-index: 3;
-    transform: translate(-100%);
+    transform: translate(0);
     animation: show 0.1s ease-out;
   }
 
   @keyframes show {
     0% {
-      z-index: -1;
-      transform: translate(0);
+      transform: translateX(100%);
     }
     100% {
-      z-index: 3;
-      transform: translate(-100%);
+      transform: translateX(0);
     }
   }
 
   @keyframes hide {
     0% {
-      z-index: 3;
-      transform: translate(-100%);
+      transform: translateX(0);
       visibility: visible;
     }
     100% {
-      z-index: -1;
-      transform: translate(0);
+      transform: translateX(100%);
       visibility: hidden;
     }
   }

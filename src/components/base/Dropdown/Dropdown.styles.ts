@@ -8,6 +8,7 @@ export const Menu = styled.div`
   min-width: 16rem;
   min-height: 16rem;
   padding: 12px 6px;
+  opacity: 0;
   overflow: hidden;
   visibility: hidden;
   color: ${vars.theme((theme) => theme.dropdown.menu.text)};
@@ -21,6 +22,7 @@ export const Menu = styled.div`
   animation: slide-up 0.2s ease-out;
 
   &.is-open {
+    opacity: 1;
     visibility: visible;
     animation: slide-down 0.2s ease-out;
   }

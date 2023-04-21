@@ -33,7 +33,7 @@ const updateOrAddLink = (href: string) => {
   newLink.setAttribute('href', href)
   newLink.setAttribute('id', CODE_HIGHLIGHT_LINK)
 
-  document.head.append(newLink)
+  document.body.append(newLink)
 }
 
 export const injectTheme = (highlight: CodeHighlights) => {

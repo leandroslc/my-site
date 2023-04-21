@@ -40,6 +40,11 @@ export default class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin=""
           />
+        </Head>
+        <body>
+          <GlobalStyles />
+          <Main />
+          <NextScript />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
@@ -48,11 +53,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/tailwindcss@3.1.8/src/css/preflight.css"
           />
-        </Head>
-        <body>
-          <GlobalStyles />
-          <Main />
-          <NextScript />
         </body>
       </Html>
     )
