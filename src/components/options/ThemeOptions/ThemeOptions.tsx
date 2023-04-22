@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
+import { FiSun, FiMoon } from 'react-icons/fi'
 import {
   getCurrentTheme,
   injectTheme,
@@ -14,23 +14,23 @@ import * as S from './ThemeOptions.styles'
 const ThemeNames = {
   [Themes.Dark]: 'Dark',
   [Themes.Light]: 'Light',
-  [Themes.System]: 'System',
+  [Themes.None]: '',
 }
 
 const ThemeIcons = {
   [Themes.Dark]: FiMoon,
   [Themes.Light]: FiSun,
-  [Themes.System]: FiMonitor,
+  [Themes.None]: () => null,
 }
 
 const ThemeColors = {
   [Themes.Dark]: '#2ed0f1',
   [Themes.Light]: '#ffe9ac',
-  [Themes.System]: '#bfffb5',
+  [Themes.None]: '#fff',
 }
 
 export const ThemeOptions = () => {
-  const [theme, setTheme] = useState(Themes.System)
+  const [theme, setTheme] = useState(Themes.None)
 
   const handleThemeChange = (theme: Themes) => {
     setTheme(theme)
@@ -97,21 +97,6 @@ export const ThemeOptions = () => {
             color={getIconColor(Themes.Light)}
           />
           {ThemeNames[Themes.Light]}
-        </S.OptionItem>
-      </DropdownItem>
-      <DropdownItem
-        as="button"
-        type="button"
-        active={isActive(Themes.System)}
-        onClick={() => handleThemeChange(Themes.System)}
-      >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiMonitor}
-            aria-hidden="true"
-            color={getIconColor(Themes.System)}
-          />
-          {ThemeNames[Themes.System]}
         </S.OptionItem>
       </DropdownItem>
     </DrilldownItem>

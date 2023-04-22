@@ -3,16 +3,12 @@ import { createStorage } from './BrowserStorageService'
 const STORAGE_PREFIX = 'theme'
 
 export enum Themes {
-  System = '',
+  None = '',
   Dark = 'dark',
   Light = 'light',
 }
 
 const storage = createStorage(STORAGE_PREFIX)
-
-const prefersDarkMode = () => {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-}
 
 export const injectTheme = (theme: Themes) => {
   if (typeof window === 'undefined') {
@@ -25,26 +21,39 @@ export const injectTheme = (theme: Themes) => {
 
   const root = document.querySelector('html')
 
-  root?.classList.remove(Themes.Dark)
-  root?.classList.remove(Themes.Light)
+  if (root?.classList.contains(Themes.Dark)) {
+    root?.classList.remove(Themes.Dark)
+  }
 
-  if (theme !== Themes.System) {
+  if (root?.classList.contains(Themes.Light)) {
+    root?.classList.remove(Themes.Light)
+  }
+
+  if (theme !== Themes.None) {
     root?.classList.add(theme)
   }
 }
 
 export const getCurrentTheme = () => {
   if (typeof window === 'undefined') {
-    return Themes.System
+    return Themes.None
   }
 
-  const theme = storage.get()
+  const storedTheme = storage.get() || Themes.None
 
-  if (theme === Themes.Dark || (!theme && prefersDarkMode())) {
+  const theme = Object.values(Themes).includes(storedTheme as Themes)
+    ? storedTheme
+    : Themes.None
+
+  if (theme === Themes.Dark) {
     return Themes.Dark
   }
 
-  return Themes.Light
+  if (theme === Themes.Light) {
+    return Themes.Light
+  }
+
+  return Themes.Dark
 }
 
 export const setCurrentTheme = (theme: Themes) => {
