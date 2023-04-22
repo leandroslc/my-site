@@ -1,8 +1,8 @@
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { SITE_NAME } from '@/src/lib/constants'
-import { Post } from '@/src/lib/services/posts/types'
+import { SITE_NAME } from '@/src/config/constants'
+import { BlogPost } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
 import { BackButton } from '../BackButton/BackButton'
 import { PostPageHeader } from '../PostPageHeader'
@@ -11,7 +11,7 @@ import { PostHeader } from '../PostHeader'
 import * as S from './PostPage.styles'
 
 export type PostProps = {
-  post: Post
+  post: BlogPost
 }
 
 export const PostPage = ({ post }: PostProps) => {

@@ -1,4 +1,6 @@
-export const dark = {
+import { ColorScheme } from '../ColorScheme'
+
+export const dark: ColorScheme = {
   all: {
     outline: '#24180b',
     outlineInset: '#eef1f5',
@@ -62,5 +64,3 @@ export const dark = {
     },
   },
 }
-
-export type ColorScheme = typeof dark

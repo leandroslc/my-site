@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import { formatDate, truncate } from '@/src/lib/helpers'
-import { Post } from '@/src/lib/services/posts/types'
+import { formatDate } from '@/src/helpers/FormatDateHelpers'
+import { truncate } from '@/src/helpers/TruncateHelper'
+import { BlogPost } from '@/src/models/BlogPost'
 import * as S from './PostPreview.styles'
 
 type Props = {
-  post: Post
+  post: BlogPost
 }
 
 export const PostPreview = ({ post }: Props) => {

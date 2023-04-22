@@ -1,5 +1,5 @@
-import { SITE_NAME } from '@/src/lib/constants'
-import { Post } from '@/src/lib/services/posts/types'
+import { SITE_NAME } from '@/src/config/constants'
+import { BlogPost } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout'
 import { Emoji } from '../../base/Emoji'
 import { HomeHeader } from '../HomeHeader'
@@ -8,7 +8,7 @@ import { Hero } from '../Hero'
 import * as S from './HomePage.styles'
 
 export type HomeProps = {
-  posts: Post[]
+  posts: BlogPost[]
 }
 
 export const HomePage = ({ posts }: HomeProps) => {

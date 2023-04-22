@@ -1,4 +1,4 @@
-import { CSS_THEME_PROPS_PREFIX } from '../constants'
+import { CSS_THEME_PROPS_PREFIX } from '@/src/config/constants'
 
 export const parseSchemeToCSSProperties = (
   scheme: Record<string, string | object>,

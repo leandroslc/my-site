@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
-import { CSS_DARK_THEME_CLASS } from '@/src/lib/constants'
-import { parseSchemeToCSSProperties } from '@/src/lib/helpers'
-import { dark, light } from './color-scheme'
-import { vars } from './variables'
+import { CSS_DARK_THEME_CLASS } from '@/src/config/constants'
+import { parseSchemeToCSSProperties } from '@/src/helpers/ParseSchemaToCssPropertiesHelper'
+import { dark, light } from './ColorScheme'
+import { vars } from '.'
 
 export const GlobalStyles = createGlobalStyle`
   *, ::after, ::before {

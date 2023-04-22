@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { postsDirectory } from '@/src/lib/config'
+import { postsDirectory } from '@/src/config/config'
 import {
   BlogPost,
   BlogPostProperty,

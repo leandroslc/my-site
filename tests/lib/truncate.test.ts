@@ -1,4 +1,4 @@
-import { truncate } from '@/src/lib/helpers'
+import { truncate } from '@/src/helpers/TruncateHelper'
 
 describe('lib-helper-trucate', () => {
   test.each`

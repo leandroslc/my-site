@@ -1,4 +1,4 @@
-import { formatDate } from '@/src/lib/helpers'
+import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { FiCalendar } from 'react-icons/fi'
 import * as S from './PostHeader.styles'
 

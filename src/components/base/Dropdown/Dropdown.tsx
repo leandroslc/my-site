@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useRef } from 'react'
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { usePopper } from 'react-popper'
-import { useMenuControl } from '@/src/components/hooks/useMenuControl'
+import { useMenuControl } from '@/src/hooks/useMenuControl'
 import * as S from './Dropdown.styles'
 
 type Props = PropsWithChildren<{

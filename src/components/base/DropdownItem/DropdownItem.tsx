@@ -2,7 +2,7 @@ import React, { forwardRef, PropsWithChildren } from 'react'
 import {
   AnyComponentType,
   PropsWithAnyComponent,
-} from '@/src/lib/types/GenericComponent'
+} from '@/src/types/GenericComponent'
 import * as S from './DropdownItem.styles'
 
 interface InnerProps {

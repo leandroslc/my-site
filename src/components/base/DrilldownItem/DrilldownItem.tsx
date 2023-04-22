@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useRef } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import { useMenuControl } from '@/src/components/hooks/useMenuControl'
+import { useMenuControl } from '@/src/hooks/useMenuControl'
 import { DropdownItem } from '../DropdownItem'
 import * as S from './DrilldownItem.styles'
 

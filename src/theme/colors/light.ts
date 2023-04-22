@@ -1,4 +1,4 @@
-import { ColorScheme } from './dark'
+import { ColorScheme } from '../ColorScheme'
 
 export const light: ColorScheme = {
   all: {
