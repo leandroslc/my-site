@@ -8,6 +8,7 @@ import {
 } from '@/src/services/CodeService'
 import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
+import { useTranslation } from '@/src/hooks/useTranslation'
 import { Option } from '../Option'
 import * as S from './CodeOptions.styles'
 
@@ -18,6 +19,7 @@ export const CodeHighlightColors: { [key in CodeHighlights]: string } = {
 }
 
 export const CodeOptions = () => {
+  const { translate } = useTranslation()
   const [highlight, setHighlight] = useState(CodeHighlights.Dracula)
 
   const handleThemeChange = (highlight: CodeHighlights) => {
@@ -45,7 +47,7 @@ export const CodeOptions = () => {
       id="code-theme"
       label={
         <Option
-          name="Code theme"
+          name={translate('options.code-theme-item')}
           description={highlight}
           icon={<FiBox color={CodeHighlightColors[highlight]} />}
         />

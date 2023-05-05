@@ -8,14 +8,9 @@ import {
 } from '@/src/services/ThemeService'
 import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
+import { useTranslation } from '@/src/hooks/useTranslation'
 import { Option } from '../Option'
 import * as S from './ThemeOptions.styles'
-
-const ThemeNames = {
-  [Themes.Dark]: 'Dark',
-  [Themes.Light]: 'Light',
-  [Themes.None]: '',
-}
 
 const ThemeIcons = {
   [Themes.Dark]: FiMoon,
@@ -30,6 +25,7 @@ const ThemeColors = {
 }
 
 export const ThemeOptions = () => {
+  const { translate } = useTranslation()
   const [theme, setTheme] = useState(Themes.None)
 
   const handleThemeChange = (theme: Themes) => {
@@ -63,8 +59,8 @@ export const ThemeOptions = () => {
       id="option-theme"
       label={
         <Option
-          name="Theme"
-          description={ThemeNames[theme]}
+          name={translate('options.site-theme-item')}
+          description={translate(`options.site-theme-${theme}`)}
           icon={getIcon(theme)}
         />
       }
@@ -81,7 +77,7 @@ export const ThemeOptions = () => {
             aria-hidden="true"
             color={getIconColor(Themes.Dark)}
           />
-          {ThemeNames[Themes.Dark]}
+          {translate(`options.site-theme-${Themes.Dark}`)}
         </S.OptionItem>
       </DropdownItem>
       <DropdownItem
@@ -96,7 +92,7 @@ export const ThemeOptions = () => {
             aria-hidden="true"
             color={getIconColor(Themes.Light)}
           />
-          {ThemeNames[Themes.Light]}
+          {translate(`options.site-theme-${Themes.Light}`)}
         </S.OptionItem>
       </DropdownItem>
     </DrilldownItem>

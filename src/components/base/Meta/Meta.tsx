@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import { HOME_OG_IMAGE_URL } from '@/src/config/constants'
+import { useTranslation } from '@/src/hooks/useTranslation'
 
 export const Meta = () => {
+  const { translate } = useTranslation()
+
   return (
     <Head>
       <link
@@ -32,10 +35,7 @@ export const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`A blog about things that I (Leandro) find interesting or that I wanted others to know`}
-      />
+      <meta name="description" content={translate('base.meta-description')} />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )

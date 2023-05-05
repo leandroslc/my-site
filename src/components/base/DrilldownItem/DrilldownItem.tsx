@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useRef } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { useMenuControl } from '@/src/hooks/useMenuControl'
+import { useTranslation } from '@/src/hooks/useTranslation'
 import { DropdownItem } from '../DropdownItem'
 import * as S from './DrilldownItem.styles'
 
@@ -18,6 +19,7 @@ export const DrilldownItem = ({
   label,
   backButtonTitle,
 }: Props) => {
+  const { translate } = useTranslation()
   const toggleRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
 
@@ -62,7 +64,7 @@ export const DrilldownItem = ({
           onClick={handleBackClick}
         >
           <S.BackButtonIcon as={FiChevronLeft} aria-hidden="true" />
-          Back
+          {translate('base.drilldown-item-back')}
         </DropdownItem>
         <S.Divider />
         {children}

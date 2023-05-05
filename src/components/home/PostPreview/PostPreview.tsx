@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { truncate } from '@/src/helpers/TruncateHelper'
 import { BlogPost } from '@/src/models/BlogPost'
+import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './PostPreview.styles'
 
 type Props = {
@@ -10,13 +11,17 @@ type Props = {
 
 export const PostPreview = ({ post }: Props) => {
   const { slug, coverImage, title, date, excerpt } = post
+  const { translate } = useTranslation()
 
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
       <S.PostLink aria-label={title}>
         <S.Card key={slug}>
           <S.Header>
-            <S.Image src={coverImage} alt={`Image de capa para ${title}`} />
+            <S.Image
+              src={coverImage}
+              alt={`${translate('home.blog-post-image-alt')} ${title}`}
+            />
           </S.Header>
           <S.Content>
             <S.Date dateTime={date}>{formatDate(date)}</S.Date>

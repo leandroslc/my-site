@@ -4,4 +4,8 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
+  i18n: {
+    locales: ['pt-BR', 'en-US'],
+    defaultLocale: 'en-US',
+  },
 }

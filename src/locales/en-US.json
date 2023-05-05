@@ -1,0 +1,30 @@
+{
+  "base": {
+    "drilldown-item-back": "Back",
+    "footer-link-home": "Home",
+    "footer-link-terms-of-use": "Terms of use",
+    "footer-rights": "All rights reserved.",
+    "meta-description": "My portfolio site with a blog about things I find interesting"
+  },
+  "home": {
+    "hero-title": "Hi {0}, I'm Leandro",
+    "hero-job": "software developer",
+    "hero-description": "I'm a full stack {0}. Mostly coding because it is fun. When not in front of a computer, I also like painting, writing, reading and playing piano.",
+    "hero-portrait-alt": "A simple portrait of myself",
+    "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
+    "blog-title": "Blog",
+    "blog-description": "Sometimes I try to write about things I wanted to know and that maybe should be important to other people. If you're passing by here, make yourself comfortable and take a time to have a look {0}.",
+    "blog-post-image-alt": "Cover image for"
+  },
+  "options": {
+    "menu": "Options",
+    "code-theme-item": "Code theme",
+    "site-theme-item": "Site theme",
+    "site-theme-light": "Day",
+    "site-theme-dark": "Night"
+  },
+  "emojis": {
+    "smiling-face-with-smiling-eyes": "Smiling Face with Smiling Eyes",
+    "slightly-smiling-face": "Slightly Smiling Face"
+  }
+}

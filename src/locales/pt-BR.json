@@ -1,0 +1,30 @@
+{
+  "base": {
+    "drilldown-item-back": "Voltar",
+    "footer-link-home": "Página inicial",
+    "footer-link-terms-of-use": "Termos de uso",
+    "footer-rights": "Todos os direitos reservados.",
+    "meta-description": "Meu portfólio com um blog sobre coisas que acho interessantes"
+  },
+  "home": {
+    "hero-title": "Oi {0}, eu sou Leandro",
+    "hero-job": "desenvolvedor de software",
+    "hero-description": "Eu sou {0} full stack. Na maior parte das vezes codificando porque é divertido. Quando não estou de frente a um computador, também gosto de pintar, escrever, ler e tocar piano.",
+    "hero-portrait-alt": "Um retrato simples de mim mesmo",
+    "header-painting-alt": "Uma pintura simples de teclas de piano, um relógio de bolso, uma xícara e um pincel",
+    "blog-title": "Blog",
+    "blog-description": "Algumas vezes tento escrever sobre coisas que gostaria de saber e que talvez sejam importantes para outras pessoas. Se estiver passando por aqui, sinta-se a vontade e tome um tempo para dar uma olhada {0}.",
+    "blog-post-image-alt": "Imagem de capa para"
+  },
+  "options": {
+    "menu": "Opções",
+    "code-theme-item": "Tema de código",
+    "site-theme-item": "Tema do site",
+    "site-theme-light": "Dia",
+    "site-theme-dark": "Noite"
+  },
+  "emojis": {
+    "smiling-face-with-smiling-eyes": "Rosto sorridente com olhos sorridentes",
+    "slightly-smiling-face": "Rosto sorrindo"
+  }
+}
