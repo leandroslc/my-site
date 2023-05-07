@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useRouter } from 'next/router'
 import ptBR from '@/src/locales/pt-BR.json'
 import enUS from '@/src/locales/en-US.json'
@@ -59,7 +59,9 @@ const findTranslationAndReplaceElements = (
 
   nodes.push(translation.substring(startIndex))
 
-  return nodes
+  return nodes.map((node, index) => (
+    <React.Fragment key={index}>{node}</React.Fragment>
+  ))
 }
 
 const getTranslationFunctions = Object.keys(translations).reduce(
