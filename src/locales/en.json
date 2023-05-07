@@ -25,7 +25,12 @@
     "code-theme-item": "Code theme",
     "site-theme-item": "Site theme",
     "site-theme-light": "Day",
-    "site-theme-dark": "Night"
+    "site-theme-dark": "Night",
+    "language-item": "Language",
+    "language-pt-BR": "Portuguese",
+    "language-en": "English",
+    "language-flag-pt-BR": "Portuguese language flag (Brazil)",
+    "language-flag-en": "English language flag (United Kingdom)"
   },
   "emojis": {
     "smiling-face-with-smiling-eyes": "Smiling Face with Smiling Eyes",

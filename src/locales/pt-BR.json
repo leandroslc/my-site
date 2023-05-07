@@ -25,7 +25,12 @@
     "code-theme-item": "Tema de código",
     "site-theme-item": "Tema do site",
     "site-theme-light": "Dia",
-    "site-theme-dark": "Noite"
+    "site-theme-dark": "Noite",
+    "language-item": "Idioma",
+    "language-pt-BR": "Português",
+    "language-en": "Inglês",
+    "language-flag-pt-BR": "Bandeira idioma português (Brasil)",
+    "language-flag-en": "Bandeira idioma inglês (Reino Unido)"
   },
   "emojis": {
     "smiling-face-with-smiling-eyes": "Rosto sorridente com olhos sorridentes",
