@@ -1,18 +1,18 @@
 import ptBR from '@/src/locales/pt-BR.json'
-import enUS from '@/src/locales/en-US.json'
-import { enUS as enUSDate, ptBR as ptBRDate } from 'date-fns/locale'
+import en from '@/src/locales/en.json'
+import { enGB as enGBDate, ptBR as ptBRDate } from 'date-fns/locale'
 
 export enum Locales {
-  enUS = 'en-US',
+  en = 'en',
   ptBR = 'pt-BR',
 }
 
 export const translations = {
-  [Locales.enUS]: enUS,
+  [Locales.en]: en,
   [Locales.ptBR]: ptBR,
 }
 
 export const dateFormats = {
-  [Locales.enUS]: enUSDate,
+  [Locales.en]: enGBDate,
   [Locales.ptBR]: ptBRDate,
 }

@@ -5,7 +5,7 @@ module.exports = {
     styledComponents: true,
   },
   i18n: {
-    locales: ['pt-BR', 'en-US'],
-    defaultLocale: 'en-US',
+    locales: ['pt-BR', 'en'],
+    defaultLocale: 'en',
   },
 }
