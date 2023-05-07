@@ -1,17 +1,6 @@
 import React, { ReactNode } from 'react'
 import { useRouter } from 'next/router'
-import ptBR from '@/src/locales/pt-BR.json'
-import enUS from '@/src/locales/en-US.json'
-
-enum Locales {
-  enUS = 'en-US',
-  ptBR = 'pt-BR',
-}
-
-const translations = {
-  [Locales.enUS]: enUS,
-  [Locales.ptBR]: ptBR,
-}
+import { Locales, translations } from '@/src/config/i18n'
 
 type InnerTranslationObject = string | TranslationObject
 type TranslationObject = { [k in string]: InnerTranslationObject }

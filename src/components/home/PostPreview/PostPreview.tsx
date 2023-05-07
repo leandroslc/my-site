@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { truncate } from '@/src/helpers/TruncateHelper'
 import { BlogPost } from '@/src/models/BlogPost'
@@ -11,6 +12,7 @@ type Props = {
 
 export const PostPreview = ({ post }: Props) => {
   const { slug, coverImage, title, date, excerpt } = post
+  const { locale } = useRouter()
   const { translate } = useTranslation()
 
   return (
@@ -24,7 +26,7 @@ export const PostPreview = ({ post }: Props) => {
             />
           </S.Header>
           <S.Content>
-            <S.Date dateTime={date}>{formatDate(date)}</S.Date>
+            <S.Date dateTime={date}>{formatDate(date, locale!)}</S.Date>
             <S.Title>{title}</S.Title>
             <S.Description>{truncate(excerpt, 100)}</S.Description>
           </S.Content>
