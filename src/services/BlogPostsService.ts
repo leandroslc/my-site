@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { join } from 'path'
+import path from 'path'
 import matter from 'gray-matter'
 import { postsDirectory } from '@/src/config/config'
 import {
@@ -8,16 +8,17 @@ import {
   SelectedBlogPostInfo,
 } from '@/src/models/BlogPost'
 
-export const getPostSlugs = () => {
-  return fs.readdirSync(postsDirectory)
+export const getPostSlugs = (locale: string) => {
+  return fs.readdirSync(path.join(postsDirectory, locale))
 }
 
 export const getPostBySlug = (
+  locale: string,
   slug: string,
   fields: BlogPostProperty[] = []
 ) => {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fullPath = path.join(postsDirectory, locale, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
@@ -44,9 +45,14 @@ export const getPostBySlug = (
 const byNewest = (post1: BlogPost, post2: BlogPost) =>
   post1.date > post2.date ? -1 : 1
 
-export const getAllPosts = (fields: BlogPostProperty[] = []) => {
-  const slugs = getPostSlugs()
-  const posts = slugs.map((slug) => getPostBySlug(slug, fields)).sort(byNewest)
+export const getAllPosts = (
+  locale: string,
+  fields: BlogPostProperty[] = []
+) => {
+  const slugs = getPostSlugs(locale)
+  const posts = slugs
+    .map((slug) => getPostBySlug(locale, slug, fields))
+    .sort(byNewest)
 
   return posts
 }

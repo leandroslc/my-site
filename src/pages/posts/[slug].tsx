@@ -1,3 +1,4 @@
+import { GetStaticPaths } from 'next'
 import markdownToHtml from '@/src/services/MarkdownToHtmlService'
 import { getAllPosts, getPostBySlug } from '@/src/services/BlogPostsService'
 import { PostPage, PostProps } from '@/src/components/post/PostPage'
@@ -12,10 +13,11 @@ type Params = {
   params: {
     slug: string
   }
+  locale: string
 }
 
-export const getStaticProps = async ({ params }: Params) => {
-  const post = getPostBySlug(params.slug, [
+export const getStaticProps = async ({ params, locale }: Params) => {
+  const post = getPostBySlug(locale, params.slug, [
     'title',
     'date',
     'slug',
@@ -35,17 +37,22 @@ export const getStaticProps = async ({ params }: Params) => {
   }
 }
 
-export const getStaticPaths = async () => {
-  const posts = getAllPosts(['slug'])
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  const paths = locales!.flatMap((locale) => {
+    const posts = getAllPosts(locale, ['slug'])
 
-  return {
-    paths: posts.map((post) => {
+    return posts.map((post) => {
       return {
         params: {
           slug: post.slug,
         },
+        locale,
       }
-    }),
+    })
+  })
+
+  return {
+    paths,
     fallback: false,
   }
 }
