@@ -16,6 +16,10 @@
     "blog-description": "Sometimes I try to write about things I wanted to know and that maybe should be important to other people. If you're passing by here, make yourself comfortable and take a time to have a look {0}.",
     "blog-post-image-alt": "Cover image for"
   },
+  "post": {
+    "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
+    "bach-to-home": "Back to home"
+  },
   "options": {
     "menu": "Options",
     "code-theme-item": "Code theme",
