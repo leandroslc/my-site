@@ -4,6 +4,7 @@ import { sizes, vars } from '@/src/theme'
 export const Hero = styled.div`
   display: grid;
   align-items: flex-start;
+  justify-items: center;
   gap: 16px;
   grid-template-columns: 1fr;
   margin-bottom: 40px;
@@ -29,7 +30,9 @@ export const Description = styled.p`
   font-size: 1.2rem;
 `
 
-export const Image = styled.img``
+export const Portrait = styled.img`
+  max-width: 281px;
+`
 
 export const Emphasys = styled.span`
   display: inline-block;

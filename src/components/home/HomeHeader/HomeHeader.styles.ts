@@ -7,6 +7,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 20px;
+
+  @media (min-width: ${sizes.small}) {
+    margin-top: 0;
+  }
 `
 
 export const Title = styled.h1`

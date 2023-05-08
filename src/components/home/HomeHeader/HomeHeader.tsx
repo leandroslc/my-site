@@ -1,3 +1,4 @@
+import { SITE_SUBNAME } from '@/src/config/constants'
 import { Border } from '@/src/components/base/Border'
 import { useTitleScroll } from '@/src/hooks/useTitleScroll'
 import { useTranslation } from '@/src/hooks/useTranslation'
@@ -11,7 +12,7 @@ export const HomeHeader = () => {
     <S.Container ref={containerRef}>
       <S.Title ref={titleRef}>
         <S.TitleImage src="/assets/site/title-signature.svg" alt="Leandro's" />
-        <S.TitleText>Blog</S.TitleText>
+        <S.TitleText>{SITE_SUBNAME}</S.TitleText>
       </S.Title>
       <S.PaintingImage
         src="/assets/site/header-painting.png"

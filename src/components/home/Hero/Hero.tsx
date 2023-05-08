@@ -35,7 +35,7 @@ export const Hero = () => {
           </S.SocialLink>
         </S.Social>
       </S.Content>
-      <S.Image
+      <S.Portrait
         src="/assets/site/me.png"
         alt={translate('home.hero-portrait-alt')}
       />

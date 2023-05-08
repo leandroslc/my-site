@@ -44,8 +44,12 @@ export const Description = styled.p`
 
 export const Posts = styled.main`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
   row-gap: 60px;
   column-gap: 90px;
   padding: 40px 20px 80px 20px;
+
+  @media (min-width: ${sizes.small}) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
 `
