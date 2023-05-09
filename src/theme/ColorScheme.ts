@@ -15,6 +15,7 @@ export type ColorScheme = {
   elements: {
     emphasys: Color
     emphasys30: Color
+    link: Color
   }
   header: {
     back: Color

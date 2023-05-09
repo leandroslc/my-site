@@ -12,6 +12,7 @@ export const dark: ColorScheme = {
   elements: {
     emphasys: 'rgb(0 191 255)',
     emphasys30: 'rgb(0 191 255 / 36%)',
+    link: '#7fcbff',
   },
   header: {
     back: 'linear-gradient(72deg, #121638, #3394af)',

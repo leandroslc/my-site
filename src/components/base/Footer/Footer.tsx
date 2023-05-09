@@ -13,7 +13,7 @@ export const Footer = () => {
           <Link as="/" href="/" passHref>
             <S.NavLink>{translate('base.footer-link-home')}</S.NavLink>
           </Link>
-          <Link as="/" href="/" passHref>
+          <Link as="/terms-of-use" href="/terms-of-use" passHref>
             <S.NavLink>{translate('base.footer-link-terms-of-use')}</S.NavLink>
           </Link>
           <Link as="/" href="/" passHref>
