@@ -24,7 +24,7 @@ Desde que sejam seguidos os seguintes termos:
 
 Para mais informações, veja o [resumo da licença](https://creativecommons.org/licenses/by-sa/4.0/deed.pt) e a [licença na íntegra](https://creativecommons.org/licenses/by-sa/4.0/legalcode.pt).
 
-## Recursos de terceiros
+## Recursos de terceiros {#recursos-de-terceiros}
 
 Alguns recursos apresentados neste site foram feitos por terceiros e possuem suas próprias licenças. Eles são:
 

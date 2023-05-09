@@ -24,7 +24,7 @@ Provided that it conforms to the following terms:
 
 For more information, read the [license summary](https://creativecommons.org/licenses/by-sa/4.0/) and the [complete license](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
-## Third party resources
+## Third party resources {#third-party-resources}
 
 Some resources presented in this site were made by third parties and have their own licenses. They are:
 
