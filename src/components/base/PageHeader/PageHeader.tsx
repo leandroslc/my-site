@@ -2,9 +2,9 @@ import { SITE_SUBNAME } from '@/src/config/constants'
 import { Border } from '@/src/components/base/Border'
 import { useTitleScroll } from '@/src/hooks/useTitleScroll'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './PostPageHeader.styles'
+import * as S from './PageHeader.styles'
 
-export const PostPageHeader = () => {
+export const PageHeader = () => {
   const { titleRef, containerRef } = useTitleScroll()
   const { translate } = useTranslation()
 

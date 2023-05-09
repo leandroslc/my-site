@@ -1,0 +1,1 @@
+export { FormattedContentBody } from './FormattedContentBody'

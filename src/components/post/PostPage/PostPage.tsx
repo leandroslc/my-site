@@ -4,9 +4,9 @@ import { useRouter } from 'next/router'
 import { SITE_NAME } from '@/src/config/constants'
 import { BlogPost } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
-import { BackButton } from '../BackButton/BackButton'
-import { PostPageHeader } from '../PostPageHeader'
-import { PostBody } from '../PostBody'
+import { BackButton } from '@/src/components/base/BackButton/BackButton'
+import { PageHeader } from '@/src/components/base/PageHeader'
+import { FormattedContentBody } from '@/src/components/base/FormattedContentBody'
 import { PostHeader } from '../PostHeader'
 import * as S from './PostPage.styles'
 
@@ -22,10 +22,7 @@ export const PostPage = ({ post }: PostProps) => {
   }
 
   return (
-    <PageLayout
-      title={`${post.title} | ${SITE_NAME}`}
-      header={<PostPageHeader />}
-    >
+    <PageLayout title={`${post.title} | ${SITE_NAME}`} header={<PageHeader />}>
       {router.isFallback ? (
         <>Loading...</>
       ) : (
@@ -40,7 +37,7 @@ export const PostPage = ({ post }: PostProps) => {
               coverImage={post.coverImage}
               date={post.date}
             />
-            <PostBody content={post.content} />
+            <FormattedContentBody content={post.content} />
           </S.PostContainer>
         </>
       )}
