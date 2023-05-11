@@ -1,13 +1,14 @@
 import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 import dotenv from 'dotenv'
+import fs from 'fs'
 import path from 'path'
 
 const isCI = !!process.env.CI
 
-const env = dotenv.config({
-  path: path.resolve(process.cwd(), '.env.test'),
-})
+const env = dotenv.parse(
+  fs.readFileSync(path.resolve(process.cwd(), '.env.test'))
+)
 
 const projects: PlaywrightTestConfig['projects'] = [
   {
@@ -47,7 +48,10 @@ const config: PlaywrightTestConfig = {
   webServer: {
     command: 'npm run dev',
     port: 3000,
-    env: env.parsed,
+    env: {
+      ...env,
+      NODE_ENV: 'test',
+    },
   },
 }
 

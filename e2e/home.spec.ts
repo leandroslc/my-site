@@ -31,14 +31,14 @@ test.describe('Home', () => {
     await assertPostPreviewIsVisible(
       page,
       'Hello world: Announcing my new site',
-      '16 de março de 2020',
+      '16 march 2020',
       '/assets/blog/hello-world/cover.jpg'
     )
 
     await assertPostPreviewIsVisible(
       page,
       'A tool vs another new tool',
-      '10 de maio de 2022',
+      '10 may 2022',
       '/assets/blog/tool-vs-tool/cover.jpg'
     )
   })

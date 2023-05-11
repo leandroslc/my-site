@@ -1,3 +1,8 @@
+const isTest = process.env.NODE_ENV === 'test'
+
+const defaultLocale = 'en'
+const additionalLocales = ['pt-BR']
+
 /** @type import('next').NextConfig */
 module.exports = {
   reactStrictMode: true,
@@ -5,7 +10,7 @@ module.exports = {
     styledComponents: true,
   },
   i18n: {
-    locales: ['pt-BR', 'en'],
-    defaultLocale: 'en',
+    locales: [defaultLocale, ...(!isTest ? additionalLocales : [])],
+    defaultLocale: defaultLocale,
   },
 }
