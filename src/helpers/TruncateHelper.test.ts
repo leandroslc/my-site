@@ -1,6 +1,6 @@
-import { truncate } from '@/src/helpers/TruncateHelper'
+import { truncate } from './TruncateHelper'
 
-describe('lib-helper-trucate', () => {
+describe('helpers.TruncateHelper', () => {
   test.each`
     value        | maxLength | expected
     ${'Testing'} | ${6}      | ${'Tes...'}
@@ -11,10 +11,8 @@ describe('lib-helper-trucate', () => {
   `(
     'Given value "$value" and "$maxLength" should return "$expected"',
     ({ value, maxLength, expected }) => {
-      // Act
       const result = truncate(value, maxLength)
 
-      // Assert
       expect(result).toBe(expected)
     }
   )

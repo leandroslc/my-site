@@ -13,7 +13,7 @@ A site about things that I wanted to know and that maybe should be important to 
 ## :computer: Build and test
 - Run `npm run dev` to start the development server.
 - Run `npm test` to run unit tests.
-- Run `npm test:e2e` to run end-to-end tests (you may need to run `npx playright install` first).
+- Run `npm test:e2e` to run end-to-end tests (you may need to run `npx playwright install` first).
 
 ## :hand: Contributing
 This is a repository that probably only I will be maintaining mostly of the time, but if you want to contribute (that would be of much help :blush:), you can fork this repository and send a PR.

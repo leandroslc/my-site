@@ -1,72 +1,39 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { useRouter } from 'next/router'
 import { Locales, translations } from '@/src/config/i18n'
+import {
+  findTranslationAndReplaceAsReactNodes,
+  findTranslationAndReplaceAsString,
+} from '@/src/helpers/FindTranslationHelpers'
 
-type InnerTranslationObject = string | TranslationObject
-type TranslationObject = { [k in string]: InnerTranslationObject }
+type GetTranslationFunctions = Record<
+  string,
+  (key: string, ...params: string[]) => string
+>
 
-type GetTranslationFunctions = Record<string, (key: string) => string>
 type GetTranslationWithReplaceFunctions = Record<
   string,
   (key: string, ...params: ReactNode[]) => ReactNode[]
 >
 
-const findTranslation = (key: string, items: TranslationObject) => {
-  const keys = key.split('.')
-
-  let item: InnerTranslationObject = items
-  let index = 0
-
-  while (typeof item !== 'string' && !!item && index < keys.length) {
-    item = item[keys[index++]]
-  }
-
-  return typeof item === 'string' ? item : ''
-}
-
-const findTranslationAndReplaceElements = (
-  key: string,
-  items: TranslationObject,
-  ...params: ReactNode[]
-) => {
-  const nodes = [] as ReactNode[]
-
-  const translation = findTranslation(key, items)
-  const matches = Array.from(translation.matchAll(/\{(\d+)\}/g))
-
-  let startIndex = 0
-
-  matches.forEach((match) => {
-    nodes.push(translation.substring(startIndex, match.index))
-
-    const elementIndex = parseInt(match[1], 10)
-
-    nodes.push(params.at(elementIndex))
-
-    startIndex = match.index! + match.length + 1
-  })
-
-  nodes.push(translation.substring(startIndex))
-
-  return nodes.map((node, index) => (
-    <React.Fragment key={index}>{node}</React.Fragment>
-  ))
-}
-
-const getTranslationFunctions = Object.keys(translations).reduce(
+const stringTranslationFunctions = Object.keys(translations).reduce(
   (result, locale) => {
-    result[locale] = (key) =>
-      findTranslation(key, translations[locale as Locales])
+    result[locale] = (key, ...params) =>
+      findTranslationAndReplaceAsString(
+        key,
+        translations[locale as Locales],
+        ...params
+      )
 
     return result
   },
   {} as GetTranslationFunctions
 )
 
-const getTranslationWithReplaceFunctions = Object.keys(translations).reduce(
+const reactNodeTranslationFunctions = Object.keys(translations).reduce(
   (result, locale) => {
     result[locale] = (key, ...params) =>
-      findTranslationAndReplaceElements(
+      findTranslationAndReplaceAsReactNodes(
         key,
         translations[locale as Locales],
         ...params
@@ -81,7 +48,7 @@ export const useTranslation = () => {
   const { locale } = useRouter()
 
   return {
-    translate: getTranslationFunctions[locale!],
-    translateWithElements: getTranslationWithReplaceFunctions[locale!],
+    translate: stringTranslationFunctions[locale!],
+    translateWithElements: reactNodeTranslationFunctions[locale!],
   }
 }

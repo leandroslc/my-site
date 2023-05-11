@@ -52,8 +52,7 @@ test.describe('Home', () => {
 
     await link.click()
 
-    await page.waitForNavigation({
-      url: '/posts/hello-world',
+    await page.waitForURL('/posts/hello-world', {
       timeout: 10 * 1000,
     })
   })

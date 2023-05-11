@@ -1,4 +1,4 @@
-import { parseSchemeToCSSProperties } from '@/src/helpers/ParseSchemaToCssPropertiesHelper'
+import { parseSchemeToCSSProperties } from './ParseSchemaToCssPropertiesHelper'
 
 const scheme = {
   outline: '#f00',
@@ -13,7 +13,7 @@ const scheme = {
   },
 }
 
-describe('theme-helper-parseSchemeToCSSProperties', () => {
+describe('helpers.ParseSchemaToCssPropertiesHelper', () => {
   test('Should parse scheme object to css properties', () => {
     const expected = [
       '--lb-tm-outline: #f00;',
@@ -24,10 +24,8 @@ describe('theme-helper-parseSchemeToCSSProperties', () => {
       '--lb-tm-menu-border: #000;',
     ]
 
-    // Act
     const result = parseSchemeToCSSProperties(scheme)
 
-    // Assert
     expect(result).toStrictEqual(expected)
   })
 })
