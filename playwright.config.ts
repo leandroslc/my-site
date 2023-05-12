@@ -19,25 +19,16 @@ const projects: PlaywrightTestConfig['projects'] = [
   },
 ]
 
-if (isCI) {
-  projects.push({
-    name: 'firefox',
-    use: {
-      ...devices['Desktop Firefox'],
-    },
-  })
-}
-
 const config: PlaywrightTestConfig = {
   testDir: './e2e',
-  timeout: 30 * 1000,
+  timeout: 10 * 1000,
   expect: {
     timeout: 5000,
   },
   fullyParallel: true,
   forbidOnly: isCI,
-  retries: isCI ? 2 : 0,
-  workers: isCI ? 1 : undefined,
+  retries: 0,
+  workers: undefined,
   reporter: 'html',
   use: {
     actionTimeout: 0,
