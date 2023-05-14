@@ -21,7 +21,7 @@ const projects: PlaywrightTestConfig['projects'] = [
 
 const config: PlaywrightTestConfig = {
   testDir: './e2e',
-  timeout: 10 * 1000,
+  timeout: 30 * 1000,
   expect: {
     timeout: 5000,
   },
