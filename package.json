@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --verbose",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "lint": "eslint **/*.ts **/*.tsx"
   },
   "dependencies": {
     "date-fns": "2.21.3",

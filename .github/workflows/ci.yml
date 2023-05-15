@@ -1,0 +1,14 @@
+name: Build (CI)
+
+on: [pull_request]
+
+jobs:
+  build:
+    uses: ./build.yml
+
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build site
+        run: npm run build
