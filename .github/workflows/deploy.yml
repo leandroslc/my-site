@@ -13,8 +13,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/build.yml
       - uses: actions/checkout@v2
+      - uses: ./.github/workflows/build.yml
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Environment Information
