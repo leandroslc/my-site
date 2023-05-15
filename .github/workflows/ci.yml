@@ -1,0 +1,25 @@
+name: Build (CI)
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Run lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Install playwright browsers
+        run: npx playwright install
+      - name: e2e tests
+        run: npm run test:e2e
+      - name: Build site
+        run: npm run build
