@@ -1,9 +1,8 @@
-
 ## Regence
 
-This Terms of Use are effective as of 08 may 2023.
+This Terms of Use are effective as of 10 may 2023.
 
-## Consentiment
+## Consent
 
 By using this site you agree with the terms of use described in this page, under the risk of applicable penalties.
 

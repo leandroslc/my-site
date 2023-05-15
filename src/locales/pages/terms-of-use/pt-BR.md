@@ -1,9 +1,8 @@
-
 ## Regência
 
-Estes Termos de Uso são efetivos a partir de 08 de maio de 2023.
+Estes Termos de Uso são efetivos a partir de 10 de maio de 2023.
 
-## Concentimento
+## Consentimento
 
 Ao usar este site você concorda com os termos descritos nesta página e compromete-se a observa-los, sob o risco de penalidades cabíveis.
 

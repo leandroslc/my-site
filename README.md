@@ -17,3 +17,7 @@ A profile site and a blog about things that I wanted to know and that maybe shou
 
 ## :hand: Contributing
 This is a repository that probably only I will be maintaining mostly of the time, but if you want to contribute (that would be of much help :blush:), you can fork this repository and send a PR.
+
+## :balance_scale: License
+- Source code licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+- Site content including blog and images authored by me are licensed under [Creative Commons ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
