@@ -1,6 +1,7 @@
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { GITHUB_URL, LINKEDIN_URL } from '@/src/config/constants'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import { Emoji } from '../../base/Emoji'
+import { Emoji } from '@/src/components/base/Emoji'
 import * as S from './Hero.styles'
 
 export const Hero = () => {
@@ -25,12 +26,12 @@ export const Hero = () => {
           )}
         </S.Description>
         <S.Social>
-          <S.SocialLink href="/">
-            <FiGithub size="1.2rem" />
+          <S.SocialLink href={GITHUB_URL}>
+            <FiGithub size="1.2rem" aria-hidden="true" />
             GitHub
           </S.SocialLink>
-          <S.SocialLink href="/">
-            <FiLinkedin size="1.2rem" />
+          <S.SocialLink href={LINKEDIN_URL}>
+            <FiLinkedin size="1.2rem" aria-hidden="true" />
             LinkedIn
           </S.SocialLink>
         </S.Social>

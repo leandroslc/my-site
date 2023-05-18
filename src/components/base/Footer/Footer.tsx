@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { GITHUB_URL, LINKEDIN_URL } from '@/src/config/constants'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './Footer.styles'
 
@@ -16,14 +17,14 @@ export const Footer = () => {
           <Link as="/terms-of-use" href="/terms-of-use" passHref>
             <S.NavLink>{translate('base.footer-link-terms-of-use')}</S.NavLink>
           </Link>
-          <Link as="/" href="/" passHref>
+          <Link as={GITHUB_URL} href={GITHUB_URL} passHref>
             <S.NavSocialLink title="GitHub">
-              <FiGithub />
+              <FiGithub aria-hidden="true" />
             </S.NavSocialLink>
           </Link>
-          <Link as="/" href="/" passHref>
+          <Link as={LINKEDIN_URL} href={LINKEDIN_URL} passHref>
             <S.NavSocialLink title="LinkedIn">
-              <FiLinkedin />
+              <FiLinkedin aria-hidden="true" />
             </S.NavSocialLink>
           </Link>
         </S.Nav>
