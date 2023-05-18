@@ -34,7 +34,7 @@ export const ParticlesContainer = () => {
               outMode: 'out',
               warp: true,
               random: false,
-              speed: 0.75,
+              speed: 0.5,
               straight: false,
             },
             number: {
@@ -47,7 +47,7 @@ export const ParticlesContainer = () => {
               type: 'circle',
             },
             size: {
-              value: { min: 2, max: 8 },
+              value: { min: 1, max: 7 },
             },
             color: {
               value: colors,
