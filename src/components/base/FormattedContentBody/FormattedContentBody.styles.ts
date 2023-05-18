@@ -2,46 +2,74 @@ import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
 export const Container = styled.main`
+  width: 100%;
   padding: 0 32px 0 32px;
-  line-height: 1.625;
+  line-height: 1.7;
 
   p {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+  }
+
+  p > code {
+    display: inline-block;
+    background-color: #2d5246;
+    color: #c1fff0;
+    padding: 0 0.3em;
+    line-height: 1.5rem;
+    font-family: 'fontFamily.mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, 'Liberation Mono', 'Courier New', monospace;
+    border-radius: 4px;
   }
 
   h2 {
     margin-top: 30px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     font-size: 1.5em;
     font-weight: 600;
   }
 
   h3 {
     margin-top: 30px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     font-size: 1.25em;
     font-weight: 600;
   }
 
   ul {
     list-style: disc;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     padding-left: 40px;
   }
 
   a {
     position: relative;
-    display: inline-block;
+    display: inline;
     color: ${vars.theme((theme) => theme.elements.link)};
+    text-decoration: none;
+    border-bottom: 1px solid ${vars.theme((theme) => theme.elements.link)};
+  }
 
-    &::after {
-      position: absolute;
-      bottom: 0;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 0.5px;
-      background-color: ${vars.theme((theme) => theme.elements.link)};
+  pre {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  pre[class*='language-'] {
+    width: calc(100% + 1px);
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0px;
+    border-radius: 0;
+
+    & ::selection {
+      color: #fff;
+      background-color: rgba(29, 59, 83, 0.99);
     }
+  }
+
+  .remark-highlight {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 0.5rem;
   }
 `

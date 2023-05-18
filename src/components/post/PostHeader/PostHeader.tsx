@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { FiCalendar } from 'react-icons/fi'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
+import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './PostHeader.styles'
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
 
 export const PostHeader = ({ title, coverImage, date }: Props) => {
   const { locale } = useRouter()
+  const { translate } = useTranslation()
 
   return (
     <S.Header>
@@ -21,7 +23,11 @@ export const PostHeader = ({ title, coverImage, date }: Props) => {
         <FiCalendar /> {formatDate(date, locale!)}
       </S.Date>
       <S.ImageContainer>
-        <S.Image src={coverImage} aria-hidden="true" alt="title" />
+        <S.Image
+          src={coverImage}
+          aria-hidden="true"
+          alt={`${translate('post.blog-post-image-alt')} ${title}`}
+        />
       </S.ImageContainer>
     </S.Header>
   )

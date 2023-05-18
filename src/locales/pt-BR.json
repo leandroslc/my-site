@@ -1,5 +1,6 @@
 {
   "base": {
+    "back-to-home": "Voltar para o início",
     "drilldown-item-back": "Voltar",
     "footer-link-home": "Página inicial",
     "footer-link-terms-of-use": "Termos de uso",
@@ -18,7 +19,7 @@
   },
   "post": {
     "header-painting-alt": "Uma pintura simples de teclas de piano, um relógio de bolso, uma xícara e um pincel",
-    "back-to-home": "Voltar para o início"
+    "blog-post-image-alt": "Imagem de capa para"
   },
   "termsOfUse": {
     "title": "Termos de Uso"

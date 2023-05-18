@@ -10,7 +10,7 @@ export const BackButton = () => {
     <Link as="/" href="/" passHref>
       <S.Button>
         <FiArrowLeft aria-hidden="true" />
-        <span>{translate('post.back-to-home')}</span>
+        <span>{translate('base.back-to-home')}</span>
       </S.Button>
     </Link>
   )

@@ -55,7 +55,7 @@ export const GlobalStyles = createGlobalStyle`
     background: none;
     border: none;
     user-select: none;
-    -webkit-appearance: button;
+    appearance: button;
   }
 
   blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
@@ -65,9 +65,5 @@ export const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
-  }
-
-  pre[class*=language-] {
-    border-radius: 0.3rem !important;
   }
 `

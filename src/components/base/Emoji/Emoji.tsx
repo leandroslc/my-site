@@ -4,5 +4,9 @@ type Props = {
 }
 
 export const Emoji = ({ symbol, alt }: Props) => {
-  return <span aria-label={alt}>{symbol}</span>
+  return (
+    <span title={alt} aria-hidden="true">
+      {symbol}
+    </span>
+  )
 }

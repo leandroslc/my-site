@@ -1,5 +1,6 @@
 {
   "base": {
+    "back-to-home": "Back to home",
     "drilldown-item-back": "Back",
     "footer-link-home": "Home",
     "footer-link-terms-of-use": "Terms of use",
@@ -18,7 +19,7 @@
   },
   "post": {
     "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
-    "back-to-home": "Back to home"
+    "blog-post-image-alt": "Cover image for"
   },
   "termsOfUse": {
     "title": "Terms of Use"
