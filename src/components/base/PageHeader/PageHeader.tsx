@@ -15,7 +15,7 @@ export const PageHeader = () => {
         <S.TitleText>{SITE_SUBNAME}</S.TitleText>
       </S.Title>
       <S.PaintingImage
-        src="/assets/site/header-painting.png"
+        src="/assets/site/header-painting.webp"
         alt={translate('post.header-painting-alt')}
       />
       <S.ContentBorder as={Border} />
