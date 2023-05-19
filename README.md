@@ -13,8 +13,6 @@
   <img src="https://github.com/leandroslc/my-site/actions/workflows/deploy.yml/badge.svg" alt="Build status" />
 </p>
 
-[![Build (CI)](https://github.com/leandroslc/my-site/actions/workflows/ci.yml/badge.svg)](https://github.com/leandroslc/my-site/actions/workflows/ci.yml)
-
 ## :book: Purpose
 A profile site and a blog about things that I wanted to know and that maybe should be important to other people.
 
