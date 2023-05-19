@@ -4,6 +4,17 @@
   An attempt to create and keep my own profile site with a blog.
 </p>
 
+<p align="center">
+  <a href="https://leandroslc.vercel.app"><strong>leandroslc.vercel.app</strong></a>
+</p>
+
+<p align="center">
+  <img src="https://github.com/leandroslc/my-site/actions/workflows/ci.yml/badge.svg" alt="Build status" />
+  <img src="https://github.com/leandroslc/my-site/actions/workflows/deploy.yml/badge.svg" alt="Build status" />
+</p>
+
+[![Build (CI)](https://github.com/leandroslc/my-site/actions/workflows/ci.yml/badge.svg)](https://github.com/leandroslc/my-site/actions/workflows/ci.yml)
+
 ## :book: Purpose
 A profile site and a blog about things that I wanted to know and that maybe should be important to other people.
 
