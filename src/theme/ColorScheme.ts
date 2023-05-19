@@ -12,10 +12,22 @@ export type ColorScheme = {
       text: Color
     }
   }
+  contentElements: {
+    link: Color
+    code: {
+      back: Color
+      text: Color
+    }
+    codeBlock: {
+      selection: {
+        back: Color
+        text: Color
+      }
+    }
+  }
   elements: {
     emphasys: Color
     emphasys30: Color
-    link: Color
   }
   header: {
     back: Color

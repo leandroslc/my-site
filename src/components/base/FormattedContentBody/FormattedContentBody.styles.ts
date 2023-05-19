@@ -12,8 +12,8 @@ export const Container = styled.main`
 
   p > code {
     display: inline-block;
-    background-color: #2d5246;
-    color: #c1fff0;
+    background-color: ${vars.theme((theme) => theme.contentElements.code.back)};
+    color: ${vars.theme((theme) => theme.contentElements.code.text)};
     padding: 0 0.3em;
     line-height: 1.5rem;
     font-family: 'fontFamily.mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
@@ -44,9 +44,10 @@ export const Container = styled.main`
   a {
     position: relative;
     display: inline;
-    color: ${vars.theme((theme) => theme.elements.link)};
+    color: ${vars.theme((theme) => theme.contentElements.link)};
     text-decoration: none;
-    border-bottom: 1px solid ${vars.theme((theme) => theme.elements.link)};
+    border-bottom: 1px solid
+      ${vars.theme((theme) => theme.contentElements.link)};
   }
 
   pre {
@@ -62,8 +63,12 @@ export const Container = styled.main`
     border-radius: 0;
 
     & ::selection {
-      color: #fff;
-      background-color: rgba(29, 59, 83, 0.99);
+      color: ${vars.theme(
+        (theme) => theme.contentElements.codeBlock.selection.text
+      )};
+      background-color: ${vars.theme(
+        (theme) => theme.contentElements.codeBlock.selection.back
+      )};
     }
   }
 

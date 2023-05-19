@@ -9,10 +9,22 @@ export const light: ColorScheme = {
       text: '#ffffff',
     },
   },
+  contentElements: {
+    link: '#2649ff',
+    code: {
+      back: '#d9e9e5',
+      text: '#2b5753',
+    },
+    codeBlock: {
+      selection: {
+        back: 'rgba(29, 59, 83, 0.99)',
+        text: '#fff',
+      },
+    },
+  },
   elements: {
     emphasys: 'rgb(0 191 255)',
     emphasys30: 'rgb(0 191 255 / 36%)',
-    link: '#2649ff',
   },
   header: {
     back: 'linear-gradient(72deg, #000851, #1cb5e0)',
