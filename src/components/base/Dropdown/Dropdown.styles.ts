@@ -53,7 +53,7 @@ export const Menu = styled.div`
 `
 
 export const Button = styled.button`
-  z-index: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
