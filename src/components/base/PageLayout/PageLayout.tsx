@@ -5,6 +5,7 @@ import { Footer } from '../Footer'
 import { FooterBorder } from '../FooterBorder'
 import { ParticlesContainer } from '../ParticlesContainer'
 import { Meta } from '../Meta'
+import { Loader } from '../Loader'
 import * as S from './PageLayout.styles'
 
 type Props = PropsWithChildren<{
@@ -15,6 +16,7 @@ type Props = PropsWithChildren<{
 export const PageLayout = ({ children, header, title }: Props) => {
   return (
     <>
+      <Loader />
       <Meta />
       <Head>
         <title>{title}</title>
