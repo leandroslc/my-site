@@ -48,3 +48,7 @@ export const Date = styled.time`
   margin: 0 16px 16px 16px;
   font-size: 0.95rem;
 `
+
+export const TagsContainer = styled.div`
+  margin: 0 16px 16px 16px;
+`

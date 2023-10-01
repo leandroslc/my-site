@@ -5,7 +5,8 @@
     "footer-link-home": "Página inicial",
     "footer-link-terms-of-use": "Termos de uso",
     "footer-rights": "Todos os direitos reservados.",
-    "meta-description": "Meu portfólio com um blog sobre coisas que acho interessantes"
+    "meta-description": "Meu portfólio com um blog sobre coisas que acho interessantes",
+    "tag-title": "Tópico {0}"
   },
   "home": {
     "hero-title": "Oi {0}, eu sou Leandro",

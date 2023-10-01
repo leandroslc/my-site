@@ -3,15 +3,13 @@ export type BlogPost = {
   title: string
   date: string
   coverImage: string
-  excerpt: string
   ogImage: {
     url: string
   }
   content: string
+  tags: string[]
 }
 
-export type BlogPostProperty = keyof BlogPost
+export type BlogPostPreview = Omit<BlogPost, 'content' | 'ogImage'>
 
-export type SelectedBlogPostInfo = {
-  [key: string]: string
-}
+export type SelectedBlogPostInfo = Record<keyof Partial<BlogPost>, unknown>

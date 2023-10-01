@@ -3,6 +3,9 @@ title: 'Building your own LINQ provider in .NET'
 excerpt: 'With the advent of Entity Framework (EF) and adoption of LINQ in other technologies like in the ORM NHibernate, the MongoDb driver and even for data querying in files like JSON and XML, it is more common to find LINQ in a C# application. But you know how this process works? And what are the characteristics that distinguishes it from a simple Iterator?'
 coverImage: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
 date: '2023-05-15T17:40:00.000Z'
+tags:
+  - .NET
+  - C#
 ogImage:
   url: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
 ---

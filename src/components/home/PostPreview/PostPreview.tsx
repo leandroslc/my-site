@@ -1,17 +1,17 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Tags } from '@/src/components/base/Tags'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
-import { truncate } from '@/src/helpers/TruncateHelper'
-import { BlogPost } from '@/src/models/BlogPost'
+import { BlogPostPreview } from '@/src/models/BlogPost'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './PostPreview.styles'
 
 type Props = {
-  post: BlogPost
+  post: BlogPostPreview
 }
 
 export const PostPreview = ({ post }: Props) => {
-  const { slug, coverImage, title, date, excerpt } = post
+  const { slug, coverImage, title, date } = post
   const { locale } = useRouter()
   const { translate } = useTranslation()
 
@@ -28,7 +28,7 @@ export const PostPreview = ({ post }: Props) => {
           <S.Content>
             <S.Date dateTime={date}>{formatDate(date, locale!)}</S.Date>
             <S.Title>{title}</S.Title>
-            <S.Description>{truncate(excerpt, 100)}</S.Description>
+            <Tags tags={post.tags} />
           </S.Content>
         </S.Card>
       </S.PostLink>
