@@ -35,8 +35,6 @@ export const Meta = () => {
       <meta name="msapplication-config" content="/manifest/browserconfig.xml" />
       <meta name="theme-color" content="#336c8b" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={translate('base.meta-description')} />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }

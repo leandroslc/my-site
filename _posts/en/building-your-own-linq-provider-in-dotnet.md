@@ -1,13 +1,12 @@
 ---
 title: 'Building your own LINQ provider in .NET'
-excerpt: 'With the advent of Entity Framework (EF) and adoption of LINQ in other technologies like in the ORM NHibernate, the MongoDb driver and even for data querying in files like JSON and XML, it is more common to find LINQ in a C# application. But you know how this process works? And what are the characteristics that distinguishes it from a simple Iterator?'
+excerpt: 'Obviously creating an ORM is far beyond the scope 😄, but at least I will show the initial steps of how to create your own LINQ provider.'
 coverImage: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
 date: '2023-05-15T17:40:00.000Z'
+ogImageUrl: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
 tags:
   - .NET
   - C#
-ogImage:
-  url: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
 ---
 
 The [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) became essential in the .NET ecosystem, introducing functional characteristics since 2008.

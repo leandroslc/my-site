@@ -1,4 +1,4 @@
-import { SITE_NAME } from '@/src/config/constants'
+import { HOME_OG_IMAGE_URL, SITE_NAME } from '@/src/config/constants'
 import { BlogPostPreview } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout'
 import { useTranslation } from '@/src/hooks/useTranslation'
@@ -16,7 +16,12 @@ export const HomePage = ({ posts }: HomeProps) => {
   const { translate, translateWithElements } = useTranslation()
 
   return (
-    <PageLayout title={SITE_NAME} header={<HomeHeader />}>
+    <PageLayout
+      title={SITE_NAME}
+      description={translate('home.meta-description')}
+      ogImageUrl={HOME_OG_IMAGE_URL}
+      header={<HomeHeader />}
+    >
       <S.Content>
         <Hero />
         <S.Title>{translate('home.blog-title')}</S.Title>

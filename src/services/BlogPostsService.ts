@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { postsDirectory } from '@/src/config/config'
 import { BlogPost, SelectedBlogPostInfo } from '@/src/models/BlogPost'
+import { makeAbsoluteUrl } from './UrlService'
 
 export const getPostSlugs = (locale: string) => {
   return fs.readdirSync(path.join(postsDirectory, locale))
@@ -21,6 +22,10 @@ export const getPostBySlug = (
   const items = {} as SelectedBlogPostInfo
 
   fields.forEach((field) => {
+    if (typeof data[field] !== 'undefined') {
+      items[field] = data[field]
+    }
+
     if (field === 'slug') {
       items[field] = realSlug
     }
@@ -29,8 +34,8 @@ export const getPostBySlug = (
       items[field] = content
     }
 
-    if (typeof data[field as string] !== 'undefined') {
-      items[field] = data[field as string]
+    if (field === 'ogImageUrl') {
+      items[field] = makeAbsoluteUrl(data[field])
     }
   })
 

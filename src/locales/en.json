@@ -5,10 +5,10 @@
     "footer-link-home": "Home",
     "footer-link-terms-of-use": "Terms of use",
     "footer-rights": "All rights reserved.",
-    "meta-description": "My portfolio site with a blog about things I find interesting",
     "tag-title": "{0} topic"
   },
   "home": {
+    "meta-description": "My portfolio site with a blog about things I find interesting",
     "hero-title": "Hi {0}, I'm Leandro",
     "hero-job": "software developer",
     "hero-description": "I'm a full stack {0}. Mostly coding because it is fun. When not in front of a computer, I also like painting, writing, reading and playing piano.",

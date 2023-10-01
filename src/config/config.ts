@@ -8,3 +8,5 @@ export const translatedPagesDirectory = join(
   'locales',
   'pages'
 )
+
+export const baseUrl = process.env.BASE_URL
