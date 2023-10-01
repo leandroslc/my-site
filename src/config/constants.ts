@@ -1,4 +1,4 @@
-export const HOME_OG_IMAGE_URL = ''
+export const HOME_OG_IMAGE_URL = '/assets/site/cover.webp'
 export const SITE_NAME = "Leandro's Place"
 export const SITE_SUBNAME = 'Place'
 export const GITHUB_URL = 'https://github.com/leandroslc'
