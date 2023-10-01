@@ -21,6 +21,9 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   ]) as unknown as BlogPostPreview
 
   return {
-    props: { posts: allPosts, ogImageUrl: makeAbsoluteUrl(HOME_OG_IMAGE_URL) },
+    props: {
+      posts: allPosts,
+      ogImageUrl: makeAbsoluteUrl(HOME_OG_IMAGE_URL),
+    },
   }
 }

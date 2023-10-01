@@ -8,15 +8,18 @@ import * as S from './TermsOfUsePage.styles'
 
 export type TermsOfUseProps = {
   content: string
+  ogImageUrl: string
 }
 
-export const TermsOfUsePage = ({ content }: TermsOfUseProps) => {
+export const TermsOfUsePage = ({ content, ogImageUrl }: TermsOfUseProps) => {
   const { translate } = useTranslation()
 
   return (
     <PageLayout
       title={`${translate('termsOfUse.title')} | ${SITE_NAME}`}
       header={<PageHeader />}
+      description={translate('home.meta-description')}
+      ogImageUrl={ogImageUrl}
     >
       <S.PageContainer>
         <BackButton />
