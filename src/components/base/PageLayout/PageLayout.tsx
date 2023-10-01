@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import Head from 'next/head'
+import { enablePageLoader } from '@/src/config/clientSideConfig'
 import { OptionsMenu } from '@/src/components/options/OptionsMenu'
 import { Footer } from '../Footer'
 import { FooterBorder } from '../FooterBorder'
@@ -16,7 +17,7 @@ type Props = PropsWithChildren<{
 export const PageLayout = ({ children, header, title }: Props) => {
   return (
     <>
-      <Loader />
+      {enablePageLoader && <Loader />}
       <Meta />
       <Head>
         <title>{title}</title>
