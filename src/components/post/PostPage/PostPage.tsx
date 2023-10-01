@@ -36,6 +36,7 @@ export const PostPage = ({ post }: PostProps) => {
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
+              tags={post.tags}
             />
             <FormattedContentBody content={post.content} />
           </S.PostContainer>

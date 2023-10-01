@@ -5,7 +5,8 @@
     "footer-link-home": "Home",
     "footer-link-terms-of-use": "Terms of use",
     "footer-rights": "All rights reserved.",
-    "meta-description": "My portfolio site with a blog about things I find interesting"
+    "meta-description": "My portfolio site with a blog about things I find interesting",
+    "tag-title": "{0} topic"
   },
   "home": {
     "hero-title": "Hi {0}, I'm Leandro",

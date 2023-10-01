@@ -22,6 +22,9 @@ test.describe('Post', () => {
       header.locator('time', { hasText: expectedDate })
     ).toBeVisible()
 
+    await expect(header.getByTitle('Hello topic')).toBeVisible()
+    await expect(header.getByTitle('Test topic')).toBeVisible()
+
     const coverImage = header.locator('img')
     await expect(coverImage).toBeVisible()
     await expect(coverImage).toHaveAttribute('src', expectedImage)

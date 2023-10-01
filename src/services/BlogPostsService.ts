@@ -2,11 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { postsDirectory } from '@/src/config/config'
-import {
-  BlogPost,
-  BlogPostProperty,
-  SelectedBlogPostInfo,
-} from '@/src/models/BlogPost'
+import { BlogPost, SelectedBlogPostInfo } from '@/src/models/BlogPost'
 
 export const getPostSlugs = (locale: string) => {
   return fs.readdirSync(path.join(postsDirectory, locale))
@@ -15,16 +11,15 @@ export const getPostSlugs = (locale: string) => {
 export const getPostBySlug = (
   locale: string,
   slug: string,
-  fields: BlogPostProperty[] = []
+  fields: (keyof BlogPost)[] = []
 ) => {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = path.join(postsDirectory, locale, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  const items: SelectedBlogPostInfo = {}
+  const items = {} as SelectedBlogPostInfo
 
-  // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
       items[field] = realSlug
@@ -34,12 +29,12 @@ export const getPostBySlug = (
       items[field] = content
     }
 
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field]
+    if (typeof data[field as string] !== 'undefined') {
+      items[field] = data[field as string]
     }
   })
 
-  return items as unknown as BlogPost
+  return items as BlogPost
 }
 
 const byNewest = (post1: BlogPost, post2: BlogPost) =>
@@ -47,7 +42,7 @@ const byNewest = (post1: BlogPost, post2: BlogPost) =>
 
 export const getAllPosts = (
   locale: string,
-  fields: BlogPostProperty[] = []
+  fields: (keyof BlogPost)[] = []
 ) => {
   const slugs = getPostSlugs(locale)
   const posts = slugs

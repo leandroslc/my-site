@@ -75,5 +75,9 @@ export const dark: ColorScheme = {
     backToHome: {
       border: '#fefefe',
     },
+    tag: {
+      back: '#e3a860',
+      text: '#1a1e2b',
+    },
   },
 }

@@ -1,5 +1,5 @@
 import { SITE_NAME } from '@/src/config/constants'
-import { BlogPost } from '@/src/models/BlogPost'
+import { BlogPostPreview } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { Emoji } from '../../base/Emoji'
@@ -9,7 +9,7 @@ import { Hero } from '../Hero'
 import * as S from './HomePage.styles'
 
 export type HomeProps = {
-  posts: BlogPost[]
+  posts: BlogPostPreview[]
 }
 
 export const HomePage = ({ posts }: HomeProps) => {

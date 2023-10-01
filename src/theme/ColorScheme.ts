@@ -78,5 +78,9 @@ export type ColorScheme = {
     backToHome: {
       border: Color
     }
+    tag: {
+      back: Color
+      text: Color
+    }
   }
 }

@@ -7,7 +7,8 @@ const assertPostPreviewIsVisible = async (
   page: Page,
   title: string,
   date: string,
-  cover: string
+  cover: string,
+  topics: string[]
 ) => {
   const post = page.locator('article', {
     has: page.locator(`text=${title}`),
@@ -15,7 +16,10 @@ const assertPostPreviewIsVisible = async (
 
   await expect(post.locator('h1', { hasText: title })).toBeVisible()
   await expect(post.locator('time', { hasText: date })).toBeVisible()
-  await expect(post.locator(`text=${COMMON_EXCERPT}`)).toBeVisible()
+
+  for await (const topic of topics) {
+    await expect(post.getByTitle(`${topic} topic`)).toBeVisible()
+  }
 
   const coverImage = post.locator('img')
   await expect(coverImage).toBeVisible()
@@ -32,14 +36,16 @@ test.describe('Home', () => {
       page,
       'Hello world: Announcing my new site',
       '16 march 2020',
-      '/assets/blog/hello-world/cover.jpg'
+      '/assets/blog/hello-world/cover.jpg',
+      ['Hello', 'Test']
     )
 
     await assertPostPreviewIsVisible(
       page,
       'A tool vs another new tool',
       '10 may 2022',
-      '/assets/blog/tool-vs-tool/cover.jpg'
+      '/assets/blog/tool-vs-tool/cover.jpg',
+      ['Tools']
     )
   })
 

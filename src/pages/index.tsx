@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import { BlogPostPreview } from '@/src/models/BlogPost'
 import { getAllPosts } from '@/src/services/BlogPostsService'
 import { HomePage, HomeProps } from '@/src/components/home/HomePage'
 
@@ -14,8 +15,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     'date',
     'slug',
     'coverImage',
-    'excerpt',
-  ])
+    'tags',
+  ]) as unknown as BlogPostPreview
 
   return {
     props: { posts: allPosts },
