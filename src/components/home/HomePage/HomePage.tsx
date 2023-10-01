@@ -10,13 +10,19 @@ import * as S from './HomePage.styles'
 
 export type HomeProps = {
   posts: BlogPostPreview[]
+  ogImageUrl: string
 }
 
-export const HomePage = ({ posts }: HomeProps) => {
+export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
   const { translate, translateWithElements } = useTranslation()
 
   return (
-    <PageLayout title={SITE_NAME} header={<HomeHeader />}>
+    <PageLayout
+      title={SITE_NAME}
+      description={translate('home.meta-description')}
+      ogImageUrl={ogImageUrl}
+      header={<HomeHeader />}
+    >
       <S.Content>
         <Hero />
         <S.Title>{translate('home.blog-title')}</S.Title>
