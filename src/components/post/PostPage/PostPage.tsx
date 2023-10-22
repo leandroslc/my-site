@@ -5,6 +5,7 @@ import { BlogPost } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout/PageLayout'
 import { BackButton } from '@/src/components/base/BackButton/BackButton'
 import { PageHeader } from '@/src/components/base/PageHeader'
+import { Meta } from '@/src/components/base/Meta'
 import { FormattedContentBody } from '@/src/components/base/FormattedContentBody'
 import { PostHeader } from '../PostHeader'
 import * as S from './PostPage.styles'
@@ -21,12 +22,12 @@ export const PostPage = ({ post }: PostProps) => {
   }
 
   return (
-    <PageLayout
-      title={`${post.title} | ${SITE_NAME}`}
-      description={post.excerpt}
-      ogImageUrl={post.ogImageUrl}
-      header={<PageHeader />}
-    >
+    <PageLayout header={<PageHeader />}>
+      <Meta
+        title={`${post.title} | ${SITE_NAME}`}
+        description={post.excerpt}
+        ogImageUrl={post.ogImageUrl}
+      />
       {router.isFallback ? (
         <>Loading...</>
       ) : (

@@ -1,10 +1,19 @@
 import Head from 'next/head'
-import { HOME_OG_IMAGE_URL } from '@/src/config/constants'
-import { useTranslation } from '@/src/hooks/useTranslation'
+import { SITE_NAME } from '@/src/config/constants'
 
-export const Meta = () => {
-  const { translate } = useTranslation()
+type Props = {
+  title: string
+  description: string
+  ogImageUrl: string
+  ogImageType?: string
+}
 
+export const Meta = ({
+  title,
+  description,
+  ogImageUrl,
+  ogImageType = 'image/webp',
+}: Props) => {
   return (
     <Head>
       <link
@@ -35,6 +44,14 @@ export const Meta = () => {
       <meta name="msapplication-config" content="/manifest/browserconfig.xml" />
       <meta name="theme-color" content="#336c8b" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImageUrl} />
+      <meta property="og:image:url" content={ogImageUrl} />
+      <meta property="og:image:type" content={ogImageType} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <title>{title}</title>
     </Head>
   )
 }
