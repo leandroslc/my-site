@@ -1,7 +1,8 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;

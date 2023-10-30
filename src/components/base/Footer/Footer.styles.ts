@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
@@ -46,7 +47,7 @@ export const Nav = styled.nav`
   align-items: center;
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   position: relative;
   display: inline-block;
   margin-right: 24px;
@@ -73,7 +74,7 @@ export const NavLink = styled.a`
   }
 `
 
-export const NavSocialLink = styled.a`
+export const NavSocialLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
