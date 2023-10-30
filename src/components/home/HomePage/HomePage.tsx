@@ -1,8 +1,9 @@
 import { SITE_NAME } from '@/src/config/constants'
 import { BlogPostPreview } from '@/src/models/BlogPost'
 import { PageLayout } from '@/src/components/base/PageLayout'
+import { Meta } from '@/src/components//base/Meta'
+import { Emoji } from '@/src/components//base/Emoji'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import { Emoji } from '../../base/Emoji'
 import { HomeHeader } from '../HomeHeader'
 import { PostPreview } from '../PostPreview'
 import { Hero } from '../Hero'
@@ -17,12 +18,12 @@ export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
   const { translate, translateWithElements } = useTranslation()
 
   return (
-    <PageLayout
-      title={SITE_NAME}
-      description={translate('home.meta-description')}
-      ogImageUrl={ogImageUrl}
-      header={<HomeHeader />}
-    >
+    <PageLayout header={<HomeHeader />}>
+      <Meta
+        title={SITE_NAME}
+        description={translate('home.meta-description')}
+        ogImageUrl={ogImageUrl}
+      />
       <S.Content>
         <Hero />
         <S.Title>{translate('home.blog-title')}</S.Title>
