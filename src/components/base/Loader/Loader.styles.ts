@@ -14,14 +14,22 @@ export const Container = styled.div`
   opacity: 1;
   overflow: hidden;
   background-color: ${vars.theme((theme) => theme.body.back)};
+  animation: 1.2s linear 0.2s 1 normal forwards running fade;
 
-  &.removing {
-    opacity: 0;
-    transition: opacity 1.2s;
-  }
-
-  &.done {
-    display: none;
+  @keyframes fade {
+    0% {
+      z-index: 1000;
+      opacity: 1;
+      visibility: visible;
+    }
+    98% {
+      opacity: 0;
+    }
+    100% {
+      z-index: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 `
 
