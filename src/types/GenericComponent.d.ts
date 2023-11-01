@@ -7,7 +7,7 @@ export type AnyComponentType =
 
 export type PropsWithAnyComponent<
   T,
-  U = {}
+  U = {},
 > = T extends keyof JSX.IntrinsicElements
   ? { as: T } & JSX.IntrinsicElements[T] & U
   : T extends React.ComponentType<infer M>

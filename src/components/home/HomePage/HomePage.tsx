@@ -33,7 +33,7 @@ export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
             <Emoji
               symbol="&#x1F642;"
               alt={translate('emojis.slightly-smiling-face')}
-            />
+            />,
           )}
         </S.Description>
         <S.Posts>

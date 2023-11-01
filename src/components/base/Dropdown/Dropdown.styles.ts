@@ -15,7 +15,8 @@ export const Menu = styled.div`
   background-color: ${vars.theme((theme) => theme.dropdown.menu.back)};
   border: 1px solid ${vars.theme((theme) => theme.dropdown.menu.border)};
   border-radius: 6px;
-  box-shadow: 0 0 0 0 ${vars.theme((theme) => theme.dropdown.menu.shadowRing)},
+  box-shadow:
+    0 0 0 0 ${vars.theme((theme) => theme.dropdown.menu.shadowRing)},
     0 10px 15px -3px ${vars.theme((theme) => theme.dropdown.menu.shadow)},
     0 4px 6px -4px ${vars.theme((theme) => theme.dropdown.menu.shadow)};
   backdrop-filter: blur(4px);
@@ -63,7 +64,8 @@ export const Button = styled.button`
   color: ${vars.theme((theme) => theme.dropdown.button.text)};
   background-color: ${vars.theme((theme) => theme.dropdown.button.back)};
   border-radius: 6px;
-  box-shadow: 0 0 ${vars.theme((theme) => theme.dropdown.button.shadow)},
+  box-shadow:
+    0 0 ${vars.theme((theme) => theme.dropdown.button.shadow)},
     0 0 ${vars.theme((theme) => theme.dropdown.button.shadowRing)},
     0 1px 2px 0 ${vars.theme((theme) => theme.dropdown.button.shadow)};
 `

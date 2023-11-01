@@ -16,13 +16,13 @@ export const Hero = () => {
             <Emoji
               symbol="&#x1F60A;"
               alt={translate('emojis.smiling-face-with-smiling-eyes')}
-            />
+            />,
           )}
         </S.Title>
         <S.Description>
           {translateWithElements(
             'home.hero-description',
-            <S.Emphasys>{translate('home.hero-job')}</S.Emphasys>
+            <S.Emphasys>{translate('home.hero-job')}</S.Emphasys>,
           )}
         </S.Description>
         <S.Social>

@@ -22,12 +22,12 @@ const stringTranslationFunctions = Object.keys(translations).reduce(
       findTranslationAndReplaceAsString(
         key,
         translations[locale as Locales],
-        ...params
+        ...params,
       )
 
     return result
   },
-  {} as GetTranslationFunctions
+  {} as GetTranslationFunctions,
 )
 
 const reactNodeTranslationFunctions = Object.keys(translations).reduce(
@@ -36,12 +36,12 @@ const reactNodeTranslationFunctions = Object.keys(translations).reduce(
       findTranslationAndReplaceAsReactNodes(
         key,
         translations[locale as Locales],
-        ...params
+        ...params,
       )
 
     return result
   },
-  {} as GetTranslationWithReplaceFunctions
+  {} as GetTranslationWithReplaceFunctions,
 )
 
 export const useTranslation = () => {

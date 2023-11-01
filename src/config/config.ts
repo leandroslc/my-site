@@ -6,7 +6,7 @@ export const translatedPagesDirectory = join(
   process.cwd(),
   'src',
   'locales',
-  'pages'
+  'pages',
 )
 
 export const baseUrl = process.env.BASE_URL

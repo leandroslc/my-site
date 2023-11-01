@@ -23,7 +23,10 @@ export const TitleText = styled.span`
   background-repeat: repeat-x;
   background-position-x: 4px, 0, 100%;
   background-position-y: calc(100% - 3px);
-  background-size: 100% 8px, auto 4px, auto 4px;
+  background-size:
+    100% 8px,
+    auto 4px,
+    auto 4px;
 `
 
 export const ImageContainer = styled.div`

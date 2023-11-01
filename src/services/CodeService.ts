@@ -46,7 +46,7 @@ export const injectTheme = (highlight: CodeHighlights) => {
   }
 
   updateOrAddLink(
-    `${CODE_HIGHLIGHT_BASE_URL}/${CodeHighlightThemes[highlight]}.css`
+    `${CODE_HIGHLIGHT_BASE_URL}/${CodeHighlightThemes[highlight]}.css`,
   )
 }
 
