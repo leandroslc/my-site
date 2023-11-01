@@ -11,7 +11,7 @@ test.describe('Terms of Use', () => {
     const content = page.locator('main', { hasText: expectedTitle })
 
     await expect(
-      content.getByRole('heading', { name: expectedTitle })
+      content.getByRole('heading', { name: expectedTitle }),
     ).toBeVisible()
   })
 

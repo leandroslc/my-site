@@ -12,7 +12,7 @@ export const getPostSlugs = (locale: string) => {
 export const getPostBySlug = (
   locale: string,
   slug: string,
-  fields: (keyof BlogPost)[] = []
+  fields: (keyof BlogPost)[] = [],
 ) => {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = path.join(postsDirectory, locale, `${realSlug}.md`)
@@ -47,7 +47,7 @@ const byNewest = (post1: BlogPost, post2: BlogPost) =>
 
 export const getAllPosts = (
   locale: string,
-  fields: (keyof BlogPost)[] = []
+  fields: (keyof BlogPost)[] = [],
 ) => {
   const slugs = getPostSlugs(locale)
   const posts = slugs

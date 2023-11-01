@@ -3,7 +3,7 @@ import { CSS_THEME_PROPS_PREFIX } from '@/src/config/constants'
 export const parseSchemeToCSSProperties = (
   scheme: Record<string, string | object>,
   properties: string[] = [],
-  prefix?: string
+  prefix?: string,
 ) => {
   let innerProperties: string[] = []
 
@@ -22,7 +22,7 @@ export const parseSchemeToCSSProperties = (
         properties,
         prefix
           ? `${prefix}-${prop.toLowerCase()}`
-          : `${CSS_THEME_PROPS_PREFIX}-${prop.toLowerCase()}`
+          : `${CSS_THEME_PROPS_PREFIX}-${prop.toLowerCase()}`,
       )
 
       innerProperties.forEach((prop) => {

@@ -60,12 +60,16 @@ export const SocialLink = styled.a`
   background-color: ${vars.theme((theme) => theme.body.back)};
   border: 2px solid ${vars.theme((theme) => theme.body.text)};
   border-radius: 9999px;
-  transition: color 0.1s, background-color 0.1s;
+  transition:
+    color 0.1s,
+    background-color 0.1s;
 
   &:hover,
   &:focus {
     color: ${vars.theme((theme) => theme.body.back)};
     background-color: ${vars.theme((theme) => theme.body.text)};
-    transition: color 0.1s, background-color 0.1s;
+    transition:
+      color 0.1s,
+      background-color 0.1s;
   }
 `

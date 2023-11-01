@@ -4,7 +4,7 @@ const createJestConfig = nextJest({
   dir: '.',
 })
 
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('ts-jest/dist/types').JestConfigWithTsJest} */
 const jestConfig = {
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
@@ -13,7 +13,7 @@ const jestConfig = {
     '^@/tests/(.*)$': '<rootDir>/tests/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/e2e'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
 
 module.exports = createJestConfig(jestConfig)

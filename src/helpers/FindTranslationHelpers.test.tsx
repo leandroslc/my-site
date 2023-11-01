@@ -30,7 +30,7 @@ describe('helpers.FindTranslationHelpers', () => {
         'home.title',
         items,
         'World',
-        'Day'
+        'Day',
       )
 
       expect(translation).toEqual('Hello World! Good Day')
@@ -47,7 +47,7 @@ describe('helpers.FindTranslationHelpers', () => {
 
       const translation = findTranslationAndReplaceAsReactNodes(
         'home.title',
-        items
+        items,
       )
 
       const translatedContents = render(<>{translation}</>).container.innerHTML
@@ -66,13 +66,13 @@ describe('helpers.FindTranslationHelpers', () => {
         'home.title',
         items,
         <strong>World</strong>,
-        <em>Day</em>
+        <em>Day</em>,
       )
 
       const translatedContents = render(<>{translation}</>).container.innerHTML
 
       expect(translatedContents).toEqual(
-        'Hello <strong>World</strong>! Good <em>Day</em>'
+        'Hello <strong>World</strong>! Good <em>Day</em>',
       )
     })
   })

@@ -64,10 +64,10 @@ export const Container = styled.main`
 
     & ::selection {
       color: ${vars.theme(
-        (theme) => theme.contentElements.codeBlock.selection.text
+        (theme) => theme.contentElements.codeBlock.selection.text,
       )};
       background-color: ${vars.theme(
-        (theme) => theme.contentElements.codeBlock.selection.back
+        (theme) => theme.contentElements.codeBlock.selection.back,
       )};
     }
   }

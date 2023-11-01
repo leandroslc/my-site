@@ -5,7 +5,8 @@ import headingId from 'remark-heading-id'
 
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
-    .use(prism)
+    // https://github.com/sergioramos/remark-prism/issues/304
+    .use(prism as never)
     .use(headingId)
     .use(html, { sanitize: false })
     .process(markdown)

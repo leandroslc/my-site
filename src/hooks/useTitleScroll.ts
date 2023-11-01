@@ -7,7 +7,7 @@ export const useTitleScroll = () => {
   const updateTitle = (
     titleElement: HTMLHeadingElement,
     position: number,
-    opacity: number
+    opacity: number,
   ) => {
     titleElement.style.transform = `translateY(${position}px)`
     titleElement.style.opacity = String(opacity)
@@ -25,7 +25,7 @@ export const useTitleScroll = () => {
       return updateTitle(
         titleRef.current,
         -scrollPosition / 3,
-        1 - scrollPosition / containerHeight
+        1 - scrollPosition / containerHeight,
       )
     }
 

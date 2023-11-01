@@ -14,6 +14,6 @@ describe('helpers.TruncateHelper', () => {
       const result = truncate(value, maxLength)
 
       expect(result).toBe(expected)
-    }
+    },
   )
 })

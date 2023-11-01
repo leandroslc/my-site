@@ -8,7 +8,7 @@ const assertPostPreviewIsVisible = async (
   title: string,
   date: string,
   cover: string,
-  topics: string[]
+  topics: string[],
 ) => {
   const post = page.locator('article', {
     has: page.locator(`text=${title}`),
@@ -37,7 +37,7 @@ test.describe('Home', () => {
       'Hello world: Announcing my new site',
       '16 march 2020',
       '/assets/blog/hello-world/cover.jpg',
-      ['Hello', 'Test']
+      ['Hello', 'Test'],
     )
 
     await assertPostPreviewIsVisible(
@@ -45,7 +45,7 @@ test.describe('Home', () => {
       'A tool vs another new tool',
       '10 may 2022',
       '/assets/blog/tool-vs-tool/cover.jpg',
-      ['Tools']
+      ['Tools'],
     )
   })
 

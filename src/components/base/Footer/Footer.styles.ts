@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { vars } from '@/src/theme'
 
@@ -8,7 +9,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   background-color: ${vars.theme((theme) => theme.footer.back)};
 
-  ::after {
+  &::after {
     content: '';
     position: absolute;
     display: block;
@@ -20,7 +21,7 @@ export const Footer = styled.footer`
     border-radius: 50%;
   }
 
-  ::before {
+  &::before {
     content: '';
     position: absolute;
     display: block;
@@ -46,7 +47,7 @@ export const Nav = styled.nav`
   align-items: center;
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   position: relative;
   display: inline-block;
   margin-right: 24px;
@@ -55,13 +56,13 @@ export const NavLink = styled.a`
 
   &:hover,
   &:focus {
-    ::after {
+    &::after {
       width: 100%;
       transition: width 0.1s;
     }
   }
 
-  ::after {
+  &::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -73,7 +74,7 @@ export const NavLink = styled.a`
   }
 `
 
-export const NavSocialLink = styled.a`
+export const NavSocialLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;

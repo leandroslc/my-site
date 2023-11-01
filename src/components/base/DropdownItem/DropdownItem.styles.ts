@@ -27,7 +27,7 @@ export const Item = styled.li`
     &:focus {
       color: ${vars.theme((theme) => theme.dropdown.item.textActive)};
       background-color: ${vars.theme(
-        (theme) => theme.dropdown.item.backActive
+        (theme) => theme.dropdown.item.backActive,
       )};
     }
   }

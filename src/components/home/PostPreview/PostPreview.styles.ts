@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { sizes, vars } from '@/src/theme'
 
@@ -26,7 +27,7 @@ export const Title = styled.h1`
   font-weight: bold;
 `
 
-export const PostLink = styled.a`
+export const PostLink = styled(Link)`
   cursor: pointer;
   border-radius: 8px;
   transform: translateY(0);
@@ -48,7 +49,8 @@ export const PostLink = styled.a`
     }
 
     ${Image} {
-      box-shadow: 0 0 0 3px ${vars.theme((theme) => theme.main.back)},
+      box-shadow:
+        0 0 0 3px ${vars.theme((theme) => theme.main.back)},
         0 0 3px 5px ${vars.theme((theme) => theme.postCard.borderHover)};
       transition: box-shadow 0.1s;
     }
