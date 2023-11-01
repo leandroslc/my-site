@@ -9,7 +9,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   background-color: ${vars.theme((theme) => theme.footer.back)};
 
-  ::after {
+  &::after {
     content: '';
     position: absolute;
     display: block;
@@ -21,7 +21,7 @@ export const Footer = styled.footer`
     border-radius: 50%;
   }
 
-  ::before {
+  &::before {
     content: '';
     position: absolute;
     display: block;
@@ -56,13 +56,13 @@ export const NavLink = styled(Link)`
 
   &:hover,
   &:focus {
-    ::after {
+    &::after {
       width: 100%;
       transition: width 0.1s;
     }
   }
 
-  ::after {
+  &::after {
     content: '';
     position: absolute;
     bottom: 0;

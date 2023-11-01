@@ -11,21 +11,20 @@ interface InnerProps {
 
 export type Props<
   T extends AnyComponentType,
-  U = InnerProps
+  U = InnerProps,
 > = PropsWithAnyComponent<T, PropsWithChildren<U>>
 
 export const InnerDropdownItem = <T extends AnyComponentType>(
   props: Props<T>,
-  ref: React.ForwardedRef<T>
+  ref: React.ForwardedRef<T>,
 ) => {
   const { as, active = false, children, ...otherProps } = props
 
   return (
     <S.Item
-      ref={ref}
+      ref={ref as React.RefObject<never>}
       as={as}
       className={active ? 'is-active' : ''}
-      is-active={active}
       {...otherProps}
     >
       {children}
