@@ -17,7 +17,7 @@
 A profile site and a blog about things that I wanted to know and that maybe should be important to other people.
 
 ## :package: Requirements
-- Install [NodeJS](https://nodejs.org) v16.13.2+.
+- Install [NodeJS](https://nodejs.org) v18.18.2+.
 
 ## :briefcase: Build and test
 - Run `npm run dev` to start the development server.
