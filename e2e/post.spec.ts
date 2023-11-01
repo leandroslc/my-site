@@ -19,7 +19,7 @@ test.describe('Post', () => {
     await expect(header.locator('h1', { hasText: expectedTitle })).toBeVisible()
 
     await expect(
-      header.locator('time', { hasText: expectedDate })
+      header.locator('time', { hasText: expectedDate }),
     ).toBeVisible()
 
     await expect(header.getByTitle('Hello topic')).toBeVisible()
