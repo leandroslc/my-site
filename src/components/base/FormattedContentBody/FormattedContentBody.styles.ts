@@ -10,7 +10,8 @@ export const Container = styled.main`
     margin-bottom: 20px;
   }
 
-  p > code {
+  p > code,
+  h2 > code {
     display: inline-block;
     background-color: ${vars.theme((theme) => theme.contentElements.code.back)};
     color: ${vars.theme((theme) => theme.contentElements.code.text)};
@@ -48,6 +49,10 @@ export const Container = styled.main`
     text-decoration: none;
     border-bottom: 1px solid
       ${vars.theme((theme) => theme.contentElements.link)};
+  }
+
+  img {
+    margin: 0 auto;
   }
 
   pre {
