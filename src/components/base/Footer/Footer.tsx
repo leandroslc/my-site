@@ -1,5 +1,5 @@
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { GITHUB_URL, LINKEDIN_URL } from '@/src/config/constants'
+import { FiGithub, FiLinkedin, FiYoutube } from 'react-icons/fi'
+import { GITHUB_URL, LINKEDIN_URL, YOUTUBE_URL } from '@/src/config/constants'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './Footer.styles'
 
@@ -21,6 +21,9 @@ export const Footer = () => {
           </S.NavSocialLink>
           <S.NavSocialLink href={LINKEDIN_URL} passHref title="LinkedIn">
             <FiLinkedin aria-hidden="true" />
+          </S.NavSocialLink>
+          <S.NavSocialLink href={YOUTUBE_URL} passHref title="YouTube">
+            <FiYoutube aria-hidden="true" />
           </S.NavSocialLink>
         </S.Nav>
         <S.Signature src="/assets/site/footer-signature.svg" alt="Leandro" />
