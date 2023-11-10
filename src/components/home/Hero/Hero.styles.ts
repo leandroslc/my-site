@@ -7,7 +7,7 @@ export const Hero = styled.div`
   justify-items: center;
   gap: 16px;
   grid-template-columns: 1fr;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 
   @media (min-width: ${sizes.small}) {
     grid-template-columns: 3fr 2fr;
@@ -47,6 +47,7 @@ export const Social = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
+  flex-wrap: wrap;
   margin-top: 16px;
 `
 
