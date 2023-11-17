@@ -16,7 +16,7 @@
     "header-painting-alt": "Uma pintura simples de teclas de piano, um relógio de bolso, uma xícara e um pincel",
     "blog-title": "Blog",
     "blog-description-first": "Algumas vezes tento escrever sobre coisas que gostaria de saber e que talvez sejam importantes para outras pessoas.",
-    "blog-description-second": "Aqui estão alguns posts aleatórios. Sinta-se a vontade para ler quando quiser {0}.",
+    "blog-description-second": "Aqui estão algumas postagens aleatórias. Sinta-se a vontade para ler quando quiser {0}.",
     "blog-link": "Ver todos os posts",
     "blog-post-image-alt": "Imagem de capa para",
     "profile-title": "Meu Perfil",
@@ -34,7 +34,8 @@
   },
   "post": {
     "header-painting-alt": "Uma pintura simples de teclas de piano, um relógio de bolso, uma xícara e um pincel",
-    "blog-post-image-alt": "Imagem de capa para"
+    "blog-post-image-alt": "Imagem de capa para",
+    "back-to-other-posts": "Ver outras postagens"
   },
   "termsOfUse": {
     "title": "Termos de Uso"

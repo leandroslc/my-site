@@ -45,6 +45,7 @@ export const light: ColorScheme = {
   body: {
     back: '#edeae5',
     text: '#1a1e2b',
+    contrast: '#cfcbc5',
   },
   dropdown: {
     button: {

@@ -48,6 +48,7 @@ export type ColorScheme = {
   body: {
     back: Color
     text: Color
+    contrast: Color
   }
   dropdown: {
     button: {

@@ -34,7 +34,8 @@
   },
   "post": {
     "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
-    "blog-post-image-alt": "Cover image for"
+    "blog-post-image-alt": "Cover image for",
+    "back-to-other-posts": "See other posts"
   },
   "termsOfUse": {
     "title": "Terms of Use"
