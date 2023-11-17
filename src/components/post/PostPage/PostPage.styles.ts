@@ -16,3 +16,10 @@ export const PostContainer = styled.article`
     max-width: 992px;
   }
 `
+
+export const BackButtonContainer = styled.div`
+  display: flex;
+  column-gap: 6px;
+  row-gap: 4px;
+  flex-wrap: wrap;
+`

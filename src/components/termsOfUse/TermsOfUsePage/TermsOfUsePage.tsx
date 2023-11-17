@@ -23,7 +23,7 @@ export const TermsOfUsePage = ({ content, ogImageUrl }: TermsOfUseProps) => {
         ogImageUrl={ogImageUrl}
       />
       <S.PageContainer>
-        <BackButton />
+        <BackButton href="/">{translate('base.back-to-home')}</BackButton>
         <S.Header>
           <S.Title>
             <S.TitleText>{translate('termsOfUse.title')}</S.TitleText>
