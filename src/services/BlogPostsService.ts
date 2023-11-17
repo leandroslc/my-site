@@ -42,6 +42,36 @@ export const getPostBySlug = (
   return items as BlogPost
 }
 
+type GetRandomPostsParams = {
+  locale: string
+  numberOfPosts: number
+  fields?: (keyof BlogPost)[]
+}
+
+const random = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min) + min)
+
+export const getRandomPosts = ({
+  locale,
+  numberOfPosts,
+  fields = [],
+}: GetRandomPostsParams) => {
+  let availableSlugs = getPostSlugs(locale)
+  const randomPosts: BlogPost[] = []
+
+  while (randomPosts.length < numberOfPosts) {
+    const randomIndex = random(0, availableSlugs.length)
+    const slug = availableSlugs[randomIndex]
+    const post = getPostBySlug(locale, slug, fields)
+
+    randomPosts.push(post)
+
+    availableSlugs.splice(randomIndex, 1)
+  }
+
+  return randomPosts
+}
+
 const byNewest = (post1: BlogPost, post2: BlogPost) =>
   post1.date > post2.date ? -1 : 1
 
