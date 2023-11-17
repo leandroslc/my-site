@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { FiCalendar } from 'react-icons/fi'
 import { Tags } from '@/src/components/base/Tags'
+import { PageTitle } from '@/src/components/base/PageTitle'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import * as S from './PostHeader.styles'
@@ -18,9 +19,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
 
   return (
     <S.Header>
-      <S.Title>
-        <S.TitleText>{title}</S.TitleText>
-      </S.Title>
+      <PageTitle>{title}</PageTitle>
       <S.Date dateTime={date}>
         <FiCalendar /> {formatDate(date, locale!)}
       </S.Date>
