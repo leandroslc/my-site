@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   * {
     &:focus {
       box-shadow: 0 0 0 1px ${vars.theme((theme) => theme.all.outlineInset)},
-        0 0 0 3px ${vars.theme((theme) => theme.all.outline)} !important;
+        0 0 0 3px ${vars.theme((theme) => theme.all.outline)};
       outline: 2px solid transparent;
       outline-offset: 2px;
     }
@@ -65,5 +65,17 @@ export const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 `

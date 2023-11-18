@@ -47,7 +47,7 @@ export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
               )}
             </p>
           </S.SectionDescription>
-          <S.SectionSideLink as={HomeLink} href="">
+          <S.SectionSideLink as={HomeLink} href="/posts">
             {translate('home.blog-link')}
           </S.SectionSideLink>
         </S.Section>

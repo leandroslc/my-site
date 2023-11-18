@@ -73,12 +73,18 @@ export const dark: ColorScheme = {
     borderHover: '#ffb46c',
   },
   post: {
-    backToHome: {
-      border: '#fefefe',
-    },
     tag: {
       back: '#e3a860',
       text: '#1a1e2b',
+    },
+  },
+  posts: {
+    search: {
+      back: '#22222e',
+      border: '#b19b7f',
+      placeholder: '#8c8174',
+      borderHover: '#9e7551',
+      shadowHover: '#ffb46c',
     },
   },
 }
