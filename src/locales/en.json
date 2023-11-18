@@ -16,7 +16,7 @@
     "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
     "blog-title": "Blog",
     "blog-description-first": "Sometimes I try to write about things I wanted to know and that maybe should be important to other people.",
-    "blog-description-second": "Here are some random posts. Feel free to read whenever you want {0}.",
+    "blog-description-second": "Here are some random posts selected for you today. Feel free to read whenever you want {0}.",
     "blog-link": "See all blog posts",
     "blog-post-image-alt": "Cover image for",
     "profile-title": "My profile",
@@ -36,6 +36,9 @@
     "header-painting-alt": "A simple painting of piano keys, a pocket watch, a cup of tea and a paint brush",
     "blog-post-image-alt": "Cover image for",
     "back-to-other-posts": "See other posts"
+  },
+  "posts": {
+    "title": "Blog"
   },
   "termsOfUse": {
     "title": "Terms of Use"

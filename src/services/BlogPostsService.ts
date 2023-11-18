@@ -72,13 +72,15 @@ export const getRandomPosts = ({
   return randomPosts
 }
 
+type GetAllPostsParams = {
+  locale: string
+  fields?: (keyof BlogPost)[]
+}
+
 const byNewest = (post1: BlogPost, post2: BlogPost) =>
   post1.date > post2.date ? -1 : 1
 
-export const getAllPosts = (
-  locale: string,
-  fields: (keyof BlogPost)[] = [],
-) => {
+export const getAllPosts = ({ locale, fields = [] }: GetAllPostsParams) => {
   const slugs = getPostSlugs(locale)
   const posts = slugs
     .map((slug) => getPostBySlug(locale, slug, fields))

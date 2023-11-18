@@ -41,7 +41,7 @@ export const getStaticProps = async ({ params, locale }: Params) => {
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const paths = locales!.flatMap((locale) => {
-    const posts = getAllPosts(locale, ['slug'])
+    const posts = getAllPosts({ locale, fields: ['slug'] })
 
     return posts.map((post) => {
       return {

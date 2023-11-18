@@ -76,12 +76,18 @@ export type ColorScheme = {
     borderHover: Color
   }
   post: {
-    backToHome: {
-      border: Color
-    }
     tag: {
       back: Color
       text: Color
+    }
+  }
+  posts: {
+    search: {
+      back: Color
+      placeholder: Color
+      border: Color
+      borderHover: Color
+      shadowHover: Color
     }
   }
 }
