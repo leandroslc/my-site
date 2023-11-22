@@ -1,11 +1,15 @@
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import * as S from './SearchBox.styles'
 
-type Props = {
+type Props = DetailedHTMLProps<
+  InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+> & {
   label: string
 }
 
-export const SearchBox = ({ label }: Props) => {
+export const SearchBox = ({ label, ...otherProps }: Props) => {
   return (
     <>
       <label className="sr-only">{label}</label>
@@ -16,6 +20,7 @@ export const SearchBox = ({ label }: Props) => {
           autoComplete="off"
           name="search"
           placeholder={label}
+          {...otherProps}
         />
       </S.SearchBox>
     </>

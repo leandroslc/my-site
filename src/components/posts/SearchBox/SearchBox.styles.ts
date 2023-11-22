@@ -34,6 +34,10 @@ export const SearchBoxInput = styled.input`
       0 0 0px 1px ${vars.theme((theme) => theme.main.back)},
       0 0 3px 3px ${vars.theme((theme) => theme.posts.search.shadowHover)};
   }
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
 `
 
 export const SearchBoxIcon = styled.input`
