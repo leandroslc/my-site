@@ -86,5 +86,8 @@ export const light: ColorScheme = {
       borderHover: '#a5b3d7',
       shadowHover: '#284da9',
     },
+    noResults: {
+      back: 'rgba(42 99 132 / 17%)',
+    },
   },
 }
