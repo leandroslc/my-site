@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-import { FiFolder } from 'react-icons/fi'
 import { SITE_NAME } from '@/src/config/constants'
 import { BlogPostPreview } from '@/src/models/BlogPost'
 import { BackButton } from '@/src/components/base/BackButton'
@@ -11,6 +10,7 @@ import { useTranslation } from '@/src/hooks/useTranslation'
 import { PageHeader } from '@/src/components/base/PageHeader'
 import { PostPreview } from '@/src/components/home/PostPreview'
 import { SearchBox } from '../SearchBox'
+import { NoResults } from '../NoResults'
 import * as S from './PostsPage.styles'
 
 export type PostsProps = {
@@ -54,12 +54,7 @@ export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
             <PostPreview key={index} post={post} />
           ))}
         </S.Posts>
-        <S.NoResultsContainer ref={noResultsRef}>
-          <S.NoResultsIconContainer>
-            <S.NoResultsIcon as={FiFolder} />
-          </S.NoResultsIconContainer>
-          <p>Nenhuma postagem encontrada</p>
-        </S.NoResultsContainer>
+        <S.NoResultsContainer as={NoResults} ref={noResultsRef} />
       </S.Content>
     </PageLayout>
   )
