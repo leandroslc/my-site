@@ -86,5 +86,8 @@ export const dark: ColorScheme = {
       borderHover: '#a8947b',
       shadowHover: '#ffb46c',
     },
+    noResults: {
+      back: 'rgba(255 255 255 / 17%)',
+    },
   },
 }

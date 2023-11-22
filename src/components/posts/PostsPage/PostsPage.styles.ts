@@ -50,5 +50,6 @@ export const SearchBoxContainer = styled.div`
 `
 
 export const NoResultsContainer = styled.div`
-  margin-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 80px;
 `

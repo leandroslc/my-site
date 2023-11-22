@@ -89,5 +89,8 @@ export type ColorScheme = {
       borderHover: Color
       shadowHover: Color
     }
+    noResults: {
+      back: Color
+    }
   }
 }

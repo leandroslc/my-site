@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef } from 'react'
-import { FiFolder } from 'react-icons/fi'
+import { FiFolder, FiSearch } from 'react-icons/fi'
 import * as S from './NoResults.styles'
 
 type Props = {
@@ -12,8 +12,9 @@ const InnerNoResults = (
 ) => {
   return (
     <S.Container className={className} ref={ref as React.RefObject<never>}>
-      <S.IconContainer>
+      <S.IconContainer aria-hidden="true">
         <S.Icon as={FiFolder} />
+        <S.AboveIcon as={FiSearch} />
       </S.IconContainer>
       <S.Text>Nenhuma postagem encontrada</S.Text>
     </S.Container>
