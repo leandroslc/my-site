@@ -6,22 +6,45 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 18px;
   user-select: none;
-  pointer-events: none;
 `
 
 export const IconContainer = styled.div`
   position: relative;
   display: block;
   padding: 16px;
-  background-color: ${vars.theme((theme) => theme.posts.noResults.back)};
-  border-radius: 50%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: ${vars.theme((theme) => theme.posts.noResults.back)};
+    border-radius: 10px;
+    transform: rotate(70deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid ${vars.theme((theme) => theme.posts.noResults.back)};
+    border-radius: 10px;
+    transform: rotate(41deg);
+  }
 `
 
 export const Icon = styled.svg`
   color: ${vars.theme((theme) => theme.body.text)};
-  font-size: 2.6rem;
+  font-size: 3.4rem;
 `
 
 export const AboveIcon = styled.svg`
