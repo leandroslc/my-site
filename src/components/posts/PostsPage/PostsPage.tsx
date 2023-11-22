@@ -63,7 +63,7 @@ export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
             <PostPreview key={index} post={post} />
           ))}
         </S.Posts>
-        <S.NoResultsContainer as={NoResults} ref={noResultsRef} />
+        <S.NoResultsContainer as={NoResults} ref={noResultsRef} hidden />
       </S.Content>
     </PageLayout>
   )
