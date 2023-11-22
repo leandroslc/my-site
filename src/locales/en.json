@@ -38,7 +38,10 @@
     "back-to-other-posts": "See other posts"
   },
   "posts": {
-    "title": "Blog"
+    "title": "Blog",
+    "description": "All blog posts I have written are here {0}",
+    "nothing-found": "No blog post found",
+    "search-placeholder": "Search for blog posts..."
   },
   "termsOfUse": {
     "title": "Terms of Use"

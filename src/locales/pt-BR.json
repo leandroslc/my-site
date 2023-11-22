@@ -17,7 +17,7 @@
     "blog-title": "Blog",
     "blog-description-first": "Algumas vezes tento escrever sobre coisas que gostaria de saber e que talvez sejam importantes para outras pessoas.",
     "blog-description-second": "Aqui estão algumas postagens aleatórias selecionadas para você hoje. Sinta-se a vontade para ler quando quiser {0}.",
-    "blog-link": "Ver todos os posts",
+    "blog-link": "Ver todas as postagens",
     "blog-post-image-alt": "Imagem de capa para",
     "profile-title": "Meu Perfil",
     "profile-description": "Gostaria de se conectar comigo no LinkedIn? Não sou muito bom com redes sociais, mas tento mantê-lo atualizado quando posso.",
@@ -38,7 +38,10 @@
     "back-to-other-posts": "Ver outras postagens"
   },
   "posts": {
-    "title": "Blog"
+    "title": "Blog",
+    "description": "Todas as postagens de blog que escrevi estão aqui {0}",
+    "nothing-found": "Nenhuma postagem encontrada",
+    "search-placeholder": "Pesquisar postagens do blog..."
   },
   "termsOfUse": {
     "title": "Termos de Uso"

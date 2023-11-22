@@ -2,9 +2,10 @@ import { useRef } from 'react'
 import { SITE_NAME } from '@/src/config/constants'
 import { BlogPostPreview } from '@/src/models/BlogPost'
 import { BackButton } from '@/src/components/base/BackButton'
+import { Emoji } from '@/src/components/base/Emoji'
 import { PageLayout } from '@/src/components/base/PageLayout'
 import { PageTitle } from '@/src/components/base/PageTitle'
-import { Meta } from '@/src/components//base/Meta'
+import { Meta } from '@/src/components/base/Meta'
 import { useSimpleSearch } from '@/src/hooks/useSimpleSearch'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { PageHeader } from '@/src/components/base/PageHeader'
@@ -21,7 +22,7 @@ export type PostsProps = {
 export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
   const postsRef = useRef<HTMLElement>(null)
   const noResultsRef = useRef<HTMLDivElement>(null)
-  const { translate } = useTranslation()
+  const { translate, translateWithElements } = useTranslation()
   const { onSearch } = useSimpleSearch({
     itemSelector: 'a',
     searchOnRef: postsRef,
@@ -41,11 +42,19 @@ export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
         </S.BackButtonContainer>
         <S.TitleContainer>
           <PageTitle>{translate('posts.title')}</PageTitle>
-          <span>Todas as postagens de blog que escrevi estão aqui</span>
+          <span>
+            {translateWithElements(
+              'posts.description',
+              <Emoji
+                symbol="&#x1F60A;"
+                alt={translate('emojis.smiling-face-with-smiling-eyes')}
+              />,
+            )}
+          </span>
         </S.TitleContainer>
         <S.SearchBoxContainer>
           <SearchBox
-            label="Pesquisar postagens do blog..."
+            label={translate('posts.search-placeholder')}
             onInput={onSearch}
           />
         </S.SearchBoxContainer>
