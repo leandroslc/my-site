@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { sizes } from '@/src/theme'
+import { sizes, vars } from '@/src/theme'
 
 export const Content = styled.section`
   display: flex;
@@ -47,4 +47,24 @@ export const SearchBoxContainer = styled.div`
   justify-content: center;
   margin-bottom: 36px;
   padding: 0 12px;
+`
+
+export const NoResultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+`
+
+export const NoResultsIconContainer = styled.div`
+  display: block;
+  padding: 16px;
+  border: 2px solid ${vars.theme((theme) => theme.body.text)};
+  border-radius: 50%;
+`
+
+export const NoResultsIcon = styled.svg`
+  color: ${vars.theme((theme) => theme.body.text)};
+  font-size: 2.6rem;
 `

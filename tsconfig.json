@@ -5,6 +5,7 @@
     "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
+    "downlevelIteration": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
