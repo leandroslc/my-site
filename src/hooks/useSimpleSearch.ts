@@ -14,7 +14,7 @@ const toggleVisibility = (element: Element, visible: boolean) => {
     : element.setAttribute(HIDDEN_ATTRIBUTE, 'true')
 }
 
-const findInContent = (element: Element, input: string | undefined) => {
+const findInContent = (element: Element, input?: string) => {
   if (!input) {
     return true
   }
@@ -35,7 +35,7 @@ export const useSimpleSearch = ({
   searchOnRef,
   noResultsRef,
 }: Props) => {
-  const search = (text: string | undefined) => {
+  const search = (text?: string) => {
     if (!searchOnRef.current || !noResultsRef.current) {
       return
     }

@@ -31,8 +31,8 @@ export const SearchBoxInput = styled.input`
   &:focus {
     border-color: ${vars.theme((theme) => theme.posts.search.borderHover)};
     box-shadow:
-      0 0 0px 1px ${vars.theme((theme) => theme.main.back)},
-      0 0 3px 3px ${vars.theme((theme) => theme.posts.search.shadowHover)};
+      0 0 0px 3px ${vars.theme((theme) => theme.main.back)},
+      0 0 3px 5px ${vars.theme((theme) => theme.posts.search.shadowHover)};
   }
 
   &::-webkit-search-cancel-button {

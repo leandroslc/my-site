@@ -81,9 +81,9 @@ export const dark: ColorScheme = {
   posts: {
     search: {
       back: '#22222e',
-      border: '#b19b7f',
+      border: '#d2bb9e',
       placeholder: '#8c8174',
-      borderHover: '#9e7551',
+      borderHover: '#a8947b',
       shadowHover: '#ffb46c',
     },
   },
