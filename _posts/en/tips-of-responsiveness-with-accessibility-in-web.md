@@ -1,15 +1,3 @@
----
-title: 'Tips of responsiveness with accessibility in web'
-excerpt: 'In this article I brought together some tips that have been helping me build more responsive and accessible layouts which I hope they can be useful to you 😊.'
-coverImage: '/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp'
-date: '2023-11-06T10:57:00.000Z'
-ogImageUrl: '/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp'
-tags:
-  - Web
-  - CSS
-  - Accessibility
----
-
 Often when we build responsive layouts, we get in doubt of which standards and which measure units to use for each situation, mainly if we are not using any ready-to-use CSS framework.
 
 In this article I brought together some tips that have been helping me build more responsive and accessible layouts which I hope they can be useful to you 😊.

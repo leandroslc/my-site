@@ -1,14 +1,3 @@
----
-title: 'Construindo seu próprio provedor LINQ no .NET'
-excerpt: 'Obviamente criar um ORM está muito além do escopo 😄, mas ao menos vou mostrar os passos iniciais de como criar seu próprio provedor LINQ.'
-coverImage: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
-date: '2023-05-15T17:40:00.000Z'
-ogImageUrl: '/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp'
-tags:
-  - .NET
-  - C#
----
-
 O [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) se tornou essencial no ecossistema .NET, trazendo características funcionais desde 2008.
 
 Com o advento do [Entity Framework (EF)](https://learn.microsoft.com/pt-br/ef/core/querying/) e a adoção do LINQ em outras tecnologias, como no [ORM NHibernate](https://nhibernate.info/doc/nhibernate-reference/querylinq.html), no [driver do MongoDb](https://www.mongodb.com/docs/drivers/csharp/current/fundamentals/linq/) e até mesmo para consulta de dados em arquivos como JSON e XML, é cada vez mais comum encontrar o LINQ em uma aplicação C#. Mas você sabe como esse processo funciona? E quais são as características que o diferenciam de um simples [Iterator](https://refactoring.guru/design-patterns/iterator)?

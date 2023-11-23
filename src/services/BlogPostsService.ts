@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 import { postsDirectory, postsDataFilePath } from '@/src/config/config'
 import { BlogPost, RawBlogPostsData } from '@/src/models/BlogPost'
 import { makeAbsoluteUrl } from './UrlService'
@@ -35,9 +34,9 @@ const getPosts = (locale: string) => {
 export const getPostBySlug = (locale: string, slug: string) => {
   const data = getRawPostsData(locale)
   const post = parsePostData(data, slug)
+
   const fullPath = path.join(postsDirectory, locale, `${slug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { content } = matter(fileContents)
+  const content = fs.readFileSync(fullPath, 'utf8')
 
   return {
     ...post,
