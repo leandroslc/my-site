@@ -1,15 +1,3 @@
----
-title: 'Dicas de responsividade com acessibilidade na web'
-excerpt: 'Neste artigo, reuni algumas dicas que têm me ajudado a construir layouts cada vez mais responsivos e acessíveis que espero poderem ser úteis para você 😊.'
-coverImage: '/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp'
-date: '2023-11-06T10:57:00.000Z'
-ogImageUrl: '/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp'
-tags:
-  - Web
-  - CSS
-  - Acessibilidade
----
-
 Muitas vezes quando construímos layouts responsivos ficamos em dúvida de quais padrões e quais unidades de medida usar para cada situação, principalmente se não estamos usando algum framework CSS pronto.
 
 Neste artigo, reuni algumas dicas que têm me ajudado a construir layouts cada vez mais responsivos e acessíveis que espero poderem ser úteis para você 😊.
