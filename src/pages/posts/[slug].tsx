@@ -17,16 +17,7 @@ type Params = {
 }
 
 export const getStaticProps = async ({ params, locale }: Params) => {
-  const post = getPostBySlug(locale, params.slug, [
-    'title',
-    'date',
-    'slug',
-    'content',
-    'ogImageUrl',
-    'coverImage',
-    'excerpt',
-    'tags',
-  ])
+  const post = getPostBySlug(locale, params.slug)
   const content = await markdownToHtml(post.content || '')
 
   return {
@@ -41,7 +32,7 @@ export const getStaticProps = async ({ params, locale }: Params) => {
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const paths = locales!.flatMap((locale) => {
-    const posts = getAllPosts({ locale, fields: ['slug'] })
+    const posts = getAllPosts(locale)
 
     return posts.map((post) => {
       return {

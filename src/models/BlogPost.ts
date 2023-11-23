@@ -9,9 +9,18 @@ export type BlogPost = {
   tags: string[]
 }
 
+export type RawBlogPostsData = Record<
+  string,
+  {
+    title: string
+    excerpt: string
+    tags: string[]
+    date: string
+    cover: string
+  }
+>
+
 export type BlogPostPreview = Omit<
   BlogPost,
   'content' | 'ogImageUrl' | 'excerpt'
 >
-
-export type SelectedBlogPostInfo = Record<keyof Partial<BlogPost>, unknown>

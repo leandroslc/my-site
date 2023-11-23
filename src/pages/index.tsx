@@ -18,11 +18,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   locale,
   res,
 }) => {
-  const allPosts = getRandomPosts({
-    locale: locale!,
-    numberOfPosts: 2,
-    fields: ['title', 'date', 'slug', 'coverImage', 'tags'],
-  }) as unknown as BlogPostPreview
+  const allPosts = getRandomPosts(locale!, 2) as unknown as BlogPostPreview
 
   res.setHeader(
     'Cache-Control',

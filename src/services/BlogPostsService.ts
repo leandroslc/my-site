@@ -1,90 +1,74 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { postsDirectory } from '@/src/config/config'
-import { BlogPost, SelectedBlogPostInfo } from '@/src/models/BlogPost'
+import { postsDirectory, postsDataFilePath } from '@/src/config/config'
+import { BlogPost, RawBlogPostsData } from '@/src/models/BlogPost'
 import { makeAbsoluteUrl } from './UrlService'
 
-export const getPostSlugs = (locale: string) => {
-  return fs.readdirSync(path.join(postsDirectory, locale))
+const getRawPostsData = (locale: string) => {
+  const file = path.join(postsDataFilePath, `posts.${locale}.json`)
+
+  return JSON.parse(fs.readFileSync(file, 'utf8')) as RawBlogPostsData
 }
 
-export const getPostBySlug = (
-  locale: string,
-  slug: string,
-  fields: (keyof BlogPost)[] = [],
-) => {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = path.join(postsDirectory, locale, `${realSlug}.md`)
+const parsePostData = (data: RawBlogPostsData, slug: string) => {
+  const post = data[slug]
+
+  return {
+    slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    coverImage: post.cover,
+    ogImageUrl: makeAbsoluteUrl(post.cover),
+    tags: post.tags,
+    content: '',
+  } as BlogPost
+}
+
+const getPosts = (locale: string) => {
+  const data = getRawPostsData(locale)
+
+  return Object.keys(data).map((slug) => parsePostData(data, slug))
+}
+
+export const getPostBySlug = (locale: string, slug: string) => {
+  const data = getRawPostsData(locale)
+  const post = parsePostData(data, slug)
+  const fullPath = path.join(postsDirectory, locale, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  const { content } = matter(fileContents)
 
-  const items = {} as SelectedBlogPostInfo
-
-  fields.forEach((field) => {
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field]
-    }
-
-    if (field === 'slug') {
-      items[field] = realSlug
-    }
-
-    if (field === 'content') {
-      items[field] = content
-    }
-
-    if (field === 'ogImageUrl') {
-      items[field] = makeAbsoluteUrl(data[field])
-    }
-  })
-
-  return items as BlogPost
-}
-
-type GetRandomPostsParams = {
-  locale: string
-  numberOfPosts: number
-  fields?: (keyof BlogPost)[]
+  return {
+    ...post,
+    content,
+  } as BlogPost
 }
 
 const random = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min) + min)
 
-export const getRandomPosts = ({
-  locale,
-  numberOfPosts,
-  fields = [],
-}: GetRandomPostsParams) => {
-  let availableSlugs = getPostSlugs(locale)
+export const getRandomPosts = (locale: string, numberOfPosts: number) => {
+  let availablePosts = getPosts(locale)
   const randomPosts: BlogPost[] = []
 
   while (randomPosts.length < numberOfPosts) {
-    const randomIndex = random(0, availableSlugs.length)
-    const slug = availableSlugs[randomIndex]
-    const post = getPostBySlug(locale, slug, fields)
+    const randomIndex = random(0, availablePosts.length)
+    const post = availablePosts[randomIndex]
 
     randomPosts.push(post)
 
-    availableSlugs.splice(randomIndex, 1)
+    availablePosts.splice(randomIndex, 1)
   }
 
   return randomPosts
 }
 
-type GetAllPostsParams = {
-  locale: string
-  fields?: (keyof BlogPost)[]
-}
-
 const byNewest = (post1: BlogPost, post2: BlogPost) =>
   post1.date > post2.date ? -1 : 1
 
-export const getAllPosts = ({ locale, fields = [] }: GetAllPostsParams) => {
-  const slugs = getPostSlugs(locale)
-  const posts = slugs
-    .map((slug) => getPostBySlug(locale, slug, fields))
-    .sort(byNewest)
+export const getAllPosts = (locale: string) => {
+  const posts = getPosts(locale).sort(byNewest)
 
   return posts
 }
