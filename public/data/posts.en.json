@@ -1,0 +1,16 @@
+{
+  "building-your-own-linq-provider-in-dotnet": {
+    "title": "Building your own LINQ provider in .NET",
+    "excerpt": "Obviously creating an ORM is far beyond the scope 😄, but at least I will show the initial steps of how to create your own LINQ provider.",
+    "tags": [".NET", "C#"],
+    "date": "2023-05-15T17:40:00.000Z",
+    "cover": "/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp"
+  },
+  "tips-of-responsiveness-with-accessibility-in-web": {
+    "title": "Tips of responsiveness with accessibility in web",
+    "excerpt": "In this article I brought together some tips that have been helping me build more responsive and accessible layouts which I hope they can be useful to you 😊.",
+    "tags": ["Web", "CSS", "Accessibility"],
+    "date": "2023-11-06T10:57:00.000Z",
+    "cover": "/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp"
+  }
+}

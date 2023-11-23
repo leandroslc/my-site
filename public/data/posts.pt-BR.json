@@ -1,0 +1,16 @@
+{
+  "building-your-own-linq-provider-in-dotnet": {
+    "title": "Construindo seu próprio provedor LINQ no .NET",
+    "excerpt": "Obviamente criar um ORM está muito além do escopo 😄, mas ao menos vou mostrar os passos iniciais de como criar seu próprio provedor LINQ.",
+    "tags": [".NET", "C#"],
+    "date": "2023-05-15T17:40:00.000Z",
+    "cover": "/assets/blog/building-your-own-linq-provider-in-dotnet/cover.webp"
+  },
+  "tips-of-responsiveness-with-accessibility-in-web": {
+    "title": "Dicas de responsividade com acessibilidade na web",
+    "excerpt": "Neste artigo, reuni algumas dicas que têm me ajudado a construir layouts cada vez mais responsivos e acessíveis que espero poderem ser úteis para você 😊.",
+    "tags": ["Web", "CSS", "Acessibilidade"],
+    "date": "2023-11-06T10:57:00.000Z",
+    "cover": "/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp"
+  }
+}

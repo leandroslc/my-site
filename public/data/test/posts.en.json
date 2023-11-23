@@ -1,0 +1,16 @@
+{
+  "hello-world": {
+    "title": "Hello world: Announcing my new site",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.",
+    "tags": ["Test", "Hello"],
+    "date": "2020-03-16T05:35:07.322Z",
+    "cover": "/assets/blog/hello-world/cover.jpg"
+  },
+  "tool-vs-new-tool": {
+    "title": "A tool vs another new tool",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.",
+    "tags": ["Tools"],
+    "date": "2022-05-10T18:00:00.002Z",
+    "cover": "/assets/blog/tool-vs-tool/cover.jpg"
+  }
+}
