@@ -2,6 +2,7 @@ const isTest = process.env.NODE_ENV === 'test'
 
 const defaultLocale = 'en'
 const additionalLocales = ['pt-BR']
+const availableLocales = [defaultLocale, ...(!isTest ? additionalLocales : [])]
 
 /** @type import('next').NextConfig */
 module.exports = {
@@ -10,7 +11,11 @@ module.exports = {
     styledComponents: true,
   },
   i18n: {
-    locales: [defaultLocale, ...(!isTest ? additionalLocales : [])],
+    locales: availableLocales,
     defaultLocale: defaultLocale,
+  },
+  env: {
+    BUILD_AVAILABLE_LOCALES: availableLocales.join(','),
+    BUILD_DEFAULT_LOCALE: defaultLocale,
   },
 }

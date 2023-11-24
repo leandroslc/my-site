@@ -30,8 +30,9 @@ const config: PlaywrightTestConfig = {
   },
   projects,
   webServer: {
-    command: 'npm run dev',
+    command: 'npm start',
     port: 3000,
+    stdout: 'pipe',
     env: {
       NODE_ENV: 'test',
     },
