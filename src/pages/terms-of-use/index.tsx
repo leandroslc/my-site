@@ -7,8 +7,8 @@ import {
   type TermsOfUseProps,
 } from '@/src/components/termsOfUse/TermsOfUsePage'
 
-const TermsOfUse = ({ content, ogImageUrl }: TermsOfUseProps) => {
-  return <TermsOfUsePage content={content} ogImageUrl={ogImageUrl} />
+const TermsOfUse = ({ content, ogImageUrl, url }: TermsOfUseProps) => {
+  return <TermsOfUsePage content={content} ogImageUrl={ogImageUrl} url={url} />
 }
 
 export default TermsOfUse
@@ -20,6 +20,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     props: {
       content,
       ogImageUrl: makeAbsoluteUrl(HOME_OG_IMAGE_URL),
+      url: makeAbsoluteUrl(`/${locale}/terms-of-use`),
     },
   }
 }

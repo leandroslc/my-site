@@ -17,9 +17,10 @@ import * as S from './PostsPage.styles'
 export type PostsProps = {
   posts: BlogPostPreview[]
   ogImageUrl: string
+  url: string
 }
 
-export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
+export const PostsPage = ({ posts, ogImageUrl, url }: PostsProps) => {
   const postsRef = useRef<HTMLElement>(null)
   const noResultsRef = useRef<HTMLDivElement>(null)
   const { translate, translateWithElements } = useTranslation()
@@ -34,6 +35,7 @@ export const PostsPage = ({ posts, ogImageUrl }: PostsProps) => {
       <Meta
         title={`Blog | ${SITE_NAME}`}
         description={translate('home.meta-description')}
+        url={url}
         ogImageUrl={ogImageUrl}
       />
       <S.Content>

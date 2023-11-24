@@ -18,9 +18,10 @@ import * as S from './HomePage.styles'
 export type HomeProps = {
   posts: BlogPostPreview[]
   ogImageUrl: string
+  url: string
 }
 
-export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
+export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
   const { translate, translateWithElements } = useTranslation()
 
   return (
@@ -28,6 +29,7 @@ export const HomePage = ({ posts, ogImageUrl }: HomeProps) => {
       <Meta
         title={SITE_NAME}
         description={translate('home.meta-description')}
+        url={url}
         ogImageUrl={ogImageUrl}
       />
       <S.Content>

@@ -1,6 +1,7 @@
 export const HOME_OG_IMAGE_URL = '/assets/site/cover.webp'
 export const SITE_NAME = "Leandro's Place"
 export const SITE_SUBNAME = 'Place'
+export const MY_NAME = 'Leandro Silva Luz do Carmo'
 export const GITHUB_URL = 'https://github.com/leandroslc'
 export const LINKEDIN_URL =
   'https://www.linkedin.com/in/leandro-silva-luz-do-carmo-3021871a4/'
