@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { DEFAULT_LOCALE, Locales } from '@/src/config/i18n'
+import { defaultLocale, availableLocales } from '@/src/config/i18n'
 import { getAllPosts } from '@/src/services/BlogPostsService'
 import { makeAbsoluteUrl } from '@/src/services/UrlService'
 
@@ -7,7 +7,7 @@ type Sitemap = MetadataRoute.Sitemap
 type Item = MetadataRoute.Sitemap[0]
 
 const mapLocales = (callback: (locale: string) => Sitemap) =>
-  ['', ...Object.values(Locales)].flatMap((locale) => callback(locale))
+  ['', ...Object.values(availableLocales)].flatMap((locale) => callback(locale))
 
 const getUrl = (locale: string, url: string) =>
   locale ? makeAbsoluteUrl(`/${locale}${url}`) : makeAbsoluteUrl(url)
@@ -45,7 +45,7 @@ export default function sitemap(): Sitemap {
           )
         : []),
     ]),
-    ...getAllPosts(DEFAULT_LOCALE).flatMap(
+    ...getAllPosts(defaultLocale).flatMap(
       (post) =>
         ({
           url: getUrl('', `/posts/${post.slug}`),

@@ -10,6 +10,7 @@
     "start": "next start",
     "test": "jest --verbose",
     "test:e2e": "playwright test",
+    "pretest:e2e": "cross-env NODE_ENV=test npm run build",
     "lint": "eslint **/*.ts **/*.tsx"
   },
   "dependencies": {

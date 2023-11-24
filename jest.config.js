@@ -4,9 +4,8 @@ const createJestConfig = nextJest({
   dir: '.',
 })
 
-/** @type {import('ts-jest/dist/types').JestConfigWithTsJest} */
+/** @type {import('jest').Config} */
 const jestConfig = {
-  preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/src/(.*)$': '<rootDir>/src/$1',
