@@ -8,8 +8,8 @@ import { HomePage, HomeProps } from '@/src/components/home/HomePage'
 const ONE_DAY_IN_SECONDS = 86_400
 const ONE_HOUR_IN_SECONDS = 3_600
 
-const Index = ({ posts, ogImageUrl }: HomeProps) => {
-  return <HomePage posts={posts} ogImageUrl={ogImageUrl} />
+const Index = ({ posts, ogImageUrl, url }: HomeProps) => {
+  return <HomePage posts={posts} ogImageUrl={ogImageUrl} url={url} />
 }
 
 export default Index
@@ -29,6 +29,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     props: {
       posts: allPosts,
       ogImageUrl: makeAbsoluteUrl(HOME_OG_IMAGE_URL),
+      url: makeAbsoluteUrl(`/${locale}`),
     },
   }
 }

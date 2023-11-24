@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import { SITE_NAME } from '@/src/config/constants'
+import { MY_NAME, SITE_NAME } from '@/src/config/constants'
 
 type Props = {
   title: string
   description: string
+  url: string
   ogImageUrl: string
   ogImageType?: string
 }
@@ -11,6 +12,7 @@ type Props = {
 export const Meta = ({
   title,
   description,
+  url,
   ogImageUrl,
   ogImageType = 'image/webp',
 }: Props) => {
@@ -44,13 +46,22 @@ export const Meta = ({
       <meta name="msapplication-config" content="/manifest/browserconfig.xml" />
       <meta name="theme-color" content="#336c8b" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={description} />
+      <meta
+        name="description"
+        content={`${description} | ${SITE_NAME} | ${MY_NAME}`}
+      />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:image:url" content={ogImageUrl} />
       <meta property="og:image:type" content={ogImageType} />
       <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImageUrl} />
+      <meta property="twitter:card" content="summary_large_image" />
       <title>{title}</title>
     </Head>
   )

@@ -11,9 +11,14 @@ import * as S from './TermsOfUsePage.styles'
 export type TermsOfUseProps = {
   content: string
   ogImageUrl: string
+  url: string
 }
 
-export const TermsOfUsePage = ({ content, ogImageUrl }: TermsOfUseProps) => {
+export const TermsOfUsePage = ({
+  content,
+  ogImageUrl,
+  url,
+}: TermsOfUseProps) => {
   const { translate } = useTranslation()
 
   return (
@@ -21,6 +26,7 @@ export const TermsOfUsePage = ({ content, ogImageUrl }: TermsOfUseProps) => {
       <Meta
         title={`${translate('termsOfUse.title')} | ${SITE_NAME}`}
         description={translate('home.meta-description')}
+        url={url}
         ogImageUrl={ogImageUrl}
       />
       <S.PageContainer>

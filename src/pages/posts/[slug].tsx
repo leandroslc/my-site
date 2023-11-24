@@ -2,9 +2,10 @@ import { GetStaticPaths } from 'next'
 import markdownToHtml from '@/src/services/MarkdownToHtmlService'
 import { getAllPosts, getPostBySlug } from '@/src/services/BlogPostsService'
 import { PostPage, PostProps } from '@/src/components/post/PostPage'
+import { makeAbsoluteUrl } from '@/src/services/UrlService'
 
-const Post = ({ post }: PostProps) => {
-  return <PostPage post={post} />
+const Post = ({ post, url }: PostProps) => {
+  return <PostPage post={post} url={url} />
 }
 
 export default Post
@@ -26,6 +27,7 @@ export const getStaticProps = async ({ params, locale }: Params) => {
         ...post,
         content,
       },
+      url: makeAbsoluteUrl(`/${locale}/posts/${post.slug}`),
     },
   }
 }

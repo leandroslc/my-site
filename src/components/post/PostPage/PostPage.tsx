@@ -13,9 +13,10 @@ import * as S from './PostPage.styles'
 
 export type PostProps = {
   post: BlogPost
+  url: string
 }
 
-export const PostPage = ({ post }: PostProps) => {
+export const PostPage = ({ post, url }: PostProps) => {
   const router = useRouter()
   const { translate } = useTranslation()
 
@@ -28,6 +29,7 @@ export const PostPage = ({ post }: PostProps) => {
       <Meta
         title={`${post.title} | ${SITE_NAME}`}
         description={post.excerpt}
+        url={url}
         ogImageUrl={post.ogImageUrl}
       />
       {router.isFallback ? (
