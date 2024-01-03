@@ -12,5 +12,12 @@
     "tags": ["Web", "CSS", "Acessibilidade"],
     "date": "2023-11-06T10:57:00.000Z",
     "cover": "/assets/blog/tips-of-responsiveness-with-accessibility-in-web/cover.webp"
+  },
+  "ef-core-with-fluent-migrator-the-easy-way": {
+    "title": "EF Core com Fluent Migrator, do jeito simples",
+    "excerpt": "Neste post vou mostrar uma maneira fácil de configurar migrações e executá-las, aproveitando o método `EnsureCreated` do EF Core para criar nosso banco de dados caso ele não exista (sem fazer gambiarras com SQL puro 😄).",
+    "tags": [".NET", "C#", "Database"],
+    "date": "2024-01-01T19:26:00.000Z",
+    "cover": "/assets/blog/ef-core-with-fluent-migrator-the-easy-way/cover.webp"
   }
 }
