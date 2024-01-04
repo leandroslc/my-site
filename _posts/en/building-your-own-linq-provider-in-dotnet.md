@@ -354,9 +354,9 @@ protected override Expression VisitMember(MemberExpression node)
 
 The member expression is any expression where you access a property of field of a class, for example: `o.Name`, `o.Name.FirstName` ou `Class.StaticName`.
 
-In this case we need to check if it is not an `static` member and whether this member is relative to the type of the class we are using in our query (remeber the `TElement` from `DbCollection`?).
+In this case we need to check if it is not an `static` member and whether this member is relative to the type of the class we are using in our query (the `TElement` of `DbCollection`). In this case, the object should be the parameter of the expression (_e.g._: `Where(p => ...)`).
 
-Having the name of the accessed member, we can use it as the column name.
+This way, having the name of the accessed member, we can use it as the column name.
 
 As for the constants, we will do something a bit different:
 
@@ -402,7 +402,7 @@ protected internal Expression VisitNormalMethodCall(MethodCallExpression node)
             && member.Expression!.NodeType == ExpressionType.Parameter)
         {
             if (node.Method.DeclaringType == typeof(string)
-								&& node.Method.Name == "Contains")
+                && node.Method.Name == "Contains")
             {
                 Visit(member);
 
