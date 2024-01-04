@@ -81,6 +81,6 @@ Atualmente é possível fazer muitas coisas usando flexbox e grid, muitas vezes 
 
 É válido ressaltar que é importante manter um padrão, mesmo que uma das dicas não sejam seguidas, já que uma base de código de CSS, se não muito bem escrita, pode se tornar um empecilho enorme.
 
-Além disso, a não ser que o conteúdo esteja totalmente desalinhado (claro 😄), as pessoas não vão se importar se um margem tiver 2 ou 4 pixels a mais ou a menos. O que realmente elas vão se importar é se conseguem entender, ler e navegar adequadamente no seu site.
+Além disso, a não ser que o conteúdo esteja totalmente desalinhado (claro 😄), as pessoas não vão se importar se uma margem tiver 2 ou 4 pixels a mais ou a menos. O que realmente elas vão se importar é se conseguem entender, ler e navegar adequadamente no seu site.
 
 Por isso, nunca pense em construir um site com pixels contados. Sempre opte por manter o seu site fluído, de fácil navegação e, acessível, independente de qual dispositivo ele será acessado.

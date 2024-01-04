@@ -102,7 +102,7 @@ public sealed class AddMusicTable : Migration
             .WithColumn("id").AsInt32().NotNullable().Identity().PrimaryKey()
             .WithColumn("name").AsString(200).NotNullable()
             .WithColumn("composition_year").AsInt32().NotNullable()
-            .WithColumn("composer_name").AsInt32().NotNullable();
+            .WithColumn("composer_name").AsString(200).NotNullable();
     }
 }
 ```
