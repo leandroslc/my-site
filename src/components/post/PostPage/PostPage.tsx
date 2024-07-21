@@ -9,7 +9,7 @@ import { Meta } from '@/src/components/base/Meta'
 import { FormattedContentBody } from '@/src/components/base/FormattedContentBody'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { PostHeader } from '../PostHeader'
-import * as S from './PostPage.styles'
+import S from './PostPage.module.css'
 
 export type PostProps = {
   post: BlogPost
@@ -36,13 +36,13 @@ export const PostPage = ({ post, url }: PostProps) => {
         <>Loading...</>
       ) : (
         <>
-          <S.PostContainer>
-            <S.BackButtonContainer>
+          <article className={S.postContainer}>
+            <div className={S.backButtonContainer}>
               <BackButton href="/">{translate('base.back-to-home')}</BackButton>
               <BackButton href="/posts">
                 {translate('post.back-to-other-posts')}
               </BackButton>
-            </S.BackButtonContainer>
+            </div>
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
@@ -50,7 +50,7 @@ export const PostPage = ({ post, url }: PostProps) => {
               tags={post.tags}
             />
             <FormattedContentBody content={post.content} />
-          </S.PostContainer>
+          </article>
         </>
       )}
     </PageLayout>

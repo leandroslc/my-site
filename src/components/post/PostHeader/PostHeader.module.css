@@ -1,12 +1,10 @@
-import styled from 'styled-components'
-
-export const Header = styled.header`
+.header {
   display: flex;
   flex-direction: column;
   padding: 30px 0 20px 0;
-`
+}
 
-export const ImageContainer = styled.div`
+.imageContainer {
   display: flex;
   align-items: center;
   height: auto;
@@ -14,21 +12,21 @@ export const ImageContainer = styled.div`
   margin-bottom: 8px;
   overflow: hidden;
   border-radius: 8px;
-`
+}
 
-export const Image = styled.img`
+.image {
   height: auto;
   width: 100%;
-`
+}
 
-export const Date = styled.time`
+.date {
   display: flex;
   align-items: center;
   gap: 6px;
   margin: 0 16px 16px 16px;
   font-size: 0.95rem;
-`
+}
 
-export const TagsContainer = styled.div`
+.tagsContainer {
   margin: 0 16px 16px 16px;
-`
+}
