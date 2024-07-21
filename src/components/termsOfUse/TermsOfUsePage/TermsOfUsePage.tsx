@@ -6,7 +6,7 @@ import { PageLayout } from '@/src/components/base/PageLayout'
 import { PageTitle } from '@/src/components/base/PageTitle'
 import { Meta } from '@/src/components/base/Meta'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './TermsOfUsePage.styles'
+import S from './TermsOfUsePage.module.css'
 
 export type TermsOfUseProps = {
   content: string
@@ -29,13 +29,13 @@ export const TermsOfUsePage = ({
         url={url}
         ogImageUrl={ogImageUrl}
       />
-      <S.PageContainer>
+      <article className={S.pageContainer}>
         <BackButton href="/">{translate('base.back-to-home')}</BackButton>
-        <S.Header>
+        <div className={S.header}>
           <PageTitle>{translate('termsOfUse.title')}</PageTitle>
-        </S.Header>
+        </div>
         <FormattedContentBody content={content} />
-      </S.PageContainer>
+      </article>
     </PageLayout>
   )
 }
