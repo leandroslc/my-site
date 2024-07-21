@@ -4,7 +4,7 @@ import { Tags } from '@/src/components/base/Tags'
 import { PageTitle } from '@/src/components/base/PageTitle'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './PostHeader.styles'
+import S from './PostHeader.module.css'
 
 type Props = {
   title: string
@@ -18,21 +18,21 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   const { translate } = useTranslation()
 
   return (
-    <S.Header>
+    <header className={S.header}>
       <PageTitle>{title}</PageTitle>
-      <S.Date dateTime={date}>
+      <time className={S.date} dateTime={date}>
         <FiCalendar /> {formatDate(date, locale!)}
-      </S.Date>
-      <S.TagsContainer>
+      </time>
+      <div className={S.tagsContainer}>
         <Tags tags={tags} />
-      </S.TagsContainer>
-      <S.ImageContainer>
-        <S.Image
+      </div>
+      <div className={S.imageContainer}>
+        <img className={S.image}
           src={coverImage}
           aria-hidden="true"
           alt={`${translate('post.blog-post-image-alt')} ${title}`}
         />
-      </S.ImageContainer>
-    </S.Header>
+      </div>
+    </header>
   )
 }
