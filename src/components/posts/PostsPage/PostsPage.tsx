@@ -12,7 +12,7 @@ import { PageHeader } from '@/src/components/base/PageHeader'
 import { PostPreview } from '@/src/components/home/PostPreview'
 import { SearchBox } from '../SearchBox'
 import { NoResults } from '../NoResults'
-import * as S from './PostsPage.styles'
+import S from './PostsPage.module.css'
 
 export type PostsProps = {
   posts: BlogPostPreview[]
@@ -38,11 +38,11 @@ export const PostsPage = ({ posts, ogImageUrl, url }: PostsProps) => {
         url={url}
         ogImageUrl={ogImageUrl}
       />
-      <S.Content>
-        <S.BackButtonContainer>
+      <section className={S.content}>
+        <div className={S.backButtonContainer}>
           <BackButton href="/">{translate('base.back-to-home')}</BackButton>
-        </S.BackButtonContainer>
-        <S.TitleContainer>
+        </div>
+        <div className={S.titleContainer}>
           <PageTitle>{translate('posts.title')}</PageTitle>
           <span>
             {translateWithElements(
@@ -53,20 +53,20 @@ export const PostsPage = ({ posts, ogImageUrl, url }: PostsProps) => {
               />,
             )}
           </span>
-        </S.TitleContainer>
-        <S.SearchBoxContainer>
+        </div>
+          <div className={S.searchBoxContainer}>
           <SearchBox
             label={translate('posts.search-placeholder')}
             onInput={onSearch}
           />
-        </S.SearchBoxContainer>
-        <S.Posts ref={postsRef}>
+        </div>
+        <main className={S.posts} ref={postsRef}>
           {posts.map((post, index) => (
             <PostPreview key={index} post={post} />
           ))}
-        </S.Posts>
-        <S.NoResultsContainer as={NoResults} ref={noResultsRef} hidden />
-      </S.Content>
+        </main>
+        <NoResults ref={noResultsRef} hidden />
+      </section>
     </PageLayout>
   )
 }

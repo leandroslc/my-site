@@ -1,21 +1,21 @@
 import { ForwardedRef, forwardRef, HTMLAttributes } from 'react'
 import { FiFolder, FiSearch } from 'react-icons/fi'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './NoResults.styles'
+import S from './NoResults.module.css'
 
-type Props = Pick<HTMLAttributes<HTMLElement>, 'className' | 'hidden'>
+type Props = Pick<HTMLAttributes<HTMLElement>, 'hidden'>
 
 const InnerNoResults = (props: Props, ref: ForwardedRef<HTMLElement>) => {
   const { translate } = useTranslation()
 
   return (
-    <S.Container {...props} ref={ref as React.RefObject<never>}>
-      <S.IconContainer aria-hidden="true">
-        <S.Icon as={FiFolder} />
-        <S.AboveIcon as={FiSearch} />
-      </S.IconContainer>
-      <S.Text>{translate('posts.nothing-found')}</S.Text>
-    </S.Container>
+    <div className={S.container} {...props} ref={ref as React.RefObject<never>}>
+      <div className={S.iconContainer} aria-hidden="true">
+        <FiFolder className={S.icon} />
+        <FiSearch className={S.aboveIcon} />
+      </div>
+      <p className={S.text}>{translate('posts.nothing-found')}</p>
+    </div>
   )
 }
 
