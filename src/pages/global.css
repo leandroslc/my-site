@@ -1,3 +1,9 @@
+/*
+sizes:
+  small: 48rem
+  medium: 62rem
+*/
+
 :root {
   --theme-all-outline: #24180b;
   --theme-all-outlineinset: #eef1f5;
