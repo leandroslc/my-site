@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
-import * as S from './HomeLink.styles'
+import S from './HomeLink.module.css'
+import Link from 'next/link'
 
 type Props = PropsWithChildren<{
   className?: string
@@ -9,9 +10,9 @@ type Props = PropsWithChildren<{
 
 export const HomeLink = ({ className, children, href }: Props) => {
   return (
-    <S.HomeLink href={href} className={className}>
+    <Link className={[S.homeLink, className].join(' ')} href={href}>
       {children}
-      <S.Icon as={FiArrowRight} aria-hidden="true" />
-    </S.HomeLink>
+      <FiArrowRight className={S.icon} aria-hidden="true" />
+    </Link>
   )
 }

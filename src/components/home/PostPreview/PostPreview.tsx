@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Tags } from '@/src/components/base/Tags'
 import { formatDate } from '@/src/helpers/FormatDateHelpers'
 import { BlogPostPreview } from '@/src/models/BlogPost'
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './PostPreview.styles'
+import S from './PostPreview.module.css'
 
 type Props = {
   post: BlogPostPreview
@@ -15,20 +16,28 @@ export const PostPreview = ({ post }: Props) => {
   const { translate } = useTranslation()
 
   return (
-    <S.PostLink href={`/posts/${slug}`} passHref aria-label={title}>
-      <S.Card key={slug}>
-        <S.Header>
-          <S.Image
+    <Link
+      className={S.postLink}
+      href={`/posts/${slug}`}
+      passHref
+      aria-label={title}
+    >
+      <article className={S.card} key={slug}>
+        <header className={S.header}>
+          <img
+            className={S.image}
             src={coverImage}
             alt={`${translate('home.blog-post-image-alt')} ${title}`}
           />
-        </S.Header>
-        <S.Content>
-          <S.Date dateTime={date}>{formatDate(date, locale!)}</S.Date>
-          <S.Title>{title}</S.Title>
+        </header>
+        <main className={S.content}>
+          <time className={S.date} dateTime={date}>
+            {formatDate(date, locale!)}
+          </time>
+          <h1 className={S.title}>{title}</h1>
           <Tags tags={post.tags} />
-        </S.Content>
-      </S.Card>
-    </S.PostLink>
+        </main>
+      </article>
+    </Link>
   )
 }
