@@ -1,20 +1,19 @@
-import styled from 'styled-components'
-import { sizes, vars } from '@/src/theme'
-
-export const Container = styled.div`
+.container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   margin-top: 20px;
+}
 
-  @media (min-width: ${sizes.small}) {
+@media (min-width: 48rem) {
+  .container {
     margin-top: 0;
   }
-`
+}
 
-export const Title = styled.h1`
+.title {
   position: fixed;
   top: 16px;
   left: 20px;
@@ -24,36 +23,38 @@ export const Title = styled.h1`
   align-items: flex-end;
   justify-content: center;
   font-size: 1.4rem;
-  color: ${vars.theme((theme) => theme.header.text)};
+  color: var(--theme-header-text);
   pointer-events: none;
   user-select: none;
   opacity: 0;
+}
 
-  @media (min-width: ${sizes.medium}) {
+@media (min-width: 62rem) {
+  .title {
     font-size: 2rem;
   }
-`
+}
 
-export const TitleImage = styled.img`
+.titleImage {
   width: 6em;
   height: auto;
-`
+}
 
-export const TitleText = styled.span`
+.titleText {
   font-size: 1.4em;
   line-height: 0.8em;
-`
+}
 
-export const PaintingImage = styled.img`
+.paintingImage {
   z-index: 1;
   width: 80vw;
   height: auto;
   pointer-events: none;
   user-select: none;
-  filter: ${vars.theme((theme) => theme.header.painting.filter)};
-`
+  filter: var(--theme-header-paiting-filter);
+}
 
-export const ContentBorder = styled.svg`
+.contentBorder {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -61,4 +62,4 @@ export const ContentBorder = styled.svg`
   width: 80vw;
   height: auto;
   margin-bottom: -1px;
-`
+}

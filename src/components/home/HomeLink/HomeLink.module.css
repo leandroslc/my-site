@@ -1,0 +1,21 @@
+.homeLink {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 20px;
+  color: var(--theme-body-text);
+  border: 2px solid var(--theme-body-text);
+  border-radius: 9999px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.homeLink:hover,
+.homeLink:focus {
+  color: var(--theme-body-back);
+  background-color: var(--theme-body-text);
+}
+
+.icon {
+  font-size: 1.8em;
+}

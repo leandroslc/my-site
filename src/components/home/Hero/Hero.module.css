@@ -1,0 +1,75 @@
+.hero {
+  display: grid;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.portrait {
+  max-width: 281px;
+}
+
+.emphasys {
+  display: inline-block;
+  padding: 4px 8px;
+  vertical-align: bottom;
+  background-color: var(--theme-elements-emphasys30);
+  border-radius: 4px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 6px;
+  color: var(--theme-body-text);
+  text-decoration: none;
+  background-color: var(--theme-body-back);
+  border: 2px solid var(--theme-body-text);
+  border-radius: 9999px;
+  transition:
+    color 0.1s,
+    background-color 0.1s;
+}
+
+.socialLink:hover,
+.socialLink:focus {
+  color: var(--theme-body-back);
+  background-color: var(--theme-body-text);
+  transition:
+    color 0.1s,
+    background-color 0.1s;
+}

@@ -13,7 +13,7 @@ import { HomeHeader } from '../HomeHeader'
 import { HomeLink } from '../HomeLink'
 import { PostPreview } from '../PostPreview'
 import { Hero } from '../Hero'
-import * as S from './HomePage.styles'
+import S from './HomePage.module.css'
 
 export type HomeProps = {
   posts: BlogPostPreview[]
@@ -32,12 +32,12 @@ export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
         url={url}
         ogImageUrl={ogImageUrl}
       />
-      <S.Content>
+      <section className={S.content}>
         <Hero />
 
-        <S.Section>
-          <S.SectionTitle>{translate('home.blog-title')}</S.SectionTitle>
-          <S.SectionDescription>
+        <div className={S.section}>
+          <h1 className={S.sectionTitle}>{translate('home.blog-title')}</h1>
+          <div className={S.sectionDescription}>
             <p>{translate('home.blog-description-first')}</p>
             <p>
               {translateWithElements(
@@ -48,39 +48,41 @@ export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
                 />,
               )}
             </p>
-          </S.SectionDescription>
-          <S.SectionSideLink as={HomeLink} href="/posts">
+          </div>
+          <HomeLink className={S.sectionSideLink} href="/posts">
             {translate('home.blog-link')}
-          </S.SectionSideLink>
-        </S.Section>
+          </HomeLink>
+        </div>
 
-        <S.Posts>
+        <main className={S.posts}>
           {posts.map((post, index) => (
             <PostPreview key={index} post={post} />
           ))}
-        </S.Posts>
+        </main>
 
-        <S.SectionReverse>
-          <S.SectionTitle>{translate('home.profile-title')}</S.SectionTitle>
-          <S.SectionImage
+        <div className={S.sectionReverse}>
+          <h1 className={S.sectionTitle}>{translate('home.profile-title')}</h1>
+          <img
+            className={S.sectionImage}
             src="/assets/site/home/work.webp"
             alt={translate('home.profile-image-alt')}
           />
-          <S.SectionDescription>
+          <div className={S.sectionDescription}>
             {translate('home.profile-description')}
-          </S.SectionDescription>
-          <S.SectionLink as={HomeLink} href={LINKEDIN_URL}>
+          </div>
+          <HomeLink className={S.sectionLink} href={LINKEDIN_URL}>
             {translate('home.profile-link')}
-          </S.SectionLink>
-        </S.SectionReverse>
+          </HomeLink>
+        </div>
 
-        <S.Section>
-          <S.SectionTitle>{translate('home.music-title')}</S.SectionTitle>
-          <S.SectionImage
+        <div className={S.section}>
+          <h1 className={S.sectionTitle}>{translate('home.music-title')}</h1>
+          <img
+            className={S.sectionImage}
             src="/assets/site/home/music.webp"
             alt={translate('home.music-image-alt')}
           />
-          <S.SectionDescription>
+          <div className={S.sectionDescription}>
             <p>
               {translateWithElements(
                 'home.music-description',
@@ -90,19 +92,20 @@ export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
                 />,
               )}
             </p>
-          </S.SectionDescription>
-          <S.SectionLink as={HomeLink} href={YOUTUBE_URL}>
+          </div>
+          <HomeLink className={S.sectionLink} href={YOUTUBE_URL}>
             {translate('home.music-link')}
-          </S.SectionLink>
-        </S.Section>
+          </HomeLink>
+        </div>
 
-        <S.SectionReverse>
-          <S.SectionTitle>{translate('home.projects-title')}</S.SectionTitle>
-          <S.SectionImage
+        <div className={S.sectionReverse}>
+          <h1 className={S.sectionTitle}>{translate('home.projects-title')}</h1>
+          <img
+            className={S.sectionImage}
             src="/assets/site/home/portfolio.webp"
             alt={translate('home.projects-image-alt')}
           />
-          <S.SectionDescription>
+          <div className={S.sectionDescription}>
             <p>
               {translateWithElements(
                 'home.projects-description',
@@ -112,12 +115,12 @@ export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
                 />,
               )}
             </p>
-          </S.SectionDescription>
-          <S.SectionLink as={HomeLink} href={GITHUB_URL}>
+          </div>
+          <HomeLink className={S.sectionLink} href={GITHUB_URL}>
             {translate('home.projects-link')}
-          </S.SectionLink>
-        </S.SectionReverse>
-      </S.Content>
+          </HomeLink>
+        </div>
+      </section>
     </PageLayout>
   )
 }

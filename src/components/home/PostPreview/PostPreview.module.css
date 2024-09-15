@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: auto;
+  border-radius: 8px;
+  transition: box-shadow 0.1s;
+}
+
+@media (min-width: 48rem) {
+  .image {
+    min-height: 10rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .image {
+    min-height: 14rem;
+  }
+}
+
+.title {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.postLink {
+  cursor: pointer;
+  border-radius: 8px;
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+.postLink:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.postLink:hover,
+.postLink:focus {
+  text-decoration: none;
+  transform: translateY(-2px);
+  transition: transform 0.1s;
+}
+
+.postLink:hover .title,
+.postLink:focus .title {
+  text-decoration: underline;
+}
+
+.postLink:hover .image,
+.postLink:focus .image {
+  box-shadow:
+    0 0 0 3px var(--theme-main-back),
+    0 0 3px 5px var(--theme-postcard-borderhover);
+  transition: box-shadow 0.1s;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6px;
+}
+
+.date {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}

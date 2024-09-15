@@ -2,15 +2,15 @@ import { FiGithub, FiLinkedin, FiYoutube } from 'react-icons/fi'
 import { GITHUB_URL, LINKEDIN_URL, YOUTUBE_URL } from '@/src/config/constants'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { Emoji } from '@/src/components/base/Emoji'
-import * as S from './Hero.styles'
+import S from './Hero.module.css'
 
 export const Hero = () => {
   const { translate, translateWithElements } = useTranslation()
 
   return (
-    <S.Hero>
-      <S.Content>
-        <S.Title>
+    <div className={S.hero}>
+      <div className={S.content}>
+        <h1 className={S.title}>
           {translateWithElements(
             'home.hero-title',
             <Emoji
@@ -18,32 +18,32 @@ export const Hero = () => {
               alt={translate('emojis.smiling-face-with-smiling-eyes')}
             />,
           )}
-        </S.Title>
-        <S.Description>
+        </h1>
+        <p className={S.description}>
           {translateWithElements(
             'home.hero-description',
-            <S.Emphasys>{translate('home.hero-job')}</S.Emphasys>,
+            <span className={S.emphasys}>{translate('home.hero-job')}</span>,
           )}
-        </S.Description>
-        <S.Social>
-          <S.SocialLink href={GITHUB_URL}>
+        </p>
+        <div className={S.social}>
+          <a className={S.socialLink} href={GITHUB_URL}>
             <FiGithub size="1.2rem" aria-hidden="true" />
             GitHub
-          </S.SocialLink>
-          <S.SocialLink href={LINKEDIN_URL}>
+          </a>
+          <a className={S.socialLink} href={LINKEDIN_URL}>
             <FiLinkedin size="1.2rem" aria-hidden="true" />
             LinkedIn
-          </S.SocialLink>
-          <S.SocialLink href={YOUTUBE_URL}>
+          </a>
+          <a className={S.socialLink} href={YOUTUBE_URL}>
             <FiYoutube size="1.2rem" aria-hidden="true" />
             YouTube
-          </S.SocialLink>
-        </S.Social>
-      </S.Content>
-      <S.Portrait
+          </a>
+        </div>
+      </div>
+      <img className={S.portrait}
         src="/assets/site/home/me.webp"
         alt={translate('home.hero-portrait-alt')}
       />
-    </S.Hero>
+    </div>
   )
 }
