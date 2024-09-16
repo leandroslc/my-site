@@ -1,17 +1,17 @@
 import React from 'react'
-import * as S from './Border.styles'
+import S from './Border.module.css'
 
 type Props = React.SVGProps<{}>
 
 export const Border = ({ className }: Props) => {
   return (
-    <S.Svg
+    <svg
       width="1116"
       height="44"
       viewBox="0 0 1116 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={[S.svg, className].join(' ')}
       aria-hidden="true"
     >
       <g>
@@ -20,6 +20,6 @@ export const Border = ({ className }: Props) => {
           fill="currentColor"
         />
       </g>
-    </S.Svg>
+    </svg>
   )
 }

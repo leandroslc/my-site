@@ -1,5 +1,5 @@
 import { useTranslation } from '@/src/hooks/useTranslation'
-import * as S from './Tags.styles'
+import S from './Tags.module.css'
 
 type Props = {
   tags?: string[]
@@ -9,12 +9,16 @@ export const Tags = ({ tags }: Props) => {
   const { translate } = useTranslation()
 
   return (
-    <S.Tags>
+    <div className={S.tags}>
       {tags?.map((tag) => (
-        <S.Tag key={tag} title={translate('base.tag-title', tag)}>
+        <span
+          className={S.tag}
+          key={tag}
+          title={translate('base.tag-title', tag)}
+        >
           {tag}
-        </S.Tag>
+        </span>
       ))}
-    </S.Tags>
+    </div>
   )
 }

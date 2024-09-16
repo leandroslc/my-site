@@ -3,7 +3,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { useMenuControl } from '@/src/hooks/useMenuControl'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { DropdownItem } from '../DropdownItem'
-import * as S from './DrilldownItem.styles'
+import S from './DrilldownItem.module.css'
 
 type Props = PropsWithChildren<{
   id: string
@@ -45,16 +45,16 @@ export const DrilldownItem = ({
         title={title}
         onClick={handleItemClick}
       >
-        <S.ItemLabel>
+        <div className={S.itemLabel}>
           {label}
-          <S.ItemLabelChevron as={FiChevronRight} aria-hidden="true" />
-        </S.ItemLabel>
+          <FiChevronRight className={S.itemLabelChevron} aria-hidden="true" />
+        </div>
       </DropdownItem>
-      <S.Menu
+      <div
         ref={menuRef}
         aria-orientation="vertical"
         aria-labelledby={id}
-        className={isOpen ? 'is-open' : ''}
+        className={[S.menu, isOpen ? S.isOpen : ''].join(' ')}
       >
         <DropdownItem
           as="button"
@@ -63,12 +63,12 @@ export const DrilldownItem = ({
           title={backButtonTitle}
           onClick={handleBackClick}
         >
-          <S.BackButtonIcon as={FiChevronLeft} aria-hidden="true" />
+          <FiChevronLeft className={S.backButtonIcon} aria-hidden="true" />
           {translate('base.drilldown-item-back')}
         </DropdownItem>
-        <S.Divider />
+        <div className={S.divider} />
         {children}
-      </S.Menu>
+      </div>
     </>
   )
 }

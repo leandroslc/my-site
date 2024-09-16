@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import type { Engine } from 'tsparticles-engine'
 import { loadSlim } from 'tsparticles-slim'
-import * as S from './ParticlesContainer.styles'
+import S from './ParticlesContainer.module.css'
 
 const colors = ['#afa0b9']
 
@@ -12,7 +12,7 @@ export const ParticlesContainer = () => {
   }, [])
 
   return (
-    <S.Container>
+    <div className={S.container}>
       <Particles
         init={initParticles}
         options={{
@@ -55,6 +55,6 @@ export const ParticlesContainer = () => {
           },
         }}
       />
-    </S.Container>
+    </div>
   )
 }

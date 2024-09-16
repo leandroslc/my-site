@@ -1,0 +1,47 @@
+.icon {
+  position: relative;
+  left: 2px;
+  transition: left 0.4s ease-in-out;
+}
+
+.buttonLink {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  color: var(--theme-body-text);
+  overflow: hidden;
+  background-color: var(--theme-body-contrast);
+  border-radius: 9999px;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.buttonLink:hover,
+.buttonLink:focus {
+  color: var(--theme-body-back);
+  background-color: var(--theme-body-text);
+}
+
+.buttonLink:hover .icon,
+.buttonLink:focus .icon {
+  left: 0;
+}
+
+.iconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px 4px 6px;
+  font-size: 1.2em;
+  outline: 3px solid var(--theme-body-back);
+  border-radius: 9999px;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px 4px 8px;
+}

@@ -5,7 +5,7 @@ import { Footer } from '../Footer'
 import { FooterBorder } from '../FooterBorder'
 import { ParticlesContainer } from '../ParticlesContainer'
 import { Loader } from '../Loader'
-import * as S from './PageLayout.styles'
+import S from './PageLayout.module.css'
 
 type Props = PropsWithChildren<{
   header?: ReactNode
@@ -15,17 +15,17 @@ export const PageLayout = ({ children, header }: Props) => {
   return (
     <>
       {enablePageLoader && <Loader />}
-      <S.Header>
+      <header className={S.header}>
         <ParticlesContainer />
-        <S.Navbar>
+        <nav className={S.navbar}>
           <OptionsMenu />
-        </S.Navbar>
+        </nav>
         {header && header}
-      </S.Header>
-      <S.Main>
+      </header>
+      <main className={S.main}>
         {children}
         <FooterBorder />
-      </S.Main>
+      </main>
       <Footer />
     </>
   )

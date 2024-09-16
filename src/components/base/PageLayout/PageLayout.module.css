@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 16px;
+}
+
+.header {
+  position: relative;
+  flex: 0 1 auto;
+  background: var(--theme-header-back);
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  background: var(--theme-main-back);
+}

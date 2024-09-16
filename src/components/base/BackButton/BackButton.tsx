@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { PropsWithChildren } from 'react'
 import { FiArrowLeft } from 'react-icons/fi'
-import * as S from './BackButton.styles'
+import S from './BackButton.module.css'
 
 type Props = PropsWithChildren<{
   href: string
@@ -8,11 +9,11 @@ type Props = PropsWithChildren<{
 
 export const BackButton = ({ children, href }: Props) => {
   return (
-    <S.ButtonLink href={href}>
-      <S.IconContainer aria-hidden="true">
-        <S.Icon as={FiArrowLeft} />
-      </S.IconContainer>
-      <S.Text>{children}</S.Text>
-    </S.ButtonLink>
+    <Link className={S.buttonLink} href={href}>
+      <div className={S.iconContainer} aria-hidden="true">
+        <FiArrowLeft className={S.icon} />
+      </div>
+      <span className={S.text}>{children}</span>
+    </Link>
   )
 }
