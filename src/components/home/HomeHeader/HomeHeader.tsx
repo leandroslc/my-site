@@ -11,10 +11,15 @@ export const HomeHeader = () => {
   return (
     <div className={S.container} ref={containerRef}>
       <h1 className={S.title} ref={titleRef}>
-        <img className={S.titleImage} src="/assets/site/title-signature.svg" alt="Leandro's" />
+        <img
+          className={S.titleImage}
+          src="/assets/site/title-signature.svg"
+          alt="Leandro's"
+        />
         <span className={S.titleText}>{SITE_SUBNAME}</span>
       </h1>
-      <img className={S.paintingImage}
+      <img
+        className={S.paintingImage}
         src="/assets/site/header-painting.webp"
         alt={translate('home.header-painting-alt')}
       />

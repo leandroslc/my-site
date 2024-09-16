@@ -27,7 +27,8 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         <Tags tags={tags} />
       </div>
       <div className={S.imageContainer}>
-        <img className={S.image}
+        <img
+          className={S.image}
           src={coverImage}
           aria-hidden="true"
           alt={`${translate('post.blog-post-image-alt')} ${title}`}

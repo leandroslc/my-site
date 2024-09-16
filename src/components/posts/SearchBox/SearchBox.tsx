@@ -15,7 +15,8 @@ export const SearchBox = ({ label, ...otherProps }: Props) => {
       <label className="sr-only">{label}</label>
       <div className={S.searchBox}>
         <FiSearch className={S.searchBoxIcon} aria-hidden="true" />
-        <input className={S.searchBoxInput}
+        <input
+          className={S.searchBoxInput}
           type="search"
           autoComplete="off"
           name="search"

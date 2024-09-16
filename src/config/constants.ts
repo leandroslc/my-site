@@ -7,6 +7,4 @@ export const LINKEDIN_URL =
   'https://www.linkedin.com/in/leandro-silva-luz-do-carmo-3021871a4/'
 export const YOUTUBE_URL =
   'https://www.youtube.com/channel/UC9W-QxRYVkGSu2_dsZyLoVQ'
-export const CSS_THEME_PROPS_PREFIX = '--theme'
-export const CSS_DARK_THEME_CLASS = 'dark'
 export const CODE_HIGHLIGHT_BASE_URL = '/code'
