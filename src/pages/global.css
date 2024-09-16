@@ -4,7 +4,7 @@ sizes:
   medium: 62rem
 */
 
-:root {
+:root.light {
   --theme-all-outline: #24180b;
   --theme-all-outlineinset: #eef1f5;
   --theme-all-selection-back: rgba(26, 30, 43, 0.9);
@@ -52,7 +52,7 @@ sizes:
   --theme-posts-noresults-back: rgba(42 99 132 / 17%);
 }
 
-:root.dark {
+:root {
   --theme-all-outline: #24180b;
   --theme-all-outlineinset: #eef1f5;
   --theme-all-selection-back: #f3e6d6;
