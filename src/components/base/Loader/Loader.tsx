@@ -1,9 +1,9 @@
-import * as S from './Loader.styles'
+import S from './Loader.module.css'
 
 export const Loader = () => {
   return (
-    <S.Container>
-      <S.Spinner />
-    </S.Container>
+    <div className={S.container}>
+      <div className={S.spinner} />
+    </div>
   )
 }

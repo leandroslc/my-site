@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react'
-import * as S from './PageTitle.styles'
+import S from './PageTitle.module.css'
 
 type Props = PropsWithChildren<{}>
 
 export const PageTitle = ({ children }: Props) => {
   return (
-    <S.Title>
-      <S.TitleText>{children}</S.TitleText>
-    </S.Title>
+    <h1 className={S.title}>
+      <span className={S.titleText}>{children}</span>
+    </h1>
   )
 }

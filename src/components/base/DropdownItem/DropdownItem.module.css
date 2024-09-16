@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.item ~ .item {
+  margin-top: 4px;
+}
+
+.item:hover,
+.item:focus {
+  color: var(--theme-dropdown-item-texthover);
+  background-color: var(--theme-dropdown-item-backhover) ;
+}
+
+.item.isActive {
+  color: var(--theme-dropdown-item-textactive);
+  background-color: var(--theme-dropdown-item-backactive);
+}
+
+.item.isActive:hover,
+.item.isActive:focus {
+  color: var(--theme-dropdown-item-textactive);
+  background-color: var(--theme-dropdown-item-backactive);
+}

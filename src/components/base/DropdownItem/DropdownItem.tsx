@@ -3,7 +3,7 @@ import {
   AnyComponentType,
   PropsWithAnyComponent,
 } from '@/src/types/GenericComponent'
-import * as S from './DropdownItem.styles'
+import S from './DropdownItem.module.css'
 
 interface InnerProps {
   active?: boolean
@@ -20,15 +20,16 @@ export const InnerDropdownItem = <T extends AnyComponentType>(
 ) => {
   const { as, active = false, children, ...otherProps } = props
 
+  const AsElement = as as 'li'
+
   return (
-    <S.Item
+    <AsElement
       ref={ref as React.RefObject<never>}
-      as={as}
-      className={active ? 'is-active' : ''}
+      className={[S.item, active ? S.isActive : ''].join(' ')}
       {...otherProps}
     >
       {children}
-    </S.Item>
+    </AsElement>
   )
 }
 
