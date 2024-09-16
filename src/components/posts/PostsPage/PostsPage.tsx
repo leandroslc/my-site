@@ -54,7 +54,7 @@ export const PostsPage = ({ posts, ogImageUrl, url }: PostsProps) => {
             )}
           </span>
         </div>
-          <div className={S.searchBoxContainer}>
+        <div className={S.searchBoxContainer}>
           <SearchBox
             label={translate('posts.search-placeholder')}
             onInput={onSearch}

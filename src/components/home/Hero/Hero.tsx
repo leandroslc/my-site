@@ -40,7 +40,8 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      <img className={S.portrait}
+      <img
+        className={S.portrait}
         src="/assets/site/home/me.webp"
         alt={translate('home.hero-portrait-alt')}
       />
