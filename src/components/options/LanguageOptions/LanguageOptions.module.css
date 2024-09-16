@@ -1,0 +1,9 @@
+.flag {
+  width: 1.1rem;
+  border-radius: 4px;
+}
+
+.optionItemFlag {
+  composes: flag;
+  margin-right: 0.5rem;
+}

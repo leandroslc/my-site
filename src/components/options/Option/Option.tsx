@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import * as S from './Option.styles'
+import S from './Option.module.css'
 
 type Props = {
   name: string
@@ -9,12 +9,16 @@ type Props = {
 
 export const Option = ({ name, description, icon }: Props) => {
   return (
-    <S.OptionContainer>
-      <S.OptionName>{name}</S.OptionName>
-      <S.OptionSelection>
-        {icon && <S.OptionIcon aria-hidden="true">{icon}</S.OptionIcon>}
+    <div className={S.optionContainer}>
+      <strong>{name}</strong>
+      <span className={S.optionSelection}>
+        {icon && (
+          <span className={S.optionIcon} aria-hidden="true">
+            {icon}
+          </span>
+        )}
         {description}
-      </S.OptionSelection>
-    </S.OptionContainer>
+      </span>
+    </div>
   )
 }

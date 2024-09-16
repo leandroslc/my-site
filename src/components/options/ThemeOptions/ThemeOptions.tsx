@@ -10,7 +10,7 @@ import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { Option } from '../Option'
-import * as S from './ThemeOptions.styles'
+import { OptionItem } from '../OptionItem'
 
 const ThemeIcons = {
   [Themes.Dark]: FiMoon,
@@ -71,14 +71,9 @@ export const ThemeOptions = () => {
         active={isActive(Themes.Dark)}
         onClick={() => handleThemeChange(Themes.Dark)}
       >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiMoon}
-            aria-hidden="true"
-            color={getIconColor(Themes.Dark)}
-          />
+        <OptionItem Icon={FiMoon} iconColor={getIconColor(Themes.Dark)}>
           {translate(`options.site-theme-${Themes.Dark}`)}
-        </S.OptionItem>
+        </OptionItem>
       </DropdownItem>
       <DropdownItem
         as="button"
@@ -86,14 +81,9 @@ export const ThemeOptions = () => {
         active={isActive(Themes.Light)}
         onClick={() => handleThemeChange(Themes.Light)}
       >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiSun}
-            aria-hidden="true"
-            color={getIconColor(Themes.Light)}
-          />
+        <OptionItem Icon={FiSun} iconColor={getIconColor(Themes.Light)}>
           {translate(`options.site-theme-${Themes.Light}`)}
-        </S.OptionItem>
+        </OptionItem>
       </DropdownItem>
     </DrilldownItem>
   )

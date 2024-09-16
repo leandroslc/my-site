@@ -10,7 +10,7 @@ import { DropdownItem } from '@/src/components/base/DropdownItem'
 import { DrilldownItem } from '@/src/components/base/DrilldownItem'
 import { useTranslation } from '@/src/hooks/useTranslation'
 import { Option } from '../Option'
-import * as S from './CodeOptions.styles'
+import { OptionItem } from '../OptionItem'
 
 export const CodeHighlightColors: { [key in CodeHighlights]: string } = {
   [CodeHighlights.Dracula]: '#f666c1',
@@ -59,14 +59,12 @@ export const CodeOptions = () => {
         active={isActive(CodeHighlights.Dracula)}
         onClick={() => handleThemeChange(CodeHighlights.Dracula)}
       >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiBox}
-            aria-hidden="true"
-            color={getIconColor(CodeHighlights.Dracula)}
-          />
+        <OptionItem
+          Icon={FiBox}
+          iconColor={getIconColor(CodeHighlights.Dracula)}
+        >
           {CodeHighlights.Dracula}
-        </S.OptionItem>
+        </OptionItem>
       </DropdownItem>
       <DropdownItem
         as="button"
@@ -74,14 +72,12 @@ export const CodeOptions = () => {
         active={isActive(CodeHighlights.NightOwl)}
         onClick={() => handleThemeChange(CodeHighlights.NightOwl)}
       >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiBox}
-            aria-hidden="true"
-            color={getIconColor(CodeHighlights.NightOwl)}
-          />
+        <OptionItem
+          Icon={FiBox}
+          iconColor={getIconColor(CodeHighlights.NightOwl)}
+        >
           {CodeHighlights.NightOwl}
-        </S.OptionItem>
+        </OptionItem>
       </DropdownItem>
       <DropdownItem
         as="button"
@@ -89,14 +85,12 @@ export const CodeOptions = () => {
         active={isActive(CodeHighlights.OneLight)}
         onClick={() => handleThemeChange(CodeHighlights.OneLight)}
       >
-        <S.OptionItem>
-          <S.OptionIcon
-            as={FiBox}
-            aria-hidden="true"
-            color={getIconColor(CodeHighlights.OneLight)}
-          />
+        <OptionItem
+          Icon={FiBox}
+          iconColor={getIconColor(CodeHighlights.OneLight)}
+        >
           {CodeHighlights.OneLight}
-        </S.OptionItem>
+        </OptionItem>
       </DropdownItem>
     </DrilldownItem>
   )
