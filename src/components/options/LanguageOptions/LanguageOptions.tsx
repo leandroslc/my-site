@@ -5,7 +5,7 @@ import { useTranslation } from '@/src/hooks/useTranslation'
 import { Option } from '../Option'
 import { OptionItem } from '../OptionItem'
 import { useRouter } from 'next/router'
-import * as S from './LanguageOptions.styles'
+import S from './LanguageOptions.module.css'
 
 const flags = {
   [Locales.en]: '/assets/site/flags/gb.svg',
@@ -35,7 +35,8 @@ export const LanguageOptions = () => {
           name={translate('options.language-item')}
           description={translate(`options.language-${locale}`)}
           icon={
-            <S.Flag
+            <img
+              className={S.flag}
               src={flags[locale! as Locales]}
               alt={translate(`options.language-flag-${locale}`)}
             />
@@ -52,7 +53,8 @@ export const LanguageOptions = () => {
           onClick={() => handleLocaleChange(currentLocale)}
         >
           <OptionItem>
-            <S.OptionItemFlag
+            <img
+              className={S.optionItemFlag}
               src={flags[currentLocale! as Locales]}
               alt={translate(`options.language-flag-${currentLocale}`)}
             />

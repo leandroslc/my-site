@@ -1,15 +1,20 @@
-import { PropsWithChildren } from 'react'
-import * as S from './OptionItem.styles'
+import React, { PropsWithChildren } from 'react'
+import S from './OptionItem.module.css'
 
 type Props = PropsWithChildren<{
-  Icon?: React.FunctionComponent
+  Icon?: React.FunctionComponent<
+    React.DetailedHTMLProps<React.HTMLAttributes<SVGElement>, {}>
+  >
+  iconColor?: string
 }>
 
-export const OptionItem = ({ children, Icon }: Props) => {
+export const OptionItem = ({ children, Icon, iconColor }: Props) => {
   return (
-    <S.OptionItem>
-      {Icon && <S.OptionIcon as={Icon} aria-hidden="true" />}
+    <span className={S.optionItem}>
+      {Icon && (
+        <Icon className={S.optionIcon} aria-hidden="true" color={iconColor} />
+      )}
       {children}
-    </S.OptionItem>
+    </span>
   )
 }
