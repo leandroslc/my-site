@@ -70,7 +70,7 @@
   background-color: var(--theme-contentelements-codeblock-selection-back);
 }
 
-.container .remark-highlight {
+.container [class='remark-highlight'] {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 0.5rem;

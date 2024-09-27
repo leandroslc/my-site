@@ -39,15 +39,6 @@ export const HomePage = ({ posts, ogImageUrl, url }: HomeProps) => {
           <h1 className={S.sectionTitle}>{translate('home.blog-title')}</h1>
           <div className={S.sectionDescription}>
             <p>{translate('home.blog-description-first')}</p>
-            <p>
-              {translateWithElements(
-                'home.blog-description-second',
-                <Emoji
-                  symbol="&#x1F642;"
-                  alt={translate('emojis.slightly-smiling-face')}
-                />,
-              )}
-            </p>
           </div>
           <HomeLink className={S.sectionSideLink} href="/posts">
             {translate('home.blog-link')}

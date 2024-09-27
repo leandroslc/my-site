@@ -11,7 +11,7 @@
   opacity: 1;
   overflow: hidden;
   background-color: var(--theme-body-back);
-  animation: 1.2s linear 0.2s 1 normal forwards running fade;
+  animation: 0.65s linear 0.2s 1 normal forwards running fade;
 }
 
 @keyframes fade {
