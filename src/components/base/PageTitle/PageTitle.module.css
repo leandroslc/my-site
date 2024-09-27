@@ -3,6 +3,7 @@
   font-size: 2rem;
   font-weight: 500;
   line-height: 1;
+  color: var(--theme-body-text);
 }
 
 .titleText {
@@ -12,10 +13,10 @@
     var(--theme-elements-emphasys30) 100%
   );
   background-repeat: repeat-x;
-  background-position-x: 4px, 0, 100%;
+  background-position-x: 2px, 0, 100%;
   background-position-y: calc(100% - 3px);
   background-size:
-    100% 12px,
-    auto 4px,
-    auto 4px;
+    100% 50%,
+    auto 2px,
+    auto 2px;
 }
